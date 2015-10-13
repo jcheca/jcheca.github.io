@@ -9,7 +9,8 @@
         autor: "Prof. Dr. Hubert Chanson.",
         categoria: "Conferencia Inaugural",
         origen: "The University of Queensland, Brisbane, Australia",
-        url: "invitada/p001.pdf"
+        url: "a/prg_131015.pdf"
+        /* url: "invitada/p001.pdf" */
       },
       {
         nombre: "Abriendo surcos al agua",
