@@ -263,7 +263,7 @@
       },
       {
         nombre: "Un paso más en la auditoría energética de comunidades de regantes, evaluación hidráulica",
-        autor: "” M. Martínez, I. Ederra, A. Alfaro, M.A. Campo-Bescós",
+        autor: "M. Martínez, I. Ederra, A. Alfaro, M.A. Campo-Bescós",
         categoria: "Tema B",
         origen: "",
         url: "b/b021.pdf"
