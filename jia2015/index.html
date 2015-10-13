@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es" ng-app="jia2015">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  		<meta name="viewport" content="width=device-width, initial-scale=1">
+  		<title>Jornadas Técnicas del Agua: Jia2015</title>
+
+		<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/jumbotron.css">
+    <link rel="stylesheet" type="text/css" href="bower_components/jia2015/pdfplugin.css">
+
+
+	</head>
+	<body ng-controller="AlmacenJia2015 as almacen" ng-init="orden = 'nombre'">
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Cambiar navegación</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">JIA2015 Córdoba 2015</a>
+        </div>
+
+        <div id="navbar" class="navbar-collapse collapse">
+          <form class="navbar-form navbar-right">
+
+            <div class="form-group" ng-show="true">
+              <select id="error" ng-model="orden"  class="form-control">
+                <option value = "autor">Autor</option>
+                <option value = "nombre">Título</option>
+                <option value = "categoria">Categoría</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <input ng-model="busco" type="text" placeholder="Buscar ..." class="form-control">
+            </div>
+          </form>
+        </div><!--/.navbar-collapse -->
+
+      </div>
+    </nav>		
+
+		<div class="jumbotron">
+      	<div class="container">
+      		<img src="bower_components/logos/logojia2015.png" align="left">
+        	<p>Este documento contiene todas las presentaciones y pósteres expuestos en las IV Jornadas de Ingeniería del Agua "La precipitación y los procesos erosivos" celebradas en Córdoba (España) durante los días 21 y 22 de Octubre de 2015.</p>
+      	</div>
+    	</div>
+
+
+
+      <!-- Selecciona la búsqueda por Título (atributo: nombre) -->
+    	<div ng-show="orden == 'nombre'" class="container" ng-repeat="articulo in almacen.indice | filter: {nombre: busco}">
+      		<div class="row">
+        		<div class="col-md-12">
+          		<h3><a href="{{articulo.url}}" target="_blank">{{articulo.nombre}}</a></h3>
+          		<p>{{articulo.autor}}</p>
+              <p><em>{{articulo.origen}}</em></p>
+              <p>{{articulo.categoria}}</p>
+          		<p><a class="btn btn-default view-pdf" href="{{articulo.url}}" role="button" target="_blank">Ver documento &raquo;</a></p>
+        		</div>
+       		</div> 
+    	</div>
+
+      <!-- Selecciona la búsqueda por Autor (atributo: autor) -->
+      <div ng-show="orden == 'autor'" class="container" ng-repeat="articulo in almacen.indice | filter: {autor: busco}">
+          <div class="row">
+            <div class="col-md-12">
+              <h3><a href="{{articulo.url}}" target="_blank">{{articulo.nombre}}</a></h3>
+              <p>{{articulo.autor}}</p>
+              <p><em>{{articulo.origen}}</em></p>
+              <p>{{articulo.categoria}}</p>
+              <p><a class="btn btn-default view-pdf" href="{{articulo.url}}" role="button" target="_blank">Ver documento &raquo;</a></p>
+            </div>
+          </div> 
+      </div>
+
+      <!-- Selecciona la búsqueda por Categoria (atributo: categoria) -->
+      <div ng-show="orden == 'categoria'" class="container" ng-repeat="articulo in almacen.indice | filter: {categoria: busco}">
+          <div class="row">
+            <div class="col-md-12">
+              <h3><a href="{{articulo.url}}" target="_blank">{{articulo.nombre}}</a></h3>
+              <p>{{articulo.autor}}</p>
+              <p><em>{{articulo.origen}}</em></p>
+              <p>{{articulo.categoria}}</p>
+              <p><a class="btn btn-default view-pdf" href="{{articulo.url}}" role="button" target="_blank">Ver documento &raquo;</a></p>
+            </div>
+          </div> 
+      </div>      
+
+      <hr>
+
+    	<div class="container">
+    	 <footer>
+        	<p>&copy; <a href="http://orcid.org/0000-0001-6501-0283" target="_blank">ORCID: 0000-0001-6501-0283</a> at <a href="https://github.com/jcheca/jia2015">GitHub</a> <button class="btn btn-default "id="install-btn">Instala App en FireFoxOS o Android Compatible</button></p>
+        </footer>
+      </div>
+
+
+
+		<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+		<script src="bower_components/jquery/dist/jquery.min.js"></script>
+		<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="bower_components/jia2015/jia2015.js"></script>
+    <script type="text/javascript" src="bower_components/jia2015/pdfplugin.js"></script>
+    <script type="text/javascript" src="bower_components/jia2015/install.js"></script>
+
+
+
+	</body>
+</html>

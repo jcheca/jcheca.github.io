@@ -1,0 +1,39 @@
+{
+  "version": "1.0",
+  "name": "JIA2015-Wf",
+  "description": "JIA2015 Workflow",
+  "launch_path": "/jia2015/index.html",
+  "icons": {
+    "16": "/jia2015/bower_components/logos/ico_16.png",
+    "48": "/jia2015/bower_components/logos/ico_48.png",
+    "128": "/jia2015/bower_components/logos/ico_128.png"
+  },
+
+  "developer": {
+    "name": "José Checa Claudel",
+    "url": "http://orcid.org/0000-0001-6501-0283"
+  },
+
+  "default_locale": "es",
+
+  "installs_allowed_from": ["*"],
+    "locales": {
+      "es": {
+        "description": "Su nueva aplicación impresionante JIA2015-Wf",
+        "developer": {
+         "url": "http://orcid.org/0000-0001-6501-0283"
+        }
+      },
+      "it": {
+        "description": "Il vostro nuovo fantastico JIA2015-Wf",
+        "developer": {
+          "url": "http://orcid.org/0000-0001-6501-0283"
+        }
+      }
+    },
+    
+    "permissions": {
+      "systemXHR": {}
+    }
+   
+}
