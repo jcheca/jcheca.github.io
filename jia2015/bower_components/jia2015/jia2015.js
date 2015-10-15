@@ -9,15 +9,14 @@
         autor: "Prof. Dr. Hubert Chanson.",
         categoria: "Conferencia Inaugural",
         origen: "The University of Queensland, Brisbane, Australia",
-        url: "a/prg_131015.pdf"
-        /* url: "invitada/p001.pdf" */
+        url: "invitadas/invitada1.pdf"
       },
       {
         nombre: "Abriendo surcos al agua",
         autor: "Prof. Dr. Alberto Losada Villasante",
         categoria: "Conferencia temática",
         origen: "Universidad Politécnica de Madrid",
-        url: "invitada/p002.pdf"
+        url: "invitadas/invitada2.pdf"
       },
 
       {
@@ -25,14 +24,14 @@
         autor: "Profa. Dra. María Jesús Esteban Parra",
         categoria: "Conferencia monográfica",
         origen: "Universidad de Granada",
-        url: "invitada/p004.pdf"
+        url: "invitadas/invitada3.pdf"
       },
       {
         nombre: "Procesos erosivos en olivar en Andalucía a diferentes escalas: entendimiento, magnitud, implicaciones e intentos de control",
         autor: "Dr. José Alfonso Gómez Calero",
         categoria: "Conferencia monográfica",
         origen: "Instituto de Agricultura Sostenible - CSIC",
-        url: "invitada/p005.pdf"
+        url: "invitadas/invitada4.pdf"
       },
       {
         nombre: "Experiencias y mejoras en el tratamiento de incertidumbres hidrológicas para la gestión de embalses en avenidas",
