@@ -12,7 +12,7 @@
 
 
 	</head>
-	<body ng-controller="AlmacenJia2015 as almacen" ng-init="orden = 'nombre'">
+	<body ng-controller="AlmacenJia2015 as almacen" ng-init="orden = 'nombre'; urlbase = 'http://www.uco.es/jia2015/ponencias/'">
 
     <nav class="navbar navbar-inverse navbar-fixed-top">
 
@@ -24,7 +24,9 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">JIA2015 Córdoba 2015 - ISBN:978-84-608-3043-6</a>
+          <div>
+          <a class="navbar-brand" href="#">JIA2015 Córdoba 2015</a> - <a class="navbar-brand" href="{{urlbase}}LibroCompleto/IVJiaLibro.pdf" target="_blank">Descarga Libro Completo ISBN:978-84-608-3043-6</a>
+        </div>
         </div>
 
         <div id="navbar" class="navbar-collapse collapse">
@@ -55,48 +57,16 @@
     	</div>
 
 
-    <!--
-    <center><h1><span class="label label-primary">Conferencias Inaugurales</span></h1></center>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-3">
-          <h4 class="alert alert-info">Hydraulic engineering and roman aqueducts: modern perspectives</h4>
-          <p>Prof. Dr. Hubert Chanson.</p>
-          <p><em>The University of Queensland, Brisbane, Australia</em></p>
-          <p><a class="btn btn-default" href="#" role="button">Ver documento &raquo;</a></p>
-        </div>
-        <div class="col-md-3">
-          <h4 class="alert alert-info">Abriendo surcos al agua</h4>
-          <p>Prof. Dr. Alberto Losada Villasante</p>
-          <p><em>Universidad Politécnica de Madrid</em></p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-       </div>
-        <div class="col-md-3">
-          <h4 class="alert alert-info">Predicción estacional del caudal de los riós ibéricos a partir de índices climáticos</h4>
-          <p>Profa. Dra. María Jesús Esteban Parra.</p>
-          <p><em>Universidad de Granada</em></p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div>
-        <div class="col-md-3">
-          <h4 class="alert alert-info">Procesos erosivos en olivar en Andalucía a diferentes escalas: entendimiento, magnitud, implicaciones e intentos de control</h4>
-          <p>Dr. José Alfonso Gómez Calero.</p>
-          <p><em>Instituto de Agricultura Sostenible - CSIC</em></p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div>
-      </div>
-      <hr/>
-    -->
-
 
       <!-- Selecciona la búsqueda por Título (atributo: nombre) -->
     	<div ng-show="orden == 'nombre'" class="container" ng-repeat="articulo in almacen.indice | filter: {nombre: busco}">
       		<div class="row">
         		<div class="col-md-12">
-          		<h3><a href="{{articulo.url}}" target="_blank">{{articulo.nombre}}</a></h3>
+          		<h3><a href="{{urlbase}}{{articulo.url}}" target="_blank">{{articulo.nombre}}</a></h3>
           		<p>{{articulo.autor}}</p>
               <p><em>{{articulo.origen}}</em></p>
               <p>{{articulo.categoria}}</p>
-          		<p><a class="btn btn-default view-pdf" href="{{articulo.url}}" role="button" target="_blank">Ver documento &raquo;</a></p>
+          		<p><a class="btn btn-default view-pdf" href="{{urlbase}}{{articulo.url}}" role="button" target="_blank">Ver documento &raquo;</a></p>
         		</div>
        		</div> 
     	</div>
@@ -105,11 +75,11 @@
       <div ng-show="orden == 'autor'" class="container" ng-repeat="articulo in almacen.indice | filter: {autor: busco}">
           <div class="row">
             <div class="col-md-12">
-              <h3><a href="{{articulo.url}}" target="_blank">{{articulo.nombre}}</a></h3>
+              <h3><a href="{{urlbase}}{{articulo.url}}" target="_blank">{{articulo.nombre}}</a></h3>
               <p>{{articulo.autor}}</p>
               <p><em>{{articulo.origen}}</em></p>
               <p>{{articulo.categoria}}</p>
-              <p><a class="btn btn-default view-pdf" href="{{articulo.url}}" role="button" target="_blank">Ver documento &raquo;</a></p>
+              <p><a class="btn btn-default view-pdf" href="{{urlbase}}{{articulo.url}}" role="button" target="_blank">Ver documento &raquo;</a></p>
             </div>
           </div> 
       </div>
@@ -118,11 +88,11 @@
       <div ng-show="orden == 'categoria'" class="container" ng-repeat="articulo in almacen.indice | filter: {categoria: busco}">
           <div class="row">
             <div class="col-md-12">
-              <h3><a href="{{articulo.url}}" target="_blank">{{articulo.nombre}}</a></h3>
+              <h3><a href="{{urlbase}}{{articulo.url}}" target="_blank">{{articulo.nombre}}</a></h3>
               <p>{{articulo.autor}}</p>
               <p><em>{{articulo.origen}}</em></p>
               <p>{{articulo.categoria}}</p>
-              <p><a class="btn btn-default view-pdf" href="{{articulo.url}}" role="button" target="_blank">Ver documento &raquo;</a></p>
+              <p><a class="btn btn-default view-pdf" href="{{urlbase}}{{articulo.url}}" role="button" target="_blank">Ver documento &raquo;</a></p>
             </div>
           </div> 
       </div>      
