@@ -21,29 +21,45 @@
 
     <!-- Scripts -->
 	<script>
+
+		// Variables Globales
+		var sw = 0;
+
 		function start() {
-			//Aqui escribiremos nuestro codigo JavaScript
+
 			var barraProgreso = document.getElementById("barraProgreso");
 			var btnEjecutar = document.getElementById("btnEjecutar");
 			var spanResultado = document.getElementById("txtResultado"); 
+			var btnParar = document.getElementById("btnParar");
 
-			barraProgreso.value = 0;
-
-			btnEjecutar.disabled = true; 
-			btnEjecutar.value = "Ejecutando...";
-
-			var refreshIntervalId = setInterval(function() {
-				//En cada ejecucion se comprueba si hemos llegado al 100%, //si no es asi, sumamos 1 y seguimos:
-				if (barraProgreso.value < 100){
-					barraProgreso.value = barraProgreso.value + 1;
-				} else {
-					//En caso contrario, habilitamos el boton de ejecucion y //modificamos su texto:
-					btnEjecutar.disabled = false;
-					btnEjecutar.value = "Ejecutar de nuevo";
-					//Detenemos la ejecucion de setInterval: clearInterval(refreshIntervalId);
-				}
-				txtResultado.innerHTML = barraProgreso.value + "%"; }, 50);
+			if (btnEjecutar.value == "Ejecutar de nuevo") {
+				barraProgreso.value = 0;
 			}
+
+			// Switch Parar/Continuar
+			if (sw == 0) {
+				sw = 1;
+				btnEjecutar.value = " Parar    ";
+			} else {
+				sw=0;
+				btnEjecutar.value = " Continuar";
+			}
+			
+			var refreshIntervalId = setInterval(function() {
+				if (barraProgreso.value < 100){
+					if (sw == 1){
+						barraProgreso.value = barraProgreso.value + 1;
+					} else {
+						barraProgreso.value = barraProgreso.value;
+					}
+				} else {
+					btnEjecutar.value = "Ejecutar de nuevo";
+					sw = 0;
+				}
+				spanResultado.innerHTML = barraProgreso.value + "%"; 
+			}, 100);
+		    
+		}
 	</script>
 
 
@@ -51,17 +67,17 @@
 <body>
 
 
+	<h1>Barra de progreso HTML5</h1>
     <!-- Formulario -->
     <form>
-		<input id="btnEjecutar" type="button" value="Ejecutar" onclick="start();" /> <progress id="barraProgreso" value="0" max="100"></progress>
-		<span id="txtResultado" />
+
+			<input id="btnEjecutar" type="button" value="Ejecutar" onclick="start();" /> 
+			<progress id="barraProgreso" value="0" max="100"></progress>
+			<span id="txtResultado" />
+
 	</form>
 	
-	<!-- Footer -->
-	<address>
-	Web desarrollada <time>2015-11-05 13:58</time> por <a href="mailto:jcheca@uco.es">José Checa Claudel</a>.<br>
-	<a href="http://www.uco.es" target="_blank">Universidad de C&oacute;rdoba</a>, Espa&ntilde;a
-	</address>
+
 
 </body>
 </html>
