@@ -5,36 +5,21 @@
 	<meta charset="UTF-8">
 	<title>Ejercicio: ej04-progress [05.11.15]</title>
 
-    <!-- Estilos -->
-	<style>
-		mark {
-			background:lime;
-		}
-		time {
-			color: red;
-		}
-		div {
-			color:#0000FF;
-			width: 500px;
-		}
-	</style>
-
     <!-- Scripts -->
 	<script>
 
 		// Variables Globales
 		var sw = 0;
 
+		// Inicio del progreso
 		function start() {
 
 			var barraProgreso = document.getElementById("barraProgreso");
 			var btnEjecutar = document.getElementById("btnEjecutar");
 			var spanResultado = document.getElementById("txtResultado"); 
-			var btnParar = document.getElementById("btnParar");
 
-			if (btnEjecutar.value == "Ejecutar de nuevo") {
-				barraProgreso.value = 0;
-			}
+			// Inicio del valor a 0 del progreso.
+			if (btnEjecutar.value == "Ejecutar de nuevo") { barraProgreso.value = 0;}
 
 			// Switch Parar/Continuar
 			if (sw == 0) {
@@ -45,6 +30,7 @@
 				btnEjecutar.value = " Continuar";
 			}
 			
+			// Progreso.
 			var refreshIntervalId = setInterval(function() {
 				if (barraProgreso.value < 100){
 					if (sw == 1){
