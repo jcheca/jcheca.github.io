@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicio: ej06-form-input-datalist [10.11.15]</title>
+	<style>
+		div {
+			color:#0000FF;
+			width: 500px;
+		}
+		fieldset {
+			border: 2px dotted #888;
+		}
+	</style>
+</head>
+<body>
+
+	<h1>Formulario</h1>
+
+	<fieldset>
+	<div>
+	<form id="formulario" method="post" novalidate>
+
+		<label for="txtNombre">Nombre:</label>
+		<input id="txtNombre" name="nombre" type="text" size="40" maxlength="40" placeholder="Escriba su nombre..." required autofocus />
+		<p>
+
+		<label for="txtApellidos">Apellidos:</label>
+		<input id="txtApellidos" name="apellidos" type="text" size="80" maxlength="80" placeholder="Escriba sus dos apellidos..." required/>
+		<p>
+
+		<label for="txtEmail">Correo electr&oacute;nico:</label>
+		<input id="txtEmail" name="email" type="text" size="80" maxlength="80" placeholder="Escriba su correo electr&oacute;nico..." required/>
+		<p>
+
+		<label for="txtFecha">Fecha Nacimiento:</label>
+		<input id="txtFecha" name="fecha" type="date" size="80" maxlength="80" required/>
+		<p>
+
+		<label for="txtURL">URL:</label>
+		<input id="txtURL" name="url" type="url" size="80" maxlength="80" required/>
+		<p>
+
+		<label for="textNavegador">Seleccione su navegador favorito:</label>
+		<input type="text" id="textNavegador" name="navegador" list="navegadores" required/>
+￼￼￼￼￼￼￼ <datalist id="navegadores">
+			<option value="Chrome">
+			<option value="Edge">
+			<option value="Firefox">
+			<option value="Internet Explorer"> <option value="Opera">
+			<option value="Safari"> 
+		</datalist>
+		<p>
+
+		<label for="txtColor">URL:</label>
+		<input id="txtColor" name="color" type="color" size="80" maxlength="80" required/>
+		<p>
+
+		<input id="btnSubmit" type="submit" value="Enviar formulario" />
+		<input id="btnReset" type="reset" value="Reiniciar formulario" />
+
+	</form>
+</div>
+	</fieldset>
+
+
+</body>
+</html>

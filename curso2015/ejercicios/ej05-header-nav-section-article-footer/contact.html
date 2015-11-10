@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="Guía Literaria">
+	<meta name="keywords" content="Guia, Literaria, Córdoba">
+	<meta name="author" content="Curso HTML/CSS/JS 2015">
+	<title>Guía Literaria de Córdoba</title>
+	<link href="styles/estilos.css" rel="stylesheet" />
+	<link href="media/favicon.ico" rel="icon" />
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script>
+	//Scripts exclusivos de este documento (no globales):
+	$(document).ready(function(){
+		$("#formulario").submit(function(){
+			/* Ocultamos las capas de los mensajes de error */
+			$("#errorTxtNombre").hide();
+			$("#errorTxtApellidos").hide();
+			$("#errorTxtEmail").hide();
+			$("#errorTxtEmailRepite").hide();
+			$("#errorTxtComentarios").hide();
+
+			/* Validamos el campo nombre: */
+			if($("#txtNombre").val() == '') {
+				$("#errorTxtNombre").html("Debe indicar su nombre");
+				$("#errorTxtNombre").fadeIn();
+				$("#txtNombre").focus();
+				return false;
+			}
+
+			/* Validar el campo apellidos: */
+			if($("#txtApellidos").val() == '') {
+				$("#errorTxtApellidos").html("Debe indicar sus apellidos");
+				$("#errorTxtApellidos").fadeIn();
+				$("#txtApellidos").focus();
+				return false;
+			}
+
+			/* Validar el campo correo electronico: */
+			if($("#txtEmail").val() == '') {
+				$("#errorTxtEmail").html("Debe indicar su correo electr&oacute;nico");
+				$("#errorTxtEmail").fadeIn();
+				$("#txtEmail").focus();
+				return false;
+			}
+
+			/* Validar el campo correo electronico (repite) */
+			if($("#txtEmailRepite").val() == '') {
+				$("#errorTxtEmailRepite").html("Debe indicar de nuevo su correo electr&oacute;nico");
+				$("#errorTxtEmailRepite").fadeIn();
+				$("#txtEmailRepite").focus();
+				return false;
+			}
+
+			/* Comprueba que txtEmail y txtEmailRepite contienen el mismo valor */
+			// Tarea :-)
+            if($("#txtEmailRepite").val() != $("#txtEmail").val()) {
+            	$("#errorTxtEmailRepite").html("No coinciden los correos introducidos");
+            	$("#errorTxtEmailRepite").fadeIn();
+            	$("#txtEmail").focus();
+            	return false;
+            }
+
+			/* Validar el campo comentarios: */				
+			if($("#txtComentarios").val() == '') {
+				$("#errorTxtComentarios").html("El campo comentarios es obligatorio");
+				$("#errorTxtComentarios").fadeIn();
+				$("#txtComentarios").focus();
+				return false;
+			}
+		});
+	});
+	</script>
+	<style>
+		<!-- Estilos exclusivos de este documento (no son globales) -->
+		label {
+			display:inline-block; 
+			width: 200px;
+			text-align:right;
+		}
+		input, label, textarea {
+			margin:5px;
+		}
+		input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
+			background:#ffa;
+		}
+		input[type='submit'] {
+			margin:20px 0 20px 200px;
+		}
+		label.requerido {
+			font-weight:bold;
+		}
+		fieldset {
+			border: 2px dotted #888;
+		}
+		legend {
+			background:white;
+		}
+		div {
+			color:red;
+			background:pink;
+			padding:5px 15px;
+			border-left:5px;
+			display:none;
+			border-radius:20px;
+			margin-left:200px;
+		}
+		label {
+			vertical-align:top;
+		}
+	</style>
+</head>
+<body>
+
+<noscript>Su navegador no soporta o tiene bloqueado JavaScript.</noscript>
+
+<!-- NOTA: Use http://youtubeinmp4.com/ para descargar un video de youtube en formato mp4 -->
+
+<!-- Main header -->
+<header>
+	<h1>Guía Literaria de Córdoba</h1>
+</header>
+
+<!-- Menu -->
+<nav>
+	<ul class="menu">
+		<li><a href="index.html" class="selected">Inicio</a></li>
+		<li><a href="images.html">Imágenes</a></li>
+		<li><a href="videos.html">Teleflims</a></li>
+		<li class="current"><a href="contact.html">Quienes somos ?</a></li>
+	</ul>
+</nav>
+
+<!-- Main content -->
+<h2>Formulario de contacto</h2>
+<p>Si desea contactar con nosotros, rellene los siguientes campos:</p>
+<fieldset>
+<legend>Formulario de registro:</legend>
+	<form id="formulario" method="post" novalidate>
+		<label class="requerido" for="txtNombre">Nombre:</label>
+		<input id="txtNombre" name="nombre" type="text" size="40" maxlength="40" placeholder="Escriba su nombre..." required autofocus />
+		<div id="errorTxtNombre"></div>
+		<br />
+		<label class="requerido" for="txtApellidos">Apellidos:</label>
+		<input id="txtApellidos" name="apellidos" type="text" size="80" maxlength="80" placeholder="Escriba sus dos apellidos..." required/>
+		<div id="errorTxtApellidos"></div>
+		<br />
+		<label class="requerido" for="txtEmail">Correo electr&oacute;nico:</label>
+		<input id="txtEmail" name="email" type="text" size="80" maxlength="80" placeholder="Escriba su correo electr&oacute;nico..." required/>
+		<div id="errorTxtEmail"></div>
+		<br />
+		<label class="requerido" for="txtEmailRepite">Repita correo electr&oacute;nico:</label>
+		<input id="txtEmailRepite" name="emailrepite" type="text" size="80" maxlength="80" placeholder="Escriba su correo electr&oacute;nico..." required/>
+		<div id="errorTxtEmailRepite"></div>
+		<br />
+		<label class="requerido" for="txtComentarios">Comentarios:</label>
+		<textarea id="txtComentarios" name="comentarios" placeholder="Escriba sus comentarios" rows="6" cols="70" required></textarea>
+		<div id="errorTxtComentarios"></div>
+		<br />
+		<input id="btnSubmit" type="submit" value="Enviar formulario" />
+		<input id="btnReset" type="reset" value="Reiniciar formulario" />
+	</form>
+</fieldset>
+
+<!-- Footer -->
+<footer>
+	<address>
+	Web desarrollada por <a href="mailto:jcheca@uco.es">José Checa Claudel</a>.<br>
+	<a href="http://www.uco.es" target="_blank">Universidad de C&oacute;rdoba</a>, Espa&ntilde;a
+	</address>
+</footer>
+
+</body>
+</html>
