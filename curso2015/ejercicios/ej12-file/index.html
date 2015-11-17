@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicio: ej12-file [17.11.15]</title>
+
+	<style>
+		#zonaDrop {
+			background: #ffff00;
+			width: 500px;
+			height: 30px;
+			padding:10px;
+			margin:10px;
+		}
+		table {
+			border-collapse: collapse;
+		}
+		td, th {
+			border: 1px solid #888; padding: 5px;
+			width: 100px;
+			height: 30px;
+		}
+
+	</style>
+
+
+</head>
+<body>
+
+	<h1>File (API).</h1>
+
+	<input type="file" id="files" name="files[]" multiple /> 
+	<div id="zonaDrop">Suelta los ficheros aqu&iacute;</div>
+	<div id="salida"></div>
+
+	<script>
+		var divSalida = document.getElementById("salida");
+
+		function capturaSeleccionFicheros(evento) {
+
+			if (window.File && window.FileReader && window.FileList && window.Blob) {
+				
+				//devuelve objeto de tipo FileList
+				var arrayFicheros = evento.target.files;
+				var textoSalida;
+
+				if(arrayFicheros.length == 0) {
+					textoSalida = "No ha seleccionado ningún fichero";
+				} else {
+					textoSalida = "Ficheros seleccionados:";
+					textoSalida += "<table><thead><th>Nombre</th><th>Tipo</th><th>bytes</th><th>Modificado</th></thead>"; 
+					for (var i = 0, fichero; fichero=arrayFicheros[i]; i++) {
+						textoSalida += "<tr>";
+						textoSalida += "<td>"+fichero.name+"</td>";
+						textoSalida += "<td>"+fichero.type+"</td>";
+						textoSalida += "<td>"+fichero.size+"</td>";
+						textoSalida += "<td>"+fichero.lastModifiedDate.toLocaleDateString()+"</td>";
+						textoSalida += "</tr>";
+					}
+					textoSalida += "</table>";
+					divSalida.innerHTML = textoSalida;
+				}
+
+			} else {
+				divSalida.innerHTML = "Su navegador no soporta la API File.";
+			}	
+
+		}
+
+
+
+		function capturaSoltarFicheros(evento) {
+
+
+
+			if (window.File && window.FileReader && window.FileList && window.Blob) {
+				
+				evento.stopPropagation(); 
+				evento.preventDefault();
+
+				//devuelve objeto de tipo FileList
+				var arrayFicheros = evento.dataTransfer.files;
+				var textoSalida;
+
+				if(arrayFicheros.length == 0) {
+					textoSalida = "No ha seleccionado ningún fichero";
+				} else {
+					textoSalida = "Ficheros seleccionados:";
+					textoSalida += "<table><thead><th>Nombre</th><th>Tipo</th><th>bytes</th><th>Modificado</th></thead>"; 
+					for (var i = 0, fichero; fichero=arrayFicheros[i]; i++) {
+						textoSalida += "<tr>";
+						textoSalida += "<td>"+fichero.name+"</td>";
+						textoSalida += "<td>"+fichero.type+"</td>";
+						textoSalida += "<td>"+fichero.size+"</td>";
+						textoSalida += "<td>"+fichero.lastModifiedDate.toLocaleDateString()+"</td>";
+						textoSalida += "</tr>";
+					}
+					textoSalida += "</table>";
+					divSalida.innerHTML = textoSalida;
+				}
+
+			} else {
+				divSalida.innerHTML = "Su navegador no soporta la API File.";
+			}	
+
+
+
+
+
+
+		}
+
+		function capturaDragOver(evento) {
+			evento.stopPropagation();
+			evento.preventDefault();
+			evento.dataTransfer.dropEffect = 'copy'; //Muestra que es una copia.
+		}
+
+
+		/* Agrega un listener al input de tipo seleccion de ficheros */
+		document.getElementById("files").addEventListener("change", capturaSeleccionFicheros, false);
+
+		var dropZone = document.getElementById("zonaDrop");
+		dropZone.addEventListener("dragover", capturaDragOver, false);
+		dropZone.addEventListener("drop", capturaSoltarFicheros, false);
+
+	</script>
+
+
+
+</body>
+</html>

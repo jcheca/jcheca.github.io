@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicio: ej11-drag-an-drop [17.11.15]</title>
+
+	<script>
+		function allowDrop(ev) {
+			ev.preventDefault(); 
+		}
+		function drag(ev) { 
+			ev.dataTransfer.setData("text", ev.target.id);
+		}
+		function drop(ev) {
+			ev.preventDefault();
+			var data = ev.dataTransfer.getData("text"); ev.target.appendChild(document.getElementById(data));
+		}
+</script>
+
+	<style>
+
+		table, th, td {
+    		border: 1px solid black;
+    		
+		}
+
+		th, td {
+			width: 50px;
+			height: 50px;
+		}
+
+	</style>
+
+
+</head>
+<body>
+
+	<h1 ondrop="drop(event)" ondragover="allowDrop(event)">Drag&Drop.</h1>
+
+	<p ondrop="drop(event)" ondragover="allowDrop(event)" >Parrafo.</p>
+
+	<ul>
+		<li ondrop="drop(event)" ondragover="allowDrop(event)">Elemento 1</li>
+		<li ondrop="drop(event)" ondragover="allowDrop(event)">Elemento 2</li>
+		<li ondrop="drop(event)" ondragover="allowDrop(event)">Elemento 3</li>
+		<li ondrop="drop(event)" ondragover="allowDrop(event)">Elemento 4</li>
+	</ul>
+
+	<table>
+		<tr>
+			<td ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+			<td ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+			<td ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+		</tr>
+		<tr>
+			<td ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+			<td ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+			<td ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+		</tr>
+		<tr>
+			<td ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+			<td ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+			<td ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+		</tr>
+	</table>
+
+
+	<p><img id="uco" src="images/uco.jpeg" draggable="true" ondragstart="drag(event)">
+
+
+</body>
+</html>

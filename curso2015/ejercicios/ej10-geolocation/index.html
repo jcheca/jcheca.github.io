@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicio: ej10-geolocation [17.11.15]</title>
+
+	<script>
+		function loadLocation() { 
+
+			var msg = document.getElementById("mensaje"); 
+			msg.innerHTML = "Cargando...";
+			//Comprueba si el navegador soporta geolocalizacion: 
+			if (navigator.geolocation) {
+				//Si obtiene las coordenadas, invocara a la
+				//funcion success, en caso contrario a error: 
+				navigator.geolocation.getCurrentPosition(success, error);
+			} else {
+				msg.innerHTML = "Oops! Su navegador no soporta geolocalizaci&oacute;n.";
+
+		 	}
+		}
+
+		function error(err) {
+			var msg = document.getElementById("mensaje");
+			switch(err.code) {
+
+				case 0:
+					msg.innerHTML = "Oops! Algo ha salido mal"; 
+					break;
+				case 1:
+					msg.innerHTML = "Oops! No has aceptado compartir tu posici&oacute;n"; 
+					break;
+				case 2:
+					msg.innerHTML = "Oops! No se puede obtener la posici&oacute;n actual"; 
+					break;
+				case 3:
+					msg.innerHTML = "Oops! Hemos superado el tiempo de espera"; 
+					break;
+
+			}
+
+		} 
+
+
+		function success(position) {
+			var msg = document.getElementById("mensaje"); 
+			//Agregamos en la capa mensaje otra capa con las //coordenadas latitud/longitud:
+			msg.innerHTML = "<ul>" + "<li>Latitud: "+ position.coords.latitude +"</li>"+ "<li>Longitud: "+ position.coords.longitude +"</li>"+"<li>TimeStamp: "+position.timestamp + "</ul>";
+
+			var img = new Image();
+			img.src = "http://maps.googleapis.com/maps/api/staticmap?maptype=hybrid&center=" + position.coords.latitude + "," + position.coords.longitude + "&zoom=17&size=500x300&sensor=false" + "&markers=label:A%7Ccolor:0xffff00%7C" + position.coords.latitude + "," + position.coords.longitude;
+			msg.appendChild(img);
+
+
+			var imgstreet = new Image();
+			imgstreet.src = "https://maps.googleapis.com/maps/api/streetview?size=600x300&location="+position.coords.latitude+","+position.coords.longitude +"&zoom=17&size=500x300&heading=250&pitch=-0.76";
+			msg.appendChild(imgstreet);
+
+
+		}
+
+
+
+	</script>
+
+</head>
+<body>
+
+	<h1>Geolocation.</h1>
+
+	<button onclick="loadLocation()">Cargar tu posici&oacute;n</button>
+	<div id="mensaje" style="margin-top:10px;"></div>
+
+
+</body>
+</html>
