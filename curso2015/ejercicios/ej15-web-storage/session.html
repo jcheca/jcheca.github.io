@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<title>Ejercicio: ej15-web-storage (sessionStorage) [19.11.15]</title>
+<style>
+table, p {
+	border-collapse: collapse;
+	margin-top:20px;
+}
+p {
+	color:brown;
+}
+th {
+	background:gold;
+}
+th, td {
+	border:1px solid #999;
+	padding:5px 10px;
+}
+.colNum{
+	background:#eee;
+	color:#555;
+}
+.col1{
+	width:300px;
+}
+.col2{
+	width:300px;
+}
+.col3{
+	width:50px;
+	text-align: center;
+}
+.col3 a{
+	color:red;
+	text-decoration:none;
+}
+</style>
+<script>
+/* Array que usaremos para almacenar los contactos en el almacen local */
+var arrayContactos = [];
+
+/* El siguiente metodo se ejecuta al cargar la pagina (se invoca al final de esta pagina) */
+function cargarContactosDesdesessionStorage() {
+    if(typeof(Storage) !== "undefined") {
+		if (sessionStorage.getItem("contactosAlmacenados") !== null) {
+			/* Si hay datos en el almacen entonces los cargamos en el array */
+			arrayContactos = JSON.parse(sessionStorage.getItem("contactosAlmacenados"));
+		}
+	}
+	/* Repintamos el listado */
+	pintarTablaDeContactos();
+}
+
+/*
+ * Agrega los datos de un nuevo contacto al almacen local:
+ */
+function agregarNuevoContacto() {
+	/* Obtenemos la referencia de las cajas de texto nombre y correo-e */
+	var inputNombre = document.getElementById("palabra");
+
+	/* Creamos un array donde los dos elementos seran el nombre y el correo-e */
+	var contact = [inputNombre.value];
+	
+	/* Agregamos el contacto al array */
+	arrayContactos.push(contact);
+	/* Actualizamos el valor contact almacenado en el navegador */
+    if(typeof(Storage) !== "undefined") {
+		sessionStorage.setItem("contactosAlmacenados", JSON.stringify(arrayContactos));
+	}
+	/* Repintamos el listado de contactos */
+	pintarTablaDeContactos();
+
+	/* Vaciamos el contenido de las cajas de texto */
+	inputNombre.value = "";
+
+}
+
+/*
+ * Elimina un contacto del almacen local:
+ */
+function borrarContacto(index) {
+	arrayContactos.splice(index, 1); //Borra 1 elemento a partir de la posicion index
+    if(typeof(Storage) !== "undefined") {
+		/* Refrescamos el valor del almacen con el array modificado en la 
+		   primera instruccion de este metodo */
+		sessionStorage.setItem("contactosAlmacenados", JSON.stringify(arrayContactos));
+	}
+	/* Repintamos el listado de contactos */
+	pintarTablaDeContactos();
+}
+
+/* Limpia el array y el almacen local de contactos */
+function borrarTodosLosContactos() {
+	/* Inicializamos el array */
+	arrayContactos = [];
+    if(typeof(Storage) !== "undefined") {
+		/* Eliminamos la entrada del almacen */
+		sessionStorage.removeItem("contactosAlmacenados");
+	}
+	/* Repintamos el listado de contactos */
+	pintarTablaDeContactos();
+}
+
+/* Genera el codigo HTML de una tabla con todos los contactos
+   existentes en el almacen local */
+function pintarTablaDeContactos() {
+	var html = "";
+	if(arrayContactos !== null && arrayContactos.length > 0) {
+		html = "<ol>";
+		/* Cada elemento de este array es otro array de dos elementos:
+			- Elemento 0: nombre 
+			- Elemento 1: email */
+		for	(i=0; i<arrayContactos.length; i++) {
+			html += "<li>"+arrayContactos[i][0]+"&nbsp;<a href=\"#\" onclick=\"borrarContacto(" + i + ");\">(Borrar)</a></li>";
+		}
+		html += "</ol>";
+	} else {
+		html = "<p>No hay palabras en el almac&eacute;n local</p>";
+	}
+	/* Sobreescribimos el codigo HTML existente dentro de la capa por el codigo HTML almacenado en la variable html */
+	document.getElementById("divListadoContactos").innerHTML = html;
+	
+	/* Situamos el foco en la caja de texto para indicar el nombre */
+	document.getElementById("palabra").focus();
+}
+</script>
+
+</head>
+
+<body onload="cargarContactosDesdesessionStorage();" >
+
+<h1>Almacenamiento Session de Palabras</h1>
+<form onsubmit="agregarNuevoContacto(); return(false);">
+	<label for="palabra">Palabra:</label>
+	<input id="palabra" type="text" required />
+	
+
+	<input type="submit" value="A&ntilde;adir palabra"/>
+	<input type="reset" value="Reiniciar listado" onclick="borrarTodosLosContactos();"/>
+</form>
+
+<div id="divListadoContactos"></div>
+
+</body>
+</html>
+
+	

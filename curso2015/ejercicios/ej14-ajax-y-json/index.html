@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicio: ej14-ajax-y-json [19.11.15]</title>
+
+	<style>
+		table {
+			border-collapse: collapse;
+		}
+		td, th {
+			border: 1px solid #000000; padding: 5px;
+			width: 100px;
+			height: 30px;
+			text-align: center;
+		}
+		thead {
+			background: orange;
+		}
+
+	</style>
+
+
+</head>
+<body>
+
+	<h1>Ejemplo JSON</h1>
+	<div id="salida"></div>
+	
+	<script>
+
+		var obj;
+		var divSalida = document.getElementById("salida");
+		var salida;
+
+		function cargarDatosFicheroJson() {
+			var httpRequest;
+			if (window.XMLHttpRequest) {
+				httpRequest = new XMLHttpRequest(); /* Instanciamos un objeto XMLHttpRequest */
+			} else {
+				/* Codigo para IE5 e IE6 */
+				httpRequest = new ActiveXObject("Microsoft.XMLHTTP");
+			}
+			/* Bloque de codigo existente porque hemos especificado mas abajo que la ejecucion es asincrona */ 
+			httpRequest.onreadystatechange = function() {
+				if (httpRequest.readyState == 4 && httpRequest.status == 200) {
+					/* La siguiente linea se ejecutara cuando el servidor este listo */ 
+					obj = JSON.parse(httpRequest.responseText);
+					/* Una vez cargados los datos procedemos al pintado de la tabla */ 
+					// pintarTablaConDatosJson();
+					// alert(obj[2].nombre);
+				} 
+			};
+			/* Para enviar la peticion al servidor usaremos los metodos open() y send() del objeto XMLHttpRequest: */
+			httpRequest.open("GET", "usuarios.json", true); httpRequest.send();
+		}
+
+
+
+
+
+		/* Objeto JSON definido en un string 
+		var text = '{ "usuarios" : [' +
+			'{"nombre":"Luke Skywalker","email":"luke.skywalker@uco.es","edad":45,"activo": true },' +
+			'{"nombre":"Homer Simpson", "email":"homer.simpson@uco.es","edad":18,"activo":false },' +
+			'{"nombre":"Michael Jordan", "email":"michael.jordan@uco.es","edad":70,"activo":true }' +
+		']}';
+
+		/* Conversion texto a objeto JSON
+		var obj = JSON.parse(text);
+		*/
+
+		/* Definición objeto JSON en JS
+		var obj = {"usuarios": [
+        	{"nombre":"Luke Skywalker","email":"luke.skywalker@uco.es","edad":45,"activo": true },
+        	{"nombre":"Homer Simpson", "email":"homer.simpson@uco.es","edad":18,"activo":false },
+        	{"nombre":"Michael Jordan", "email":"michael.jordan@uco.es","edad":70,"activo":true}
+    	]
+		};
+		*/
+
+		cargarDatosFicheroJson();
+		alert(obj[0].nombre);
+		
+
+		/* Genera los resultados */
+		salida = "<table><thead><th>Nombre</th><th>email</th><th>Edad</th><th>Activo</th></thead>";
+		for (var i = 0; i < obj.usuarios.length; i++) {
+			salida += "<tr>";
+			salida += "<td>"+obj.usuarios[i].nombre+"</td>";
+			salida += "<td><a href='mailto:"+obj.usuarios[i].email+"'>"+obj.usuarios[i].email+"</td>";
+			salida += "<td>"+obj.usuarios[i].edad+"</td>";
+			salida += "<td>"+obj.usuarios[i].activo+"</td>";
+			salida += "</tr>";
+		};
+		salida += "</table>";
+
+		/* Inyectar los resultados al objeto DOM correspondiente */
+		divSalida.innerHTML = salida;
+
+	</script>
+
+
+</body>
+</html>

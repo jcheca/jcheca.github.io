@@ -1,0 +1,5 @@
+[
+{"nombre":"Luke Skywalker","email":"luke.skywalker@uco.es","edad":45,"activo":true},
+{"nombre":"Homer Simpson","email":"homer.simpson@uco.es","edad":18,"activo":false},
+{"nombre":"Michael Jordan","email":"michael.jordan@uco.es","edad":70,"activo":true}
+]
