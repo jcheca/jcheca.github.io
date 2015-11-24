@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="Javier Fuentes Alventosa">
+	<title>Selectores CSS</title>
+	<link rel="stylesheet" type="text/css" href="styles/common.css">
+	<style>
+	input:invalid {
+		border:2px solid red;
+		background:pink;
+	}
+	input:valid {
+		border:2px solid green;
+		background:lime;
+	}
+	</style>
+</head>
+<body>
+
+<header>
+	<h1>Selector <span>CSS3</span></h1>
+	<h2><code><dfn>:invalid</dfn></code> y <code><dfn>:valid</dfn></code>: Seleccionan respectivamente todos los elementos <code>&lt;input&gt;</code> con contenidos correctos e incorrectos.</h2>
+	<p><code>input:invalid</code> e <code>input:valid</code>: Seleccionan respectivamente todos los elementos <code>&lt;input&gt;</code> con contenidos correctos e incorrectos:</p>
+</header>
+
+<form>
+	<p><label for="e-mail">E-mail:</label>
+		<input id="e-mail" type="email" value="email-incorrecto"></p>
+	<p><label for="url">URL:</label>
+		<input id="url" type="url" value="url-incorrecta"></p>
+</form>
+
+</body>
+</html>

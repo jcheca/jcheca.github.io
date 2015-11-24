@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="Javier Fuentes Alventosa">
+	<title>Selectores CSS</title>
+	<link rel="stylesheet" type="text/css" href="styles/common.css">
+	<style>
+	a:visited {
+		background:#ffa;
+		color:red;
+		font-weight:bold;
+		border:1px dashed brown;
+		padding:5px;
+	}
+	</style>
+</head>
+<body>
+
+<header>
+	<h1>Selector <span>CSS1</span></h1>
+	<h2><code><dfn>:visited</dfn></code>: Selecciona todos aquellos enlaces <code>&lt;a&gt;</code> que ya han sido visitados por el usuario.</h2>
+	<p><code>[a:visited]</code>: Selecciona todos aquellos enlaces <code>&lt;a&gt;</code> que ya han sido visitados por el usuario:</p>
+	<p>Nota: Por motivos de seguridad, los navegadores limitan los estilos que se pueden aplicar a los enlaces a:visited links.</p>
+</header>
+
+<p><a href="http://www.uco.es">Universidad de C&oacute;rdoba</a></p>
+<p><a href="http://www.uco.es/pas.html">Portal del PAS de la UCO</a></p>
+<p><a href="http://www.uco.es/investigacion/">Portal del Investigador de la UCO</a></p>
+
+</body>
+</html>

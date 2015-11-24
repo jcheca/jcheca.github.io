@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="Javier Fuentes Alventosa">
+	<title>Selectores CSS</title>
+	<link rel="stylesheet" type="text/css" href="styles/common.css">
+	<style>
+	input:out-of-range {
+		border:2px solid red;
+		background:pink;
+	}
+	input:in-range {
+		border:2px solid yellow;
+		background:#ffa;
+	} 
+	</style>
+</head>
+<body>
+
+<header>
+	<h1>Selector <span>CSS3</span></h1>
+	<h2><code><dfn>:out-of-range</dfn></code> y <code><dfn>:in-range</dfn></code>: Seleccionan respectivamente todos los elementos fuera y dentro del rango definido en los elementos <code>&lt;input&gt;</code>.</h2>
+	<p><code>input:out-of-range</code> e <code>input:in-range</code>: Seleccionan respectivamente todos los elementos fuera (rojo) y dentro (amarillo) del rango definido en los elementos <code>&lt;input&gt;</code>:</p>
+</header>
+
+<form>
+	<p><label for="num1">N&uacute;mero entre 5 y 10:</label>
+	<input id="num1" type="number" min="5" max="10" value="7"></p>
+</form>
+
+</body>
+</html>

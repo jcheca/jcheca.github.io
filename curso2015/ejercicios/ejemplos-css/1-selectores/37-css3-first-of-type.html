@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="Javier Fuentes Alventosa">
+	<title>Selectores CSS</title>
+	<link rel="stylesheet" type="text/css" href="styles/common.css">
+	<style>
+	div {
+		background:#dfd;
+		padding:5px;
+	}
+	p:first-of-type { 
+		background:#ffa;
+		color:red;
+		font-weight:bold;
+		border:1px dashed brown;
+		padding:5px;
+	}
+	</style>
+</head>
+<body>
+
+<header>
+	<h1>Selector <span>CSS3</span></h1>
+	<h2><code><dfn>:first-of-type</dfn></code>: Selecciona el primer elemento dentro de cada contenedor padre.</h2>
+	<p><code>p:first-of-type</code>: Selecciona el primer elemento <code>&lt;p&gt;</code> dentro de cada contenedor padre:</p>
+</header>
+
+<p>P&aacute;rrafo 1</p>
+<p>P&aacute;rrafo 2</p>
+<p>P&aacute;rrafo 3</p>
+
+<div>Capa 1
+	<p>P&aacute;rrafo 1 de la Capa 1</p>
+	<p>P&aacute;rrafo 2 de la Capa 1</p>
+	<p>P&aacute;rrafo 3 de la Capa 1</p>
+</div>
+
+<p>P&aacute;rrafo 4</p>
+
+</body>
+</html>

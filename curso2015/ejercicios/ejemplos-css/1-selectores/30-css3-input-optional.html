@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="Javier Fuentes Alventosa">
+	<title>Selectores CSS</title>
+	<link rel="stylesheet" type="text/css" href="styles/common.css">
+	<style>
+	input:optional {
+		background:#ffa;
+		color:red;
+		font-weight:bold;
+		border:1px dashed brown;
+		padding:5px;
+	}
+	</style>
+</head>
+<body>
+
+<header>
+	<h1>Selector <span>CSS3</span></h1>
+	<h2><code><dfn>:optional</dfn></code>: Selecciona todos los elementos <code>&lt;input&gt;</code> que no son requeridos.</h2>
+	<p><code>input:optional</code>: Selecciona todos los elementos <code>&lt;input&gt;</code> que no son requeridos:</p>
+</header>
+
+<form>
+	<p>	<label for="nombre">Nombre:</label>
+		<input type="text" id="nombre" placeholder="Nombre..." required/></p>
+	<p>	<label for="apellidos">Apellidos:</label>
+		<input type="text" id="apellidos" placeholder="Apellidos..." required /></p>
+	<p>	<label for="correo-e">E-mail:</label>
+		<input type="email" id="correo-e" placeholder="E-mail..." required /></p>
+	<p>	<label for="telefono">Tel&eacute;fono:</label>
+		<input type="number" id="telefono" placeholder="Tel&eacute;fono..."/></p>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicio: ej18-animaciones [24.11.15]</title>
+
+	<style type="text/css">
+	div {
+		width: 150px;
+		height: 150px;
+		background: lightcyan;
+		text-align: center;
+		float: left;
+		border: 1px solid black;
+		position: relative;
+
+		/* Chrome, Safari, Opera */ 
+		-webkit-animation-name: ejemplo; 
+		-webkit-animation-duration: 4s;
+		animation-name: ejemplo;
+		animation-duration: 5s;
+		animation-direction: reverse;
+		animation-iteration-count: infinite;
+
+	}
+	img {
+		width: 100px;
+		height: 100px;
+	}
+	h2 {
+		clear: both;
+	}
+
+	@-webkit-keyframes ejemplo { 
+		/* Chrome, Safari, Opera */
+		0% {background-color:yellow; left:0px; top:0px;} 
+		25% {background-color:red; left:0; top: 200}
+		50% {background-color:green; left:200px; top:200px;} 
+		100% {background-color:blue; left:200px; top:0px;}
+	}
+	@keyframes ejemplo {
+		0% {background-color:yellow; left:0px; top:0px;} 
+		25% {background-color:red; left:0; top: 200}
+		50% {background-color:green; left:200px; top:200px;} 
+		75% {background-color:blue; left:200px; top:0px;}
+	}
+
+	</style>
+
+</head>
+<body>
+
+	<h1>Animaciones (Reverse | Infinite)</h1>
+
+
+	<div><img src="images/pollo.jpg" alt="Pollo"><p>Animate</p></div>
+
+
+
+
+
+
+</body>
+</html>

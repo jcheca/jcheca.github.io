@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="Javier Fuentes Alventosa">
+	<title>Selectores CSS</title>
+	<link rel="stylesheet" type="text/css" href="styles/common.css">
+	<style>
+	div {
+		background:#dfd;
+		padding:5px;
+	}
+	:target {
+ 		background:#ffa;
+		color:red;
+		font-weight:bold;
+		border:1px dashed brown;
+		padding:5px;
+	}
+	</style>
+</head>
+<body>
+
+<header>
+	<h1>Selector <span>CSS3</span></h1>
+	<h2><code><dfn>:target</dfn></code>: Selecciona elemento anclado e invocado.</h2>
+	<p><code>:target</code>: Selecciona elemento anclado e invocado:</p>
+</header>
+
+<p><a href="#parrafo1">Saltar al p&aacute;rrafo 1</a></p>
+<p><a href="#parrafo2">Saltar al p&aacute;rrafo 2</a></p>
+<p><a href="#parrafo3">Saltar al p&aacute;rrafo 3</a></p>
+
+<p id="parrafo1">P&aacute;rrafo 1</span></p>
+<p id="parrafo2">P&aacute;rrafo 2</span></p>
+<p id="parrafo3">P&aacute;rrafo 3</span></p>
+
+</body>
+</html>

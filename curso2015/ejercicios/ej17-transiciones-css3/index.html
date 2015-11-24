@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicio: ej17-transiciones [24.11.15]</title>
+
+	<style type="text/css">
+	div {
+		width: 150px;
+		height: 150px;
+		background: lightcyan;
+		text-align: center;
+		float: left;
+		border: 1px solid black;
+	}
+	img {
+		width: 100px;
+		height: 100px;
+	}
+	h2 {
+		clear: both;
+	}
+
+	#picTranslate:hover {
+		/* IE 9 */
+		-ms-transform: translate(10px,20px);
+		/* Safari */	
+		-webkit-transform: translate(10px, 20px);
+		-webkit-transition: 2s;
+
+		transform: translate(10px,20px);
+		transition: transform 2s;
+	}
+
+	#picRotate:hover {
+		/* IE 9 */
+		-ms-transform: rotate(20deg);
+		/* Safari */	
+		-webkit-transform: translate(20deg);
+		-webkit-transition: 2s;
+
+		transform: rotate(20deg);
+		transition: transform 2s;
+	}
+
+	#picScale:hover {
+		/* IE 9 */
+		-ms-transform: scale(20deg);
+		/* Safari */	
+		-webkit-transform: scale(20deg);
+		transform: scale(1.2,1.5);
+		transition: transform 2s;
+	}
+
+	#picSkew:hover {
+		/* IE 9 */
+		-ms-transform: skew(20deg, 10deg);
+		/* Safari */	
+		-webkit-transform: skew(20deg,10deg);
+		transform: skew(20deg,10deg);
+		transition: transform 2s;
+	}
+
+	#picRotateX:hover {
+		/* IE 9 */
+		-ms-transform: rotateX(25deg);
+		/* Safari */	
+		-webkit-transform: rotateX(25deg);
+		transform: rotateX(25deg);
+		transition: transform 2s;
+
+	}
+
+	#picRotateY:hover {
+		/* IE 9 */
+		-ms-transform: rotateY(25deg);
+		/* Safari */	
+		-webkit-transform: rotateY(25deg);
+		transform: rotateY(25deg);
+		transition: transform 2s;
+
+
+	}
+
+	#picRotateZ:hover {
+		/* IE 9 */
+		-ms-transform: rotateZ(25deg);
+		/* Safari */	
+		-webkit-transform: rotateZ(25deg);
+		transform: rotateZ(25deg);
+		transition: transform 2s;
+
+	}
+
+
+	</style>
+
+</head>
+<body>
+
+	<h1>Transformaciones</h1>
+
+	<h2>Transformaciones 2D</h2>
+	<div><img id="picTranslate" src="images/pollo.jpg" alt="Pollo"><p>Translate</p></div>
+	<div><img id="picRotate" src="images/pollo.jpg" alt="Pollo"><p>Rotate</p></div>
+	<div><img id="picScale" src="images/pollo.jpg" alt="Pollo"><p>Scale</p></div>
+	<div><img id="picSkew" src="images/pollo.jpg" alt="Pollo"><p>Skew</p></div>
+
+
+	<h2>Transformaciones 3D</h2>
+	<div><img id="picRotateX" src="images/pollo.jpg" alt="Pollo"><p>RotateX</p></div>
+	<div><img id="picRotateY" src="images/pollo.jpg" alt="Pollo"><p>RotateX</p></div>
+	<div><img id="picRotateZ" src="images/pollo.jpg" alt="Pollo"><p>RotateZ</p></div>
+
+
+
+
+
+</body>
+</html>

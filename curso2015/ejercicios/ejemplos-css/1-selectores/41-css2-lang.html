@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="Javier Fuentes Alventosa">
+	<title>Selectores CSS</title>
+	<link rel="stylesheet" type="text/css" href="styles/common.css">
+	<style>
+	div {
+		margin:10px;
+	}
+	div:lang(es) { 
+		background:#ffa;
+		color:red;
+		font-weight:bold;
+		border:1px dashed brown;
+		padding:5px;
+	}
+	</style>
+</head>
+<body>
+
+<header>
+	<h1>Selector <span>CSS2</span></h1>
+	<h2><code><dfn>:lang(language)</dfn></code>: Selecciona todos los elementos que contengan el atributo <code>lang</code> con el valor <code>language</code>.</h2>
+	<p><code>p:lang(en)</code>: En este ejemplo, hemos seleccionado todos los elementos <code>&lt;div&gt;</code> que contengan el atributo <code>lang="es"</code>:</p>
+</header>
+
+<div lang="de">Guten Tag</div>
+<div lang="en">Good morning</div>
+<div lang="es">Buenos d&iacute;as</div>
+<div lang="pt">Bom d&iacute;a</div>
+<div lang="it">Buon Giorno</div>
+<div lang="fr">Bonjour</div>
+
+<div>Hola, yo tambi&eacute;n estoy marcado porque en la etiqueta <code>&lt;html&gt;</code> de este documento, se ha marcado el atributo <code>lang="es"</code>. Por lo tanto, por defecto, todos los elementos heredan este atributo.</div>
+
+</body>
+</html>

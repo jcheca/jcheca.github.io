@@ -1,0 +1,38 @@
+header {
+	padding:5px;
+	background:#faffff;
+	color:black;
+	border:4px solid darkblue;
+	font-family:arial;
+	margin-bottom:20px;
+}
+header * {
+	background:#faffff;
+	border:0;
+	color:black;
+}
+header h1 {
+	margin-top:0;
+}
+header h2, header p {
+	font-weight:normal;
+}
+header h2 code, header p code {
+	font-weight:bolder;
+}
+header h2 {
+	font-size:14pt;
+}
+header h2 code dfn {
+	font-size:17pt;
+	color:darkblue;
+}
+header h2 code {
+	font-size:16pt;
+}
+header p {
+	font-size:12pt;
+}
+header p code {
+	font-size:14pt;
+}

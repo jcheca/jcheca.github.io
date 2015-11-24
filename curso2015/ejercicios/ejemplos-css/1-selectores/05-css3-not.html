@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="Javier Fuentes Alventosa">
+	<title>Selectores CSS</title>
+	<link rel="stylesheet" type="text/css" href="styles/common.css">
+	<style>
+	div {
+		margin-bottom:10px;
+	}
+	div:not(.importante) {
+		background:#ffa;
+		color:red;
+		font-weight:bold;
+		border:1px dashed brown;
+		padding:5px;
+	}
+	</style>
+</head>
+<body>
+
+<header>
+	<h1>Selector <span>CSS3</span></h1>
+	<h2><code><dfn>:not(selector)</dfn></code>: Selecciona todos los elementos que no cumplan la condici&oacute;n del <code>selector</code>.</h2>
+	<p><code>div:not(.importante)</code>: Selecciona todos los elementos <code>&lt;div&gt;</code> que no contengan el atributo <code>class="importante"</code>:</p>
+</header>
+
+<p class="importante">P&aacute;rrafo con atributo <code>class="importante"</code>.</p>
+<p>P&aacute;rrafo sin atributo <code>class="importante"</code>.</p>
+
+<div class="importante">Capa <code>&lt;div&gt;</code> con atributo <code>class="importante"</code>.</div>
+<div>Capa <code>&lt;div&gt;</code> sin atributo <code>class="importante"</code>.</div>
+
+</body>
+</html>

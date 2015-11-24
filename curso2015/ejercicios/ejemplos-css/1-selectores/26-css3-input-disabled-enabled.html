@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="Javier Fuentes Alventosa">
+	<title>Selectores CSS</title>
+	<link rel="stylesheet" type="text/css" href="styles/common.css">
+	<style>
+	input[type="text"]:enabled {
+		background:#ffa;
+		color:red;
+		font-weight:bold;
+		border:1px dashed brown;
+		padding:5px;
+	}
+	input[type=text]:disabled {
+		background:black;
+	}
+	</style>
+</head>
+<body>
+
+<header>
+	<h1>Selector <span>CSS3</span></h1>
+	<h2><code><dfn>:enabled</dfn></code> y <code><dfn>:disabled</dfn></code>: Seleccionan todos los elementos <code>&lt;input&gt;</code> que est&eacute;n habilitados y deshabilitados respectivamente.</h2>
+	<p><code>input[type="text"]:enabled</code> y <code>input[type="text"]:disabled</code>: Seleccionan todos los elementos <code>&lt;input&gt;</code> de tipo <code>"text"</code>que est&eacute;n habilitados y deshabilitados respectivamente:</p>
+</header>
+
+<form>
+	<p>	<label for="nombre">Nombre:</label>
+		<input type="text" id="nombre" placeholder="Nombre..."/> </p>
+	<p>	<label for="apellidos">Apellidos:</label>
+		<input type="text" id="apellidos" placeholder="Apellidos..." disabled="disabled"/> </p>
+	<p>	<label for="correo-e">E-mail:</label>
+		<input type="email" id="correo-e" placeholder="E-mail..." disabled="disabled"/> </p>
+	<p>	<label for="telefono">Tel&eacute;fono:</label>
+		<input type="number" id="telefono" placeholder="Tel&eacute;fono..."/> </p>
+</form>
+
+</body>
+</html>

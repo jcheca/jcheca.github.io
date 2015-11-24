@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="Javier Fuentes Alventosa">
+	<title>Selectores CSS</title>
+	<link rel="stylesheet" type="text/css" href="styles/common.css">
+	<style>
+	input:-moz-read-only, input:read-only { /* For Firefox */
+ 		background:#ffa;
+		color:red;
+		font-weight:bold;
+		border:1px dashed brown;
+		padding:5px;
+	}
+	input:read-only {
+ 		background:#ffa;
+		color:red;
+		font-weight:bold;
+		border:1px dashed brown;
+		padding:5px;
+	}
+	</style>
+</head>
+<body>
+
+<header>
+	<h1>Selector <span>CSS3</span></h1>
+	<h2><code><dfn>:read-only</dfn></code>: Selecciona todos los elementos <code>&lt;input&gt;</code> marcados como de s&oacute;lo lectura.</h2>
+	<p><code>input:read-only</code>: Selecciona todos los elementos <code>&lt;input&gt;</code> marcados como de s&oacute;lo lectura:</p>
+	<p><code>input:-moz-read-only</code>: Para que funcione en Firefox hay que declarar este estilo tambi&eacute;n:</p>
+</header>
+
+<form>
+	<p>	<label for="nombre">Nombre:</label>
+	<input type="text" id="nombre" placeholder="Nombre..." /></p>
+	<p>	<label for="apellidos">Apellidos:</label>
+	<input type="text" id="apellidos" placeholder="Apellidos..." readonly /></p>
+	<p>	<label for="correo-e">E-mail:</label>
+	<input type="email" id="correo-e" placeholder="E-mail..." /></p>
+	<p>	<label for="telefono">Tel&eacute;fono:</label>
+	<input type="number" id="telefono" placeholder="Tel&eacute;fono..." readonly /></p>
+</form>
+
+</body>
+</html>
