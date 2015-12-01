@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8" />
+	<title>Ejemplo Moment.JS</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<!-- Moment.JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment-with-locales.min.js"></script>
+	<style>
+		pre {
+			border:0;
+			margin:0;
+			background:transparent;
+			padding:0;
+			font-size:11pt;
+			color:darkblue;
+		}
+		pre strong {
+			color:brown;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1>Ejemplo de Moment.JS</h1>
+		<div class="panel panel-primary">
+		  <div class="panel-heading">Resultado</div>
+		  <div id="salida" class="panel-body">
+		  </div>
+		</div>
+	</div>
+
+	<script>
+
+		var html = "<table class='table table-bordered table-striped table-hover table-condensed'><thead><th>M&eacute;todo</th><th>Salida</th></thead><tbody>";
+
+		html += "<tr><td><pre>moment();</pre></td><td>" + moment() + "</td>";
+		html += "<tr><td><pre>moment().format();</pre></td><td>" + moment().format() + "</td>";
+		html += "<tr><td><pre>moment().format('YYYY MM DD');</pre></td><td>" + moment().format('YYYY MM DD') + "</td>";
+		html += "<tr><td><pre>moment().format('DD/MM/YYYY');</pre></td><td>" + moment().format('DD/MM/YYYY') + "</td>";
+		
+		html += "<tr><td><pre>moment().format('LL');</pre></td><td>" + moment().format('LL') + "</td>";
+		html += "<tr><td><pre>moment().format('LLL');</pre></td><td>" + moment().format('LLL') + "</td>";
+
+		html += "<tr><td colspan='2'><pre><strong>moment.lang('es');</strong></pre></td>";
+		moment.lang('es');
+		html += "<tr><td><pre>moment().format('LL');</pre></td><td>" + moment().format('LL') + "</td>";
+		html += "<tr><td><pre>moment().format('LLL');</pre></td><td>" + moment().format('LLL') + "</td>";
+		
+		html += "<tr><td><pre>moment().format('DD[ de ]MMMM[ de ]YYYY');</pre></td><td>" + moment().format('DD[ de ]MMMM[ de ]YYYY') + "</td>";
+		html += "<tr><td><pre>moment().format('dddd, DD[ de ]MMMM[ de ]YYYY, HH:mm:ss');</pre></td><td>" + moment().format('dddd, DD[ de ]MMMM[ de ]YYYY, H:mm:ss') + "</td>";
+		
+		html += "<tr><td><pre>moment().day();</pre></td><td>" + moment().day() + "</td>";
+		html += "<tr><td><pre>moment().month();</pre></td><td>" + moment().month() + "</td>";
+		html += "<tr><td><pre>moment().year();</pre></td><td>" + moment().year() + "</td>";
+
+		var hoy = moment();
+		html += "<tr><td colspan='2'><pre><strong>var hoy = moment();</strong></pre></td>";
+		
+		var sorteoNavidad2015 = moment('2015-12-22 8:00', 'YYYY-MM-DD HH:mm');
+		html += "<tr><td colspan='2'><pre><strong>var sorteoNavidad2015 = moment('2015-12-22 8:00', 'YYYY-MM-DD H:mm');</strong></pre></td>";
+		html += "<tr><td><pre>sorteoNavidad2015.diff(hoy, 'days');</pre></td><td>" + sorteoNavidad2015.diff(hoy, 'days') + "</td>";
+		html += "<tr><td><pre>sorteoNavidad2015.fromNow();</pre></td><td>" + sorteoNavidad2015.fromNow() + "</td>";
+
+		var descubrimientoAmerica = moment('1492-10-12', 'YYYY-MM-DD');
+		html += "<tr><td colspan='2'><pre><strong>var descubrimientoAmerica = moment('1492-10-12', 'YYYY-MM-DD');</strong></pre></td>";
+		html += "<tr><td><pre>descubrimientoAmerica.diff(hoy, 'years');</pre></td><td>" + descubrimientoAmerica.diff(hoy, 'years') + "</td>";
+		html += "<tr><td><pre>descubrimientoAmerica.fromNow();</pre></td><td>" + descubrimientoAmerica.fromNow() + "</td>";
+		
+		html += "<tr><td><pre>hoy.isBefore(sorteoNavidad2015);</pre></td><td>" + hoy.isBefore(sorteoNavidad2015) + "</td>";
+		html += "<tr><td><pre>hoy.isBefore(descubrimientoAmerica);</pre></td><td>" + hoy.isBefore(descubrimientoAmerica) + "</td>";
+
+		html += "<tr><td><pre>hoy.isAfter(sorteoNavidad2015);</pre></td><td>" + hoy.isAfter(sorteoNavidad2015) + "</td>";
+		html += "<tr><td><pre>hoy.isAfter(descubrimientoAmerica);</pre></td><td>" + hoy.isAfter(descubrimientoAmerica) + "</td>";
+
+		html += "<tr><td><pre>hoy.isBetween(sorteoNavidad2015, descubrimientoAmerica);</pre></td><td>" + hoy.isBetween(descubrimientoAmerica, sorteoNavidad2015) + "</td>";
+
+		html += "<tr><td><pre>moment(sorteoNavidad2015).isSame('2015-12-22 8:00');</pre></td><td>" + moment(sorteoNavidad2015).isSame('2015-12-22 8:00') + "</td>";
+		html += "<tr><td><pre>moment(sorteoNavidad2015).isSame(descubrimientoAmerica);</pre></td><td>" + moment(sorteoNavidad2015).isSame(descubrimientoAmerica) + "</td>";
+
+		html += "<tr><td><pre>hoy.add(20, 'years').format('LLL');</pre></td><td>" + hoy.add(20, 'years').format('LLL') + "</td>";
+
+		html += "<tr><td><pre>hoy.subtract(20, 'years').format('LLL');</pre></td><td>" + hoy.subtract(20, 'years').format('LLL') + "</td>";
+		
+		html += "</tbody></table>";
+
+		document.getElementById("salida").innerHTML = html;
+	</script>
+
+</body>
+</html>

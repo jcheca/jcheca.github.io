@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="Javier Fuentes Alventosa">
+	<title>Selectores CSS</title>
+	<link rel="stylesheet" type="text/css" href="styles/common.css">
+	<style>
+	td {
+		border:1px solid black;
+		padding:15px;
+	}
+	p:empty, td:empty {
+		background:#ffa;
+		color:red;
+		font-weight:bold;
+		border:1px dashed brown;
+		padding:5px;
+	}
+	</style>
+</head>
+<body>
+
+<header>
+	<h1>Selector <span>CSS3</span></h1>
+	<h2><code><dfn>:empty</dfn></code>: Selecciona todos los elementos que est&eacute;n vac&iacute;os.</h2>
+	<p><code>p:empty, td:empty</code>: Selecciona todos los elementos <code>&lt;p&gt;</code> y <code>&lt;td&gt;</code> que no posean ning&uacute;n contenido:</p>
+</header>
+
+<p>Primer p&aacute;rrafo</p>
+<p></p>
+<p>&Uacute;ltimo p&aacute;rrafo</p>
+
+<table>
+	<tr>
+		<td></td><td>B</td><td>C</td>
+	</tr>
+	<tr>
+		<td></td><td>E</td><td></td>
+	</tr>
+	<tr>
+		<td>G</td><td></td><td>I</td>
+	</tr>
+</table>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="Javier Fuentes Alventosa">
+	<title>Selectores CSS</title>
+	<link rel="stylesheet" type="text/css" href="styles/common.css">
+	<style>
+	.importante { /*Todos los elementos que contengan la clase "importante"*/
+		background:#ffa;
+		color:red;
+		font-weight:bold;
+		border:1px dashed brown;
+		padding:5px;
+	}
+	p.importante { /*Todos los elementos p que contengan la clase "importante"*/
+		font-size:20pt;
+	}
+	</style>
+</head>
+<body>
+
+<header>
+	<h1>Selector <span>CSS1</span></h1>
+	<h2><code><dfn>.nombre_clase</dfn></code>: Selecciona todos los elementos que contengan la clase <code>"nombre_clase"</code>.</h2>
+	<p><code>.importante</code> y también <code>p.importante</code>: Selecciona todos los elementos que contienen la clase <code>"importante"</code>, y tambi&eacute;n hemos aumentado el tama&ntilde;o de la fuente a aquellos p&aacute;rrafos <code>&lt;p&gt;</code> que tengan la clase <code>"importante"</code>:</p>
+</header>
+
+<p id="parrafo" class="importante">P&aacute;rrafo 1</p>
+<p id="segundo-parrafo">P&aacute;rrafo 2</p>
+<p id="parrafo-tercero">P&aacute;rrafo 3</p>
+<p id="cuartoParrafo">P&aacute;rrafo 3</p>
+<p id="parrafoUltimo">P&aacute;rrafo 4</p>
+
+<ul id="navegadores">
+	<li id="google-chrome" class="importante">Google Chrome</li>
+	<li id="microsoft-edge">Microsoft Edge</li>
+	<li id="microsoft-ie">Microsoft Internet Explorer</li>
+	<li id="mozilla-firefox">Mozilla Firefox</li>
+	<li id="opera">Opera</li>
+	<li id="safari">Safari</li>
+</ul>
+
+</body>
+</html>

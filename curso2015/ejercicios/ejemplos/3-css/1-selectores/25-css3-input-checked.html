@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="Javier Fuentes Alventosa">
+	<title>Selectores CSS</title>
+	<link rel="stylesheet" type="text/css" href="styles/common.css">
+	<style>
+	input:checked + label { 
+		background:#ffa;
+		color:red;
+		font-weight:bold;
+		border:1px dashed brown;
+		padding:5px;
+	}
+	</style>
+</head>
+<body>
+
+<header>
+	<h1>Selector <span>CSS3</span></h1>
+	<h2><code><dfn>:checked</dfn></code>: Selecciona todos los elementos <code>&lt;input&gt;</code> que est&eacute;n <code>checked</code>.</h2>
+	<p><code>input:checked + label</code>: Selecciona todos los elementos <code>&lt;label&gt;</code> que referencien a elementos <code>&lt;input&gt;</code> que est&aacute;n <code>checked</code>:</p>
+</header>
+
+<form>
+	<p>	<input id="radio-sexo-hombre" type="radio" name="sexo" value="h" checked="checked">
+		<label for="radio-sexo-hombre">Var&oacute;n</label>	</p>
+	<p>	<input id="radio-sexo-mujer" type="radio" name="sexo" value="m">
+		<label for="radio-sexo-hombre">Mujer</label> </p>
+	<p>	<input id="checkbox-carnet" type="checkbox" value="carnet">
+		<label for="checkbox-carnet">Carnet de conducir</label>	</p>
+	<p>	<input id="checkbox-ingles" type="checkbox" value="ingles">
+		<label for="checkbox-ingles">Nivel de Ingl&eacute;s B1+</label>	</p>
+</form>
+
+</body>
+</html>

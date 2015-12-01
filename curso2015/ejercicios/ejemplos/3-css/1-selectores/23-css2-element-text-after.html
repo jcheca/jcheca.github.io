@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="Javier Fuentes Alventosa">
+	<title>Selectores CSS</title>
+	<link rel="stylesheet" type="text/css" href="styles/common.css">
+	<style>
+	a::after { 
+		content: " - Universidad de C\00f3rdoba."; //o minuscula con tilde en formato ISO: \00f3
+	}
+	</style>
+</head>
+<body>
+
+<header>
+	<h1>Selector <span>CSS2</span></h1>
+	<h2><code><dfn>::after</dfn></code>: Inserta un texto despu&eacute;s del contenido en todos los elementos seleccionados.</h2>
+	<p><code>a::after</code>: Inserta un texto despu&eacute;s del contenido en todos los elementos <code>&lt;a&gt;</code>:</p>
+</header>
+
+<p><a href="http://www.uco.es">P&aacute;gina principal de la UCO</a></p>
+<p><a href="http://www.uco.es/pas.html">Portal del PAS de la UCO</a></p>
+<p><a href="http://www.uco.es/investigacion/">Portal del Investigador de la UCO</a></p>
+
+</body>
+</html>

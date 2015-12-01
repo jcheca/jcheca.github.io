@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="Javier Fuentes Alventosa">
+	<title>Animaciones CSS</title>
+	<style>
+	div {
+		width:100px; height:100px; background-color:blue;
+		position:relative;
+		/* Chrome, Safari, Opera */
+		-webkit-animation-name: ejemplo; 
+		-webkit-animation-duration: 4s; 
+		animation-name: ejemplo;
+		animation-duration: 4s;
+	}
+	@-webkit-keyframes ejemplo { /* Chrome, Safari, Opera */
+		0%   {background-color:yellow; left:0px; top:0px;}
+		50%  {background-color:green; left:200px; top:200px;}
+		100% {background-color:blue; left:0px; top:0px;}
+	}
+	@keyframes ejemplo { /* Standard syntax */
+		0%   {background-color:yellow; left:0px; top:0px;}
+		50%  {background-color:green; left:200px; top:200px;}
+		100% {background-color:blue; left:0px; top:0px;}
+	}
+	</style>
+</head>
+<body>
+
+<h1>Animaci&oacute;n CSS3</h1>
+<div></div>
+
+</body>
+</html>

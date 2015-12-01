@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="Javier Fuentes Alventosa">
+	<title>Selectores CSS</title>
+	<link rel="stylesheet" type="text/css" href="styles/common.css">
+	<style>
+	[class~=parrafo] {
+		background:#ffa;
+		color:red;
+		font-weight:bold;
+		border:1px dashed brown;
+		padding:5px;
+	}
+	</style>
+</head>
+<body>
+
+<header>
+	<h1>Selector <span>CSS3</span></h1>
+	<h2><code><dfn>[attr~=value]</dfn></code>: Selecciona todos los elementos que tengan un atributo <code>attr</code> cuyo valor contenga la palabra <code>"value"</code> de entre todas las palabras que contenga.</h2>
+	<p><code>[class~=parrafo]</code>: Selecciona todos aquellos elementos cuyo texto en el atributo <code>class</code> contenga la palabra <code>"parrafo"</code> de entre todas las palabras que contenga:</p>
+</header>
+
+<p class="primerParrafo">P&aacute;rrafo 1 (<code>class="primerParrafo"</code>).</p>
+<p class="parrafoSecundario">P&aacute;rrafo 2 (<code>class="parrafoSecundario"</code>).</p>
+<p class="importante parrafo">P&aacute;rrafo 3 (<code>class="importante parrafo"</code>).</p>
+<p class="parrafo importante">P&aacute;rrafo 4 (<code>class="parrafo importante"</code>).</p>
+<p class="importante">P&aacute;rrafo 5 (<code>class="importante"</code>).</p>
+<p class="sextoparrafo">P&aacute;rrafo 6 (<code>class="sextoparrafo"</code>).</p>
+<p class="penultimo-parrafo">P&aacute;rrafo 7 (<code>class="penultimo-parrafo"</code>).</p>
+<p class="parrafo-ultimo">P&aacute;rrafo 7 (<code>class="parrafo-ultimo"</code>).</p>
+
+</body>
+</html>

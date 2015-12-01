@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="Javier Fuentes Alventosa">
+	<title>Selectores CSS</title>
+	<link rel="stylesheet" type="text/css" href="styles/common.css">
+	<style>
+	div {
+		background:#dfd;
+		padding:5px;
+	}
+	p:last-child {
+		background:#ffa;
+		color:red;
+		font-weight:bold;
+		border:1px dashed brown;
+		padding:5px;
+	}
+	</style>
+</head>
+<body>
+
+<header>
+	<h1>Selector <span>CSS2</span></h1>
+	<h2><code><dfn>:last-child</dfn></code>: Selecciona el &uacute;ltimo elemento de cada elemento del contenedor padre.</h2>
+	<p><code>p:last-child</code>: Selecciona el &uacute;ltimo elemento <code>&lt;p&gt;</code> de cada elemento contenedor padre:</p>
+</header>
+
+<p id="parrafo1" class="importante">Texto en <span>p&aacute;rrafo 1</span></p>
+<h1>Selectores <span>CSS</span></h1>
+<p id="parrafo2" class="importante">Texto en <span>p&aacute;rrafo 2</span></p>
+
+<div>
+	<p>Texto en <span>p&aacute;rrafo 1</span> dentro de la <span>capa 1</span></p>
+	<p class="importante">Texto en <span>p&aacute;rrafo 2</span> dentro de la <span>capa 1</span></p>
+	<p>Texto en <span>p&aacute;rrafo 3</span> dentro de la <span>capa 1</span></p>
+	Texto al final en <span class="importante">capa 1</span>
+</div>
+
+<p id="parrafo3">Texto en <span>p&aacute;rrafo 3</span></p>
+<p id="parrafo4" class="importante">Texto en <span>p&aacute;rrafo 4</span></p>
+
+<div>Texto al comienzo en <span class="importante">capa 2</span>
+	<p>Texto en <span>p&aacute;rrafo 1</span> dentro de la <span>capa 2</span></p>
+	<p>Texto en <span>p&aacute;rrafo 2</span> dentro de la <span>capa 2</span></p>
+	<p>Texto en <span>p&aacute;rrafo 3</span> dentro de la <span>capa 2</span></p>
+</div>
+
+<p id="parrafo5">Texto en <span class="importante">p&aacute;rrafo 5</span></p>
+<p id="parrafo6">Texto en <span class="importante">p&aacute;rrafo 6</span></p>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="Javier Fuentes Alventosa">
+	<title>Selectores CSS</title>
+	<link rel="stylesheet" type="text/css" href="styles/common.css">
+	<style>
+	span, li, div.importante {
+		background:#ffa;
+		color:red;
+		font-weight:bold;
+		border:1px dashed brown;
+		padding:5px;
+	}
+	</style>
+</head>
+<body>
+
+<header>
+	<h1>Selector <span>CSS1</span></h1>
+	<h2><code><dfn>elemento1, elemento2</dfn></code>: Selecciona todos los elementos etiquetados como <code>elemento1</code> y <code>elemento2</code>.</h2>
+	<p><code>span, li, div.importante</code>: Selecciona todos los elementos <code>&lt;span&gt;</code>, elementos <code>&lt;div&gt;</code> con la clase <code>"importante"</code>, y todos los elementos <code>&lt;li&gt;</code>:</p>
+</header>
+
+<p class="importante">P&aacute;rrafo con atributo <code>class="importante"</code>.</p>
+<p>P&aacute;rrafo sin atributo <code>class="importante"</code>.</p>
+
+<div class="importante">Capa <code>&lt;div&gt;</code> con atributo <code>class="importante"</code>.</div>
+<div>P&aacute;rrafo sin atributo class="importante".</div>
+
+<ul id="navegadores">
+	<li id="google-chrome" class="importante">Google Chrome</li>
+	<li id="microsoft-edge">Microsoft Edge</li>
+	<li id="microsoft-ie">Microsoft Internet Explorer</li>
+	<li id="mozilla-firefox">Mozilla Firefox</li>
+	<li id="opera">Opera</li>
+	<li id="safari">Safari</li>
+</ul>
+</body>
+</html>

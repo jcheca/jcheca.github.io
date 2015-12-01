@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="Javier Fuentes Alventosa">
+	<title>Transformaciones CSS</title>
+	<style>
+	div {
+		width:130px;
+		height:100px;
+		background:red;
+		border:1px solid black;
+	}
+	div:hover {
+		/* IE 9 */
+		-ms-transform: scale(1.2,1.5); 
+		/* Safari */
+		-webkit-transform: scale(1.2,1.5); 
+		transform: scale(1.2,1.5);
+	} 
+	</style>
+</head>
+<body>
+
+<h1>Transformaciones 2D: Scale</h1>
+<div>SCALE</div>
+
+</body>
+</html>

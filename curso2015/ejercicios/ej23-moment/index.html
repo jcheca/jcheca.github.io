@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicio: ej13-moment [01.12.15]</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment-with-locales.min.js"></script>
+
+	<style>
+		table {
+			border-collapse: collapse;
+		}
+		td, th {
+			border: 1px solid #000000; padding: 5px;
+			width: 100px;
+			height: 30px;
+			text-align: center;
+		}
+		thead {
+			background: orange;
+		}
+
+	</style>
+
+
+</head>
+<body onload="cargarDatosFicheroJson()">
+
+	<h1>Ejemplo JSON - con Moment</h1>
+	<div id="salida"></div>
+	
+	<script>
+
+		function cargarDatosFicheroJson() {
+			var httpRequest;
+			if (window.XMLHttpRequest) {
+				httpRequest = new XMLHttpRequest(); /* Instanciamos un objeto XMLHttpRequest */
+			} else {
+				/* Codigo para IE5 e IE6 */
+				httpRequest = new ActiveXObject("Microsoft.XMLHTTP");
+			}
+			/* Bloque de codigo existente porque hemos especificado mas abajo que la ejecucion es asincrona */ 
+			httpRequest.onreadystatechange = function() {
+				if (httpRequest.readyState == 4 && httpRequest.status == 200) {
+					/* La siguiente linea se ejecutara cuando el servidor este listo */ 
+					obj = JSON.parse(httpRequest.responseText);
+					/* Una vez cargados los datos procedemos al pintado de la tabla */ 
+					pintarTablaConDatosJson(obj);
+				} 
+			};
+			/* Para enviar la peticion al servidor usaremos los metodos open() y send() del objeto XMLHttpRequest: */
+			httpRequest.open("GET", "usuarios.json", true); httpRequest.send();
+		}
+
+		function pintarTablaConDatosJson() {
+
+			var salida;
+			var divSalida = document.getElementById("salida");
+
+			/* Genera los resultados */
+			salida = "<table><thead><th>Nombre</th><th>email</th><th>Edad</th><th>Activo</th><th>Nacimiento</th></thead>";
+			for (var i = 0; i < obj.length; i++) {
+
+				// Fechas
+				// moment.lang('es');
+				moment.locale('es');
+				var miahora = moment(obj[i].fechanacimiento).fromNow(true);		
+				var mifecha = moment(obj[i].fechanacimiento).format('LL');
+
+				salida += "<tr>";
+				salida += "<td>"+obj[i].nombre+"</td>";
+				salida += "<td><a href='mailto:"+obj[i].email+"'>"+obj[i].email+"</td>";
+				// salida += "<td>"+obj[i].edad+"</td>";
+				salida += "<td>"+miahora+"</td>";
+				salida += "<td>"+obj[i].activo+"</td>";
+				salida += "<td>"+mifecha+"</td>";
+
+				salida += "</tr>";
+			};
+			salida += "</table>";
+
+			/* Inyectar los resultados al objeto DOM correspondiente */
+			divSalida.innerHTML = salida;
+
+		}
+
+	</script>
+
+
+</body>
+</html>

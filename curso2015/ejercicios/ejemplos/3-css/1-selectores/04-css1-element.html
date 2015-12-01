@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="Javier Fuentes Alventosa">
+	<title>Selectores CSS</title>
+	<link rel="stylesheet" type="text/css" href="styles/common.css">
+	<style>
+	span {
+		background:#ffa;
+		color:red;
+		font-weight:bold;
+		border:1px dashed brown;
+		padding:5px;
+	}
+	</style>
+</head>
+<body>
+
+<header>
+	<h1>Selector <span>CSS1</span></h1>
+	<h2><code><dfn>elemento</dfn></code>: Selecciona todos los elementos cuya etiqueta es <code>elemento</code>.</h2>
+	<p><code>span</code>: Selecciona todos los elementos <code>span</code>:</p>
+</header>
+
+<p id="parrafo1" class="importante">Texto en <span>p&aacute;rrafo 1</span></p>
+
+<div>Texto en <span class="importante">capa 1</span>
+	<p>Texto en <span>p&aacute;rrafo 1</span> dentro de la <span>capa 1</span></p>
+	<p class="importante">Texto en <span>p&aacute;rrafo 2</span> dentro de la <span>capa 1</span></p>
+	<p>Texto en <span>p&aacute;rrafo 3</span> dentro de la <span>capa 1</span></p>
+</div>
+
+<p id="parrafo2">Texto en <span>p&aacute;rrafo 2</span></p>
+<p id="parrafo3" class="importante">Texto en <span>p&aacute;rrafo 3</span></p>
+
+<div>Texto en <span class="importante">capa 2</span>
+	<p>Texto en <span>p&aacute;rrafo 1</span> dentro de la <span>capa 2</span></p>
+	<p>Texto en <span>p&aacute;rrafo 2</span> dentro de la <span>capa 2</span></p>
+	<p>Texto en <span>p&aacute;rrafo 3</span> dentro de la <span>capa 2</span></p>
+</div>
+
+<p id="parrafo4">Texto en <span class="importante">p&aacute;rrafo 4</span></p>
+
+</body>
+</html>

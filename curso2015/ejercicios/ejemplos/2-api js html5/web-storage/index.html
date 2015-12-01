@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<title>Ejemplo HTML5</title>
+<script>
+function mostrarMensajeContador() {
+	var msg = document.getElementById("mensaje");
+	if (typeof (Storage) !== "undefined") {
+		//if (localStorage.contador == null) {
+		//if (localStorage['contador'] == null) {
+		if (localStorage.getItem("contador") == null) {
+			//localStorage.contador = 0;
+			//localStorage['contador'] = 0;
+			localStorage.setItem("contador", 0);
+		}
+		//msg.innerHTML = "Valor actual del contador: " + localStorage.contador;
+		//msg.innerHTML = "Valor actual del contador: " + localStorage['contador'];
+		msg.innerHTML = "Valor actual del contador: " + localStorage.getItem("contador");
+	} else {
+		msg.innerHTML = "Su navegador no soporta Almacenamiento Web :(";
+	}
+}
+
+function incrementarContador() {
+	if (typeof (Storage) !== "undefined") {
+		//localStorage['contador'] = Number(localStorage.contador) + 1;
+		//localStorage.contador = Number(localStorage.contador) + 1;
+		localStorage.setItem("contador", Number(localStorage.getItem("contador")) + 1);
+	}
+	mostrarMensajeContador();
+}
+
+function reiniciarContador() {
+	if (typeof (Storage) !== "undefined") {
+		//localStorage.contador = 0;
+		//localStorage['contador'] = 0;
+		localStorage.setItem("contador", 0);
+	}
+	mostrarMensajeContador();
+}
+</script>
+</head>
+<body onload="mostrarMensajeContador();">
+	<h1>Almacenamiento Local</h1>
+	<p id="mensaje"></p>
+	<button onclick="incrementarContador()" type="button">Contador++</button>
+	<button onclick="reiniciarContador()" type="button">Reiniciar contador</button>
+</body>
+</html>

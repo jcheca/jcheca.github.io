@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <title>Ejemplo HTML5</title>
+</head>
+<body>
+
+<div style="background:yellow;border:1px solid #cccccc;padding: 10px;" contextmenu="mi_menu">
+<p>Haz clic con el bot&oacute;n derecho del rat&oacute;n</p>
+</div>
+
+<menu type="context" id="mi_menu">
+  <menuitem label="Refrescar" 
+	onclick="window.location.reload();" icon="img/ico_reload.png"></menuitem>
+  <menu label="Compartir...">
+    <menuitem label="Twitter" icon="img/ico_twitter.png" 
+		onclick="window.open('//twitter.com/intent/tweet?text=' + window.location.href);"></menuitem>
+    <menuitem label="Facebook" icon="img/ico_facebook.png" 
+		onclick="window.open('//facebook.com/sharer/sharer.php?u=' + window.location.href);"></menuitem>
+  </menu>
+  <menuitem label="Enviar por e-mail"
+	onclick="window.location='mailto:?body='+window.location.href;"></menuitem>
+</menu>
+
+</body>
+</html>

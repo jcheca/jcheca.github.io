@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <title>Ejemplo HTML5</title>
+    <script>
+    function loadLocation() {
+        var msg = document.getElementById("mensaje");
+    	msg.innerHTML = "Cargando...";
+    	//Comprueba si el navegador soporta geolocalizacion:
+        if (navigator.geolocation) {
+            //Si obtiene las coordenadas, invocara a la
+            //funcion success, en caso contrario a error:
+            navigator.geolocation.getCurrentPosition(success, error);
+        } else {
+        	msg.innerHTML = "Oops! Su navegador no soporta geolocalizaci&oacute;n.";
+        }
+    }
+    
+    /*
+     * Esta funcion se ejecutara si navigator.geolocation.getCurrentPosition() NO devuelve errores:
+     */
+    function success(position) {
+        var msg = document.getElementById("mensaje");
+        //Agregamos en la capa mensaje otra capa con las coordenadas latitud/longitud:
+        msg.innerHTML = "<p>" + 
+                "Latitud: " + position.coords.latitude + "<br/>" + 
+                "Longitud: " + position.coords.longitude + 
+                "</p>";
+        //Agregamos debajo una imagen de Google Maps con la ubicacion:
+        var img = new Image();
+        img.src = "http://maps.googleapis.com/maps/api/staticmap?center=" + 
+            position.coords.latitude + "," + position.coords.longitude + 
+            "&zoom=18&size=300x300&sensor=false" + 
+            "&markers=color:blue%7C" + position.coords.latitude + "," + position.coords.longitude;
+        msg.appendChild(img);
+    }
+    
+    /*
+     * Esta funcion se ejecutara si navigator.geolocation.getCurrentPosition() devuelve errores:
+     */
+    function error(err) {
+        var msg = document.getElementById("mensaje");
+        switch(err.code) {
+        case 0: 
+        	msg.innerHTML = "Oops! Algo ha salido mal"; 
+            break;
+        case 1:
+        	msg.innerHTML = "Oops! No has aceptado compartir tu posici&oacute;n";
+            break;
+        case 2:
+        	msg.innerHTML = "Oops! No se puede obtener la posici&oacute;n actual";
+            break;
+        case 3:
+        	msg.innerHTML = "Oops! Hemos superado el tiempo de espera";
+            break;
+        }
+    }
+    </script>
+
+</head>
+<body>
+
+<h1>Ejemplo de geolocalizaci&oacute;n</h1>
+<button onclick="loadLocation()">Cargar tu posici&oacute;n</button>
+<div id="mensaje" style="margin-top:10px;"></div>
+
+</body>
+</html>

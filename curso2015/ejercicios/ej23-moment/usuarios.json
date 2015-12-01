@@ -1,0 +1,5 @@
+[
+{"nombre":"Luke Skywalker","email":"luke.skywalker@uco.es","edad":45,"activo":true,"fechanacimiento":"1980/12/19"},
+{"nombre":"Homer Simpson","email":"homer.simpson@uco.es","edad":18,"activo":false,"fechanacimiento":"1985/06/03"},
+{"nombre":"Michael Jordan","email":"michael.jordan@uco.es","edad":70,"activo":true,"fechanacimiento":"1985/07/20"}
+]

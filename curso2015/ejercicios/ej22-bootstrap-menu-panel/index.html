@@ -1,0 +1,176 @@
+￼
+<!DOCTYPE html> 
+<html lang="es">
+<head>
+  	<meta charset="utf-8" />
+  	<title>Ejemplo Bootstrap (Styling)</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+
+
+
+
+
+
+
+
+<div class="container"> 
+
+<nav class="navbar navbar-default">
+			<!-- Parte siempre visible de la barra de navegacion (aunque cambie el ancho de la pantalla) -->
+			<div class="navbar-header">
+			  <!-- Boton Toggle -->
+			  <button type="button" class="navbar-toggle collapsed" data-target="#nuestro-boton-toggle" data-toggle="collapse" aria-expanded="false">
+				<!-- Oculta el span para uso exclusivo de los lectores de pantalla -->
+				<span class="sr-only">Cambiar el modo de navegaci&oacute;n</span>
+				<!-- Los tres span siguientes constituyen el boton de Toggle. Agrega o quita alguno para ver el resultado -->
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			  </button>
+			  <!-- En el siguiente enlace se puede agregar el logotipo de nuestro sitio web o un texto que dirija a la pantalla principal -->
+			  <a class="navbar-brand active" href="#"><strong>Principal</strong></a>
+			</div>
+
+			<!-- Parte que se ocultara cuando el ancho de la pantalla sea inferior al ancho minimo de la barra de navegacion -->
+			<div id="nuestro-boton-toggle" class="collapse navbar-collapse">
+			
+			  <!-- Coleccion de enlaces y subenlaces -->
+			  <ul class="nav navbar-nav navbar-left">
+			    <!-- La clase active informa al usuario de que dicho elemento es la pagina actual que se esta visualizando en su navegador -->
+				<li class="active"><a href="#">Hoteles</a></li>
+				<li><a href="#">Ofertas</a></li>
+
+			  </ul>
+
+			  <!-- Formulario alineado a la izquierda -->
+			  <form class="navbar-form navbar-left" role="search">
+				<div class="form-group">
+				  <input type="text" class="form-control" placeholder="Buscar...">
+				</div>
+				<button type="submit" class="btn btn-default">Buscar</button>
+			  </form>
+			  
+			  <!-- Coleccion de enlaces y subenlaces agrupados a la derecha de la barra de navegacion -->
+			  <ul class="nav navbar-nav navbar-right">
+				<li><a href="#">Ayuda</a></li>
+				<li class="dropdown">
+				  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Mi sesi&oacute;n <span class="caret"></span></a>
+				  <ul class="dropdown-menu">
+					<li><a href="#">Preferencias</a></li>
+					<li><a href="#">Mi perfil</a></li>
+					<li role="separator" class="divider"></li>
+					<li><a href="#">Cerrar sesi&oacute;n</a></li>
+				  </ul>
+				</li>
+			  </ul>
+			</div><!-- /.navbar-collapse -->
+		</nav>
+
+
+
+
+
+
+
+
+
+		<div class="row"> 
+￼      		<div class="col-sm-12"><h1>Trimago <small>- Central de Reservas</small></h1></div>	
+		</div>
+		<hr>
+
+
+		<div class="panel panel-primary">
+
+		<div class="panel-heading ">Detalles del Hotel</div>
+		<div class="panel-body">
+
+
+
+		<div class="row"> 
+￼      		<div class="col-sm-6">
+				<article>
+					<h2>Kakslauttanen <small>- Artic Resort</small></h2>
+					<em>Lorem ipsum dolor</em> sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.<p>
+					Expetenda tincidunt in sed, ex partem placerat sea, porro commodo ex eam. His putant aeterno interesset at. Usu ea mundi tincidunt, omnium virtute <mark>aliquando ius ex</mark>. Ea aperiri sententiae duo. Usu nullam dolorum quaestio ei, sit vidit facilisis ea. Per ne impedit iracundia neglegentur. Consetetur neglegentur eum ut, vis animal legimus inimicus id.<p>
+					His audiam deserunt in, eum ubique voluptatibus te. In reque dicta usu. Ne rebum dissentiet eam, vim omnis deseruisse id. Ullum deleniti vituperata at quo, insolens complectitur te eos, ea pri dico munere propriae. Vel ferri facilis ut, qui paulo ridens praesent ad. Possim alterum qui cu. Accusamus consulatu ius te, cu decore soleat appareat usu.<p>
+				</article>				
+				<div class="col-sm-4"><img class="img-responsive img-thumbnail" src="media/iglu-1.jpg" width="100%"></div>
+				<div class="col-sm-4"><img class="img-responsive img-thumbnail" src="media/iglu-2.jpg" width="100%"></div>
+				<div class="col-sm-4"><img class="img-responsive img-thumbnail" src="media/iglu-3.jpg" width="100%"></div>
+			</div>
+
+
+
+
+
+
+			<div class="col-sm-6">
+			<div class="panel panel-info">
+			<div class="panel-heading">Tabla de precios</div>
+			<div class="panel-body">
+
+				
+				<table class="table table-striped table-bordered table-hover">
+					<thead>
+						<tr>
+							<th></th>
+							<th>Precio Diario</th>
+							<th>Paquete Navidad</th>
+						<tr>
+					</thead>
+					<tr>
+						<td>Una persona</td>
+						<td>410&euro; - 501&euro;</td>
+						<td>2494&euro;</td>
+					</tr>
+					<tr>
+						<td>Primer y segundo adulto</td>
+						<td>243&euro; - 304&euro;</td>
+						<td>1511&euro;</td>
+					</tr>
+					<tr>
+						<td>Adulto extra</td>
+						<td>182&euro; - 228&euro;</td>
+						<td>1133&euro;</td>
+					</tr>
+					<tr>
+						<td>Menor de 12</td>
+						<td>158&euro; - 197&euro;</td>
+						<td>982&euro;</td>
+					</tr>
+				</table>
+				<p class="alert alert-info">Información: Precios por persona</p>
+				<p class="alert alert-success">Atención: No e adminte pagos en metálico</p>
+
+			</div>
+			</div>
+
+
+
+
+			</div>
+
+
+
+			
+
+
+		</div>
+
+
+		</div>
+		</div>
+
+
+
+	</div> 
+</body>
+</html>

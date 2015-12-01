@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8" />
+	<title>Ejemplo Bootstrap</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	
+	<!-- Nota: IE8 no soporta las etiquetas HTML5 <figure> ni <figcaption>: -->
+	<!--[if lt IE 9]>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<![endif]-->
+
+	<!-- Photoswipe -->
+    <link rel="stylesheet" href="styles/photoswipe.min.css"> <!-- Core CSS file -->
+    <link rel="stylesheet" href="styles/default-skin.min.css"> <!-- Skin CSS file (styling of UI - buttons, caption, etc.) -->
+	<script src="scripts/photoswipe-ui-default.min.js"></script> <!-- Core JS file -->
+	<script src="scripts/photoswipe.min.js"></script> <!-- UI JS file -->
+	<script src="scripts/funciones.js"></script> <!-- Nuestro JS file -->
+	<style type="text/css">
+	.my-gallery figcaption {
+		display: none;
+	}
+	</style>
+</head>
+<body onload="initPhotoSwipeFromDOM('.my-gallery')">
+	<div class="container">
+		<header>
+			<h1>The Pong House <small> - Portal de Smartphones</small></h1>
+		</header>
+		
+		<div class="panel panel-primary">
+		  <div class="panel-heading">Smartphones m&aacute;s populares</div>
+		  <div class="panel-body">
+
+			<div class="row">
+				<div class="col-sm-12">			
+					<p>A continuaci&oacute;n mostramos los smartphones m&aacute;s vendidos en nuestra tienda:</p>
+					<div class="row my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+
+						<figure class="col-sm-3" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+							<a href="media/galaxy-s6-big.jpg" itemprop="contentUrl" data-size="748x1500">
+								<img src="media/galaxy-s6-small.jpg" alt="Samsung Galaxy S6" style="height:100px;" class="img-thumbnail" itemprop="thumbnail" />
+							</a>
+							<figcaption itemprop="caption description">Samsung Galaxy S6</figcaption>
+						</figure>
+						
+						<figure class="col-sm-3" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+							<a href="media/iphone6-big.jpg" itemprop="contentUrl" data-size="732x1500">
+								<img src="media/iphone6-small.jpg" alt="iPhone6" style="height:100px;" class="img-thumbnail" itemprop="thumbnail" />
+							</a>
+							<figcaption itemprop="caption description">iPhone6</figcaption>
+						</figure>
+
+						<figure class="col-sm-3" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+							<a href="media/note-edge-big.jpg" itemprop="contentUrl" data-size="696x696">
+								<img src="media/note-edge-small.jpg" alt="Samsung Galaxy Note Edge" style="height:100px;" class="img-thumbnail" itemprop="thumbnail" />
+							</a>
+							<figcaption itemprop="caption description">Samsung Galaxy Note Edge</figcaption>
+						</figure>
+
+						<figure class="col-sm-3" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+							<a href="media/nokia-220-big.jpg" itemprop="contentUrl" data-size="1500x1500">
+								<img src="media/nokia-220-small.jpg" alt="Nokia 220" style="height:100px;" class="img-thumbnail" itemprop="thumbnail" />
+							</a>
+							<figcaption itemprop="caption description">Nokia 220</figcaption>
+						</figure>
+					</div>
+				</div>
+			</div>
+		  </div> <!-- Cierre de panel-body -->
+		</div> <!-- Cierre de panel -->
+		
+		<!-- Visor PhotoSwipe -->
+		<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="pswp__bg"></div>
+			<div class="pswp__scroll-wrap">
+				<div class="pswp__container">
+					<div class="pswp__item"></div>
+					<div class="pswp__item"></div>
+					<div class="pswp__item"></div>
+				</div>
+				<div class="pswp__ui pswp__ui--hidden">
+					<div class="pswp__top-bar">
+						<div class="pswp__counter"></div>
+						<button class="pswp__button pswp__button--close" title="Cerrar (Esc)"></button>
+						<button class="pswp__button pswp__button--share" title="Compartir"></button>
+						<button class="pswp__button pswp__button--fs" title="Pantalla completa"></button>
+						<button class="pswp__button pswp__button--zoom" title="Zoom"></button>
+						<div class="pswp__preloader">
+							<div class="pswp__preloader__icn">
+								<div class="pswp__preloader__cut">
+									<div class="pswp__preloader__donut"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+						<div class="pswp__share-tooltip"></div> 
+					</div>
+					<button class="pswp__button pswp__button--arrow--left" title="Anterior (arrow left)">
+					</button>
+					<button class="pswp__button pswp__button--arrow--right" title="Siguiente (arrow right)">
+					</button>
+					<div class="pswp__caption">
+						<div class="pswp__caption__center"></div>
+					</div>
+				</div>
+			</div>
+		</div> <!-- Cierre de photoswipe viewer -->
+	
+	</div> <!-- Cierre de container -->
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8" />
+	<title>Ejemplo Bootstrap</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container-fluid">
+
+		<header>
+			<h1>Universidad de C&oacute;rdoba</h1>
+		</header>
+
+		<nav class="navbar navbar-default">
+			<!-- Parte siempre visible de la barra de navegacion (aunque cambie el ancho de la pantalla) -->
+			<div class="navbar-header">
+			  <!-- Boton Toggle -->
+			  <button type="button" class="navbar-toggle collapsed" data-target="#nuestro-boton-toggle" data-toggle="collapse" aria-expanded="false">
+				<!-- Oculta el span para uso exclusivo de los lectores de pantalla -->
+				<span class="sr-only">Cambiar el modo de navegaci&oacute;n</span>
+				<!-- Los tres span siguientes constituyen el boton de Toggle. Agrega o quita alguno para ver el resultado -->
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			  </button>
+			  <!-- En el siguiente enlace se puede agregar el logotipo de nuestro sitio web o un texto que dirija a la pantalla principal -->
+			  <a class="navbar-brand active" href="#"><strong>Principal</strong></a>
+			</div>
+
+			<!-- Parte que se ocultara cuando el ancho de la pantalla sea inferior al ancho minimo de la barra de navegacion -->
+			<div id="nuestro-boton-toggle" class="collapse navbar-collapse">
+			
+			  <!-- Coleccion de enlaces y subenlaces -->
+			  <ul class="nav navbar-nav navbar-left">
+			    <!-- La clase active informa al usuario de que dicho elemento es la pagina actual que se esta visualizando en su navegador -->
+				<li class="active"><a href="#">Calendario</a></li>
+				<li><a href="#">Contactos</a></li>
+				<li class="dropdown">
+				  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Administraci&oacute;n <span class="caret"></span></a>
+				  <ul class="dropdown-menu">
+					<li><a href="#">Mantenimiento de equipos</a></li>
+					<!-- La clase active informa al usuario de que dicho elemento es la pagina actual que se esta visualizando en su navegador -->
+					<li class="active"><a href="#">Mantenimiento de recursos</a></li>
+					<li><a href="#">Mantenimiento de usuarios</a></li>
+					<li role="separator" class="divider"></li>
+					<li><a href="#">Correo electr&oacute;nico</a></li>
+					<li role="separator" class="divider"></li>
+					<li><a href="#">Investigaci&oacute;n</a></li>
+					<li><a href="#">Recursos humanos</a></li>
+				  </ul>
+				</li>
+			  </ul>
+
+			  <!-- Formulario alineado a la izquierda -->
+			  <form class="navbar-form navbar-left" role="search">
+				<div class="form-group">
+				  <input type="text" class="form-control" placeholder="Buscar...">
+				</div>
+				<button type="submit" class="btn btn-default">Buscar</button>
+			  </form>
+			  
+			  <!-- Coleccion de enlaces y subenlaces agrupados a la derecha de la barra de navegacion -->
+			  <ul class="nav navbar-nav navbar-right">
+				<li><a href="#">Ayuda</a></li>
+				<li class="dropdown">
+				  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Mi sesi&oacute;n <span class="caret"></span></a>
+				  <ul class="dropdown-menu">
+					<li><a href="#">Preferencias</a></li>
+					<li><a href="#">Mi perfil</a></li>
+					<li role="separator" class="divider"></li>
+					<li><a href="#">Cerrar sesi&oacute;n</a></li>
+				  </ul>
+				</li>
+			  </ul>
+			</div><!-- /.navbar-collapse -->
+		</nav>
+
+	</div>
+</body>
+</html>

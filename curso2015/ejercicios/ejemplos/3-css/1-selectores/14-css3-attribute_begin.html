@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="Javier Fuentes Alventosa">
+	<title>Selectores CSS</title>
+	<link rel="stylesheet" type="text/css" href="styles/common.css">
+	<style>
+	[id^=parrafo] {
+		background:#ffa;
+		color:red;
+		font-weight:bold;
+		border:1px dashed brown;
+		padding:5px;
+	}
+	</style>
+</head>
+<body>
+
+<header>
+	<h1>Selector <span>CSS3</span></h1>
+	<h2><code><dfn>[attr^=value]</dfn></code>: Selecciona todos los elementos que tengan un atributo <code>attr</code> cuyo valor comience con la cadena <code>"value"</code>.</h2>
+	<p><code>[id^=parrafo]</code>: Selecciona todos aquellos elementos cuyo texto en el atributo <code>id</code> comienza con el texto <code>"parrafo"</code>:</p>
+</header>
+
+<p id="parrafo" class="importante">P&aacute;rrafo 1 (<code>id="parrafo"</code>).</p>
+<p id="segundo-parrafo">P&aacute;rrafo 2 (<code>id="segundo-parrafo"</code>).</p>
+<p id="parrafo-tercero">P&aacute;rrafo 3 (<code>id="parrafo-tercero"</code>).</p>
+<p id="cuartoParrafo">P&aacute;rrafo 4 (<code>id="cuartoParrafo"</code>).</p>
+<p id="quintoparrafo">P&aacute;rrafo 5 (<code>id="quintoparrafo"</code>).</p>
+<p id="parrafoUltimo">P&aacute;rrafo 6 (<code>id="parrafoUltimo"</code>).</p>
+
+</body>
+</html>
