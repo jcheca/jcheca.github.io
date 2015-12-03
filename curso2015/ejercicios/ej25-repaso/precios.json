@@ -1,0 +1,6 @@
+[
+	{"nombre":"Samsung Galaxy S6", "fechalanzamiento":"01/04/2015", "precio":600, "stock":true},
+	{"nombre":"Samsung Galaxy Note Edge", "fechalanzamiento":"01/11/2014", "precio":700, "stock":false},
+	{"nombre":"LG G4", "fechalanzamiento":"01/04/2015", "precio":380, "stock":true},
+	{"nombre":"Apple iPhone 6s", "fechalanzamiento":"01/09/2015", "precio":750, "stock":true}
+]

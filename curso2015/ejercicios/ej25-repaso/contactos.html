@@ -1,0 +1,199 @@
+￼
+<!DOCTYPE html> 
+<html lang="es">
+<head>
+  	<meta charset="utf-8" />
+  	<title>Ejercicio Final 2015 (Contactos)</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+
+<div class="container"> 
+
+<header>
+	<div class="row">
+		<div class="col-sm-12"><h1>The Pong House <small>- Portal de Smartphones</small></h1></div>
+	</div>
+	<nav class="navbar navbar-default">
+			<!-- Parte siempre visible de la barra de navegacion (aunque cambie el ancho de la pantalla) -->
+			<div class="navbar-header">
+			  <!-- Boton Toggle -->
+			  <button type="button" class="navbar-toggle collapsed" data-target="#nuestro-boton-toggle" data-toggle="collapse" aria-expanded="false">
+				<!-- Oculta el span para uso exclusivo de los lectores de pantalla -->
+				<span class="sr-only">Cambiar el modo de navegaci&oacute;n</span>
+				<!-- Los tres span siguientes constituyen el boton de Toggle. Agrega o quita alguno para ver el resultado -->
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			  </button>
+			  <!-- En el siguiente enlace se puede agregar el logotipo de nuestro sitio web o un texto que dirija a la pantalla principal -->
+			  <a class="navbar-brand active" href="index.html"><strong>Principal</strong></a>
+			</div>
+
+			<!-- Parte que se ocultara cuando el ancho de la pantalla sea inferior al ancho minimo de la barra de navegacion -->
+			<div id="nuestro-boton-toggle" class="collapse navbar-collapse">
+			
+			  <!-- Coleccion de enlaces y subenlaces -->
+			  <ul class="nav navbar-nav navbar-left">
+			    <!-- La clase active informa al usuario de que dicho elemento es la pagina actual que se esta visualizando en su navegador -->
+				<li><a href="ofertas.html">Ofertas</a></li>
+				<li><a href="contactos.html">Contactos</a></li>
+
+			  </ul>
+			  
+			  <!-- Coleccion de enlaces y subenlaces agrupados a la derecha de la barra de navegacion -->
+			  <ul class="nav navbar-nav navbar-right">
+				<li><a href="#">Ayuda</a></li>
+				<li class="dropdown">
+				  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Mi sesi&oacute;n <span class="caret"></span></a>
+				  <ul class="dropdown-menu">
+					<li><a href="#">Preferencias</a></li>
+					<li><a href="#">Mi perfil</a></li>
+					<li role="separator" class="divider"></li>
+					<li><a href="#">Cerrar sesi&oacute;n</a></li>
+				  </ul>
+				</li>
+			  </ul>
+			</div><!-- /.navbar-collapse -->
+	</nav>
+</heade>
+
+
+<h3>Contacte con nosotros</h3>
+
+<div class="row"> 
+
+￼      	<div class="col-sm-10">
+			<div class="panel panel-primary">
+			<div class="panel-heading ">Formulario de contacto</div>
+			<div class="panel-body">
+
+
+
+		<form class="form-horizontal" role="form">
+	
+		<div class="form-group">
+			<label for="nombre" class="control-label col-lg-1">Nombre:</label>
+			<div class="col-lg-4">
+				<input type="text" class="form-control" id="nombre" placeholder="Nombre...">
+			</div>
+
+			<label for="apellidos" class="control-label col-lg-1">Apellidos:</label>
+			<div class="col-lg-6">
+				<input type="text" class="form-control" id="apellidos" placeholder="Escribe tus apellidos ...">
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label for="correo" class="control-label col-lg-1">Correo electrónico:</label>
+			<div class="col-lg-11">
+				<input type="email" class="form-control" id="correo" placeholder="Correo electrónico ...">
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label for="tlfnomb" class="control-label col-lg-1">Teléfono Móvil:</label>
+			<div class="col-lg-4">
+				<input type="tel" class="form-control" id="tlfnomb" placeholder="+XX XXX XXXXXX">
+			</div>
+
+			<label for="tlfnootr" class="control-label col-lg-1">Otro Teléfono:</label>
+			<div class="col-lg-6">
+				<input type="tel" class="form-control" id="tlfnootr" placeholder="+XX XXX XXXXXX">
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label for="fechanac" class="control-label col-lg-1">Fecha Nacimiento:</label>
+			<div class="col-lg-4">
+				<input type="date" class="form-control" id="fechanac">
+			</div>
+
+			<label for="cpostal" class="control-label col-lg-1">Código Postal:</label>
+			<div class="col-lg-6">
+				<input type="number" class="form-control" id="cpostal" placeholder="00000">
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label for="direccion" class="control-label col-lg-1">Dirección:</label>
+			<div class="col-lg-11">
+				<input type="text" class="form-control" id="direccion" placeholder="Dirección ...">
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label for="urlfav" class="control-label col-lg-1">URL web favorita:</label>
+			<div class="col-lg-11">
+				<input type="url" class="form-control" id="urlfav" placeholder="Indique la URL de su web favorita (protocolo://)">
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label for="marca" class="control-label col-lg-1">Seleccione su marca favorita:</label>
+			<div class="col-lg-11">
+				<input type="text" class="form-control" id="marca" placeholder="Seleccione su marca favorita">
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label for="color" class="control-label col-lg-1">Color de Smartphone favorita:</label>
+			<div class="col-lg-11">
+				<input type="color" class="form-control" id="color">
+			</div>
+		</div>
+
+
+	</form>
+
+
+
+
+
+
+
+
+
+
+
+
+			</div>
+			</div>
+		</div><!-- columna principal -->
+
+		<div class="col-sm-2">
+			<aside>
+				<div class="panel panel-default">
+				<div class="panel-heading ">Siguenos</div>
+				<div class="panel-body">
+  					<div class="btn-group-vertical" role="group" aria-label="...">
+   						<p><a class="btn btn-default btn-lg" href="#" role="button">Facebook</a></p>
+   						<p><a class="btn btn-default btn-lg" href="#" role="button">&nbsp;&nbsp;Twitter&nbsp;&nbsp;&nbsp;</a></p>
+   						<p><a class="btn btn-default btn-lg" href="#" role="button">&nbsp;&nbsp;&nbsp;&nbsp;RSS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></p>
+   						<p><a class="btn btn-default btn-lg" href="#" role="button">&nbsp;&nbsp;&nbsp;E-Mail&nbsp;&nbsp;&nbsp;</a></p>
+					</div>
+				</div>
+				</div>
+			</aside>
+		</div><!-- columna aside -->
+
+</div><!-- fin de ROW -->
+
+<footer class="footer">
+    <div class="container text-right">
+        <address>
+			Web desarrollada por <a href="mailto:jcheca@uco.es">José Checa Claudel</a>.<br>
+			<a href="http://www.uco.es" target="_blank">Universidad de C&oacute;rdoba</a>, Espa&ntilde;a
+		</address>
+    </div>
+</footer>
+
+</div> 
+
+</body>
+</html>
