@@ -56,38 +56,50 @@
 
     <md-content flex="" tabIndex="-1" role="main" layout-padding="" class="md-whiteframe-z2">
 
+        <h4>Use sliders below to set True or False. Right position or red value it's True.</h4>
+
+
+        <md-switch ng-model="user.cb1" aria-label="WtHR">
+          Is the WtHR (less than) < 0,55 ? {{ user.cb1 }}
+        </md-switch>
+
+        <md-switch ng-model="user.cb2" aria-label="Switch 1">
+          Is Blood Pressure (less than) < 128/85 mm Hg ? {{ user.cb2 }}
+        </md-switch>
+
+        <div ng-if="user.cb1 == true">
+           <div ng-if="user.cb2 == true">
+            <md-button class="md-primary md-raised" ng-click="showAlert($event)" flex="100" flex-gt-md="auto">
+              (6) Yes !! Metabolic Syndrome Confirmed
+            </md-button>
+           </div>
+           <div ng-if="user.cb2 !== true">
+            <md-button class="md-primary md-raised" ng-click="showAlert($event)" flex="100" flex-gt-md="auto">
+              (5) No Syndrome
+            </md-button>
+           </div>
+        </div> 
+        <div ng-if="user.cb1 !== true">
+          <div ng-if="user.cb2 == true">
+            <md-button class="md-primary md-raised" ng-click="showAlert($event)" flex="100" flex-gt-md="auto">
+              (4) No Syndrome
+            </md-button>
+          </div>
+          <div ng-if="user.cb2 !== true">
+            <md-button class="md-primary md-raised" ng-click="showAlert($event)" flex="100" flex-gt-md="auto">
+              (3) No Syndrome
+            </md-button>
+          </div>
+        </div> 
+
+
+
         <md-button class="contact" md-no-ink ng-click="ul.showContactOptions($event)" aria-label="Contact User">
           <md-tooltip>Contact {{ ul.selected.name }}</md-tooltip>
           <md-icon md-svg-icon="{{ul.selected.avatar}}" class="avatar"></md-icon>
         </md-button>
         <h2>{{ul.selected.name}}</h2>
         <p>{{ul.selected.content}}</p>
-
-
-        <md-switch ng-model="user.cb1" aria-label="WtHR">
-          WtHR < 0,55: {{ user.cb1 }}
-        </md-switch>
-
-        <md-switch ng-model="user.cb2" aria-label="Switch 1">
-          Blood Pressure < 128/85 mm Hg: {{ user.cb2 }}
-        </md-switch>
-
-        <div ng-if="user.cb1 == true">
-           <div ng-if="user.cb2 == true">
-            Node-6
-           </div>
-           <div ng-if="user.cb2 !== true">
-            Node-5
-           </div>
-        </div> 
-        <div ng-if="user.cb1 !== true">
-          <div ng-if="user.cb2 == true">
-            Node-4
-          </div>
-          <div ng-if="user.cb2 !== true">
-            Node-3
-          </div>
-        </div> 
 
 
       <p>Lorem ipsum dolor sit amet, ne quod novum mei. Sea omnium invenire mediocrem at, in lobortis conclusionemque nam. Ne deleniti appetere reprimique pro, inani labitur disputationi te sed. At vix sale omnesque, id pro labitur reformidans accommodare, cum labores honestatis eu. Nec quem lucilius in, eam praesent reformidans no. Sed laudem aliquam ne.
