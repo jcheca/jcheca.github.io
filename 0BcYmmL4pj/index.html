@@ -27,7 +27,7 @@
             	</ul>
                
                 <ul class="nav hidden-xs" id="lg-menu">
-                    <li class="active"><a href="sm.html"><i class="glyphicon glyphicon-list-alt"></i> SM</a></li>
+                    <li class="active"><a href="sm.html"><i class="glyphicon glyphicon-list-alt"></i> MS</a></li>
                     <li><a href="wt.html"><i class="glyphicon glyphicon-list"></i> WtHR</a></li>
                     <li><a href="ht.html"><i class="glyphicon glyphicon-th"></i> HT</a></li>
                     <li><a href="vl.html"><i class="glyphicon glyphicon-registration-mark"></i> Validation</a></li>
@@ -35,7 +35,7 @@
                     <li><a href="au.html"><i class="glyphicon glyphicon-info-sign"></i> Authors</a></li>
                 </ul>
                 <ul class="list-unstyled hidden-xs" id="sidebar-footer">
-                    <li><h3>MetS</h3><i class="glyphicon glyphicon-heart-empty"></i> Metabolic Syndrome</li>
+                    <li><h3><img src="images/logo-footer.png" width="28px"> MetS</h3> Metabolic Syndrome</li>
                 </ul>
               
               	<!-- tiny only nav-->
@@ -76,11 +76,38 @@
                         <!-- content -->                      
                       	<div class="row">
                           
+                        
                         <!-- main col left --> 
                         <div class="bs-callout bs-callout-info" id="callout-alerts-no-default"> 
-                        <h4>Metabolic Syndrome Test</h4> 
 
-                        <p>Check questions below to set to True.</p>
+
+                        <h4>Method for the early detection of MetS</h4> 
+
+                        <h5>Implications for practice.</h5>
+
+                        <p>We have developed a new method for the screen- ing of MetS using non-invasive techniques and based on just two anthropometric variables: WtHR (⩾0.55) and BP (⩾128/85 mmHg). This method reduces the use of blood tests for those cases in which confirmation is required.</p>
+
+                        <p>The new method has been proposed as a clinical decision tree composed of these two predictors (WtHR and BP). It is a versatile, economic and easily measurable method in any healthcare setting.</p>
+
+                        <p>This new method has shown an elevated diag- nostic accuracy, with high sensitivity, specificity and clinic concordance with the reference test (NCEP ATP III).</p>
+
+                        <p>Let's try !!</p>
+
+               
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <h5>Check questions below to set to True.</h5>
 
                         <div class="row">
                           <div class="col-lg-6">
@@ -88,7 +115,7 @@
                               <span class="input-group-addon">
                               <input type="checkbox" aria-label="..." ng-model="user.cb1" value="{{user.cb1}}">
                               </span>
-                              <input type="text" class="form-control" value="Is WtHR less to 0,55 ?" disabled>
+                              <input type="text" class="form-control" value="Is WtHR < 0,55 ?" disabled>
                             </div><!-- /input-group -->
                           </div><!-- /.col-lg-6 -->
                         </div>
@@ -101,7 +128,7 @@
                               <span class="input-group-addon">
                               <input type="checkbox" aria-label="..." ng-model="user.cb2" value="{{user.cb1}}">
                               </span>
-                              <input type="text" class="form-control" value="Is Blood Pressure greater or equal to 128/85 mmHg ?" disabled>
+                              <input type="text" class="form-control" value="Is Blood Pressure greater >= 128/85 mmHg ?" disabled>
                             </div><!-- /input-group -->
                           </div><!-- /.col-lg-6 -->
                         </div>
@@ -254,7 +281,7 @@
                           </div> 
                           <div class="col-lg-6" ng-if="user.cb1 !== true">
                             <div ng-if="user.cb2 == true">
-                                <div class="alert alert-danger" role="alert">(6) Yes Metabolic Syndrome</div>
+                                <div class="alert alert-danger" role="alert">(6) Metabolic Syndrome: YES, Look for your Doctor</div>
 
                               <!-- Low WtHR>=,55 :: Node 2 -->
                               <h4>Low WtHR greater o iqual to 0,55 - Node 2</h4>
@@ -262,7 +289,7 @@
                               <table class="table table-striped table-bordered table-hover">
                                 <tbody>
 
-                                <tr class="success">
+                                <tr class="danger">
                                   <th>Categoría</th>
                                   <th>%</th>
                                   <th>N</th>
@@ -272,12 +299,12 @@
                                   <td>54.1</td>
                                   <td>100</td>
                                 </tr>
-                                <tr>
+                                <tr class="alert-danger">
                                   <td>MetS Yes</td>
                                   <td>45.9</td>
                                   <td>85</td>
                                 </tr>
-                                <tr class="success">
+                                <tr class="danger">
                                   <td>TOTAL</td>
                                   <td>29.1</td>
                                   <td>185</td>
@@ -294,7 +321,7 @@
                               <table class="table table-striped table-bordered table-hover">
                                 <tbody>
 
-                                <tr class="success">
+                                <tr class="danger">
                                   <th>Categoría</th>
                                   <th>%</th>
                                   <th>N</th>
@@ -304,12 +331,12 @@
                                   <td>38.3</td>
                                   <td>46</td>
                                 </tr>
-                                <tr>
+                                <tr class="alert-danger">
                                   <td>MetS Yes</td>
                                   <td>61.7</td>
                                   <td>74</td>
                                 </tr>
-                                <tr class="success">
+                                <tr class="danger">
                                   <td>TOTAL</td>
                                   <td>18.9</td>
                                   <td>120</td>
@@ -416,13 +443,6 @@
 		<script src="js/bootstrap.min.js"></script>
     <script src="js/bootstrap-switch.min.js"></script>
 		<script src="js/scripts.js"></script>
-
-    <script type="text/javascript">
-      $.fn.bootstrapSwitch.defaults.onColor = 'success';
-      $.fn.bootstrapSwitch.defaults.size = 'large';
-      $("[name='my-checkbox']").bootstrapSwitch();
-    </script>
-
     
 	</body>
 </html>

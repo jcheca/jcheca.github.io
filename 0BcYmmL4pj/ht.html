@@ -3,16 +3,19 @@
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 	<meta charset="utf-8">
-	<title>Metabolic Syndrome - HT</title>
+	<title>Metabolic Syndrome :: HT</title>
 	<meta name="generator" content="Bootply" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/bootstrap-switch.min.css" rel="stylesheet">
+
+
 	<!--[if lt IE 9]>
 		<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
 	<link href="css/styles.css" rel="stylesheet">
 </head>
-<body>
+<body ng-app="">
 <div class="wrapper">
     <div class="box">
         <div class="row row-offcanvas row-offcanvas-left">   
@@ -24,7 +27,7 @@
             	</ul>
                
                 <ul class="nav hidden-xs" id="lg-menu">
-                    <li><a href="sm.html"><i class="glyphicon glyphicon-list-alt"></i> SM</a></li>
+                    <li><a href="sm.html"><i class="glyphicon glyphicon-list-alt"></i> MS</a></li>
                     <li><a href="wt.html"><i class="glyphicon glyphicon-list"></i> WtHR</a></li>
                     <li class="active"><a href="ht.html"><i class="glyphicon glyphicon-th"></i> HT</a></li>
                     <li><a href="vl.html"><i class="glyphicon glyphicon-registration-mark"></i> Validation</a></li>
@@ -32,7 +35,7 @@
                     <li><a href="au.html"><i class="glyphicon glyphicon-info-sign"></i> Authors</a></li>
                 </ul>
                 <ul class="list-unstyled hidden-xs" id="sidebar-footer">
-                    <li><h3>MetS</h3><i class="glyphicon glyphicon-heart-empty"></i> Metabolic Syndrome</li>
+                    <li><h3><img src="images/logo-footer.png" width="28px"> MetS</h3> Metabolic Syndrome</li>
                 </ul>
               
               	<!-- tiny only nav-->
@@ -73,15 +76,19 @@
                         <!-- content -->                      
                       	<div class="row">
                           
-                         <!-- main col left --> 
-
-                        <div class="bs-callout bs-callout-info" id="callout-alerts-no-default"> 
-                        <h4>HT</h4> 
                         
+                        <!-- main col left --> 
+                        <div class="bs-callout bs-callout-info" id="callout-alerts-no-default"> 
+        
+                          <h4>Metabolic Syndrome</h4> 
+
+                          <h5>HT.</h5>
+
+                          <p>To measure BP, the recommendations in the Manual of Hypertension of the Spanish Society of Family Medicine14 were followed. BP was determined after a resting period of 10 minutes in the supine position using an automatic and calibrated sphygmomanometer (OMRON M3, OMRON Healthcare Europe, Spain). As indicated for the anthropo- metrical measures, BP was measured three times with a 1-minute gap between each measurement and an average value was calculated.</p>
+
                         </div>
-
-
-                         
+        
+                      
                       <hr>
                         
                       
@@ -97,8 +104,11 @@
 
 
 	<!-- script references -->
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+    <script type="text/javascript" src="angular/1.4.3/angular.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-switch.min.js"></script>
 		<script src="js/scripts.js"></script>
+    
 	</body>
 </html>
