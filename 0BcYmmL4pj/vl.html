@@ -3,19 +3,16 @@
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 	<meta charset="utf-8">
-	<title>Metabolic Syndrome</title>
+	<title>Metabolic Syndrome - Validation</title>
 	<meta name="generator" content="Bootply" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/bootstrap-switch.min.css" rel="stylesheet">
-
-
 	<!--[if lt IE 9]>
 		<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
 	<link href="css/styles.css" rel="stylesheet">
 </head>
-<body ng-app="">
+<body>
 <div class="wrapper">
     <div class="box">
         <div class="row row-offcanvas row-offcanvas-left">   
@@ -27,10 +24,10 @@
             	</ul>
                
                 <ul class="nav hidden-xs" id="lg-menu">
-                    <li class="active"><a href="sm.html"><i class="glyphicon glyphicon-list-alt"></i> SM</a></li>
+                    <li><a href="sm.html"><i class="glyphicon glyphicon-list-alt"></i> SM</a></li>
                     <li><a href="wt.html"><i class="glyphicon glyphicon-list"></i> WtHR</a></li>
                     <li><a href="ht.html"><i class="glyphicon glyphicon-th"></i> HT</a></li>
-                    <li><a href="vl.html"><i class="glyphicon glyphicon-registration-mark"></i> Validation</a></li>
+                    <li class="active"><a href="vl.html"><i class="glyphicon glyphicon-registration-mark"></i> Validation</a></li>
                     <li><a href="ar.html"><i class="glyphicon glyphicon-book"></i> Article</a></li>
                     <li><a href="au.html"><i class="glyphicon glyphicon-info-sign"></i> Authors</a></li>
                 </ul>
@@ -43,7 +40,7 @@
                   	<li><a href="sm.html" class="text-center"><i class="glyphicon glyphicon-list-alt"></i></a></li>
                     <li><a href="wt.html" class="text-center"><i class="glyphicon glyphicon-list"></i></a></li>
                   	<li><a href="ht.html" class="text-center"><i class="glyphicon glyphicon-th"></i></a></li>
-                    <li><a href="vl.html" class="text-center"><i class="glyphicon glyphicon-registration-mark"></i></a></li>
+                    <li class="active"><a href="vl.html" class="text-center"><i class="glyphicon glyphicon-registration-mark"></i></a></li>
                     <li><a href="ar.html" class="text-center"><i class="glyphicon glyphicon-book"></i></a></li>
                     <li><a href="au.html" class="text-center"><i class="glyphicon glyphicon-info-sign"></i></a></li>
               </ul>
@@ -76,54 +73,15 @@
                         <!-- content -->                      
                       	<div class="row">
                           
-                        <!-- main col left --> 
+                         <!-- main col left --> 
+
                         <div class="bs-callout bs-callout-info" id="callout-alerts-no-default"> 
-                        <h4>Metabolic Syndrome Test</h4> 
-
-                        <p>Check questions below to set to True.</p>
-
-                        <div class="row">
-
-                          <div class="col-lg-6">
-                            <div class="input-group">
-                              <span class="input-group-addon">
-                              <input type="checkbox" aria-label="..." ng-model="user.cb1" value="{{user.cb1}}">
-                              </span>
-                              <input type="text" class="form-control" value="Is WtHR less than 0,55 ?" disabled aria-label="...">
-                            </div><!-- /input-group -->
-                          </div><!-- /.col-lg-6 -->
-
-                          <p>
-                          <div class="col-lg-6">
-                            <div class="input-group">
-                              <span class="input-group-addon">
-                              <input type="checkbox" aria-label="..." ng-model="user.cb2" value="{{user.cb1}}">
-                              </span>
-                              <input type="text" class="form-control" value="Is Blood Pressure less than 128/85 mmHg ?" disabled aria-label="...">
-                            </div><!-- /input-group -->
-                          </div><!-- /.col-lg-6 -->
-
-                          <p>
-
-                          <!-- Resolución casos -->  
-                          <div class="col-lg-6" ng-if="user.cb1 == true">
-                             <div ng-if="user.cb2 == true">
-                              <div class="alert alert-danger" role="alert">(6) Yes !! Metabolic Syndrome Confirmed</div>
-                             </div>
-                             <div ng-if="user.cb2 !== true">
-                              <div class="alert alert-success" role="alert">(5) No Syndrome</div>
-                             </div>
-                          </div> 
-                          <div class="col-lg-6" ng-if="user.cb1 !== true">
-                            <div ng-if="user.cb2 == true">
-                                <div class="alert alert-success" role="alert">(4) No Syndrome</div>
-                            </div>
-                            <div ng-if="user.cb2 !== true">
-                              <div class="alert alert-success" role="alert">(3) No Syndrome</div>
-                            </div>
-                          </div> 
-        
+                        <h4>Validation</h4> 
+                        
                         </div>
+
+
+                         
                       <hr>
                         
                       
@@ -139,18 +97,8 @@
 
 
 	<!-- script references -->
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
-    <script type="text/javascript" src="angular/1.4.3/angular.min.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
-    <script src="js/bootstrap-switch.min.js"></script>
 		<script src="js/scripts.js"></script>
-
-    <script type="text/javascript">
-      $.fn.bootstrapSwitch.defaults.onColor = 'success';
-      $.fn.bootstrapSwitch.defaults.size = 'large';
-      $("[name='my-checkbox']").bootstrapSwitch();
-    </script>
-
-    
 	</body>
 </html>
