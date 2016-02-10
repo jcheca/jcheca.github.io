@@ -1,4 +1,6 @@
-Metabolic Sindrome - MetS
+[Metabolic Sindrome - MetS]
+
+* Introduction
 
 Metabolic syndrome (MetS) is defined as a group of metabolic risk factors, characterised by central obesity, high arterial blood pressure (BP) and an impaired glucose (hyperglycaemia) and lipid (hypertriglyceridaemia and low high-density lipoprotein (HDL)-cholesterol) metabolism.
 
@@ -11,3 +13,11 @@ In addition, the identification of abdominal obesity and, more specifically, the
 Occupational health nursing is actively involved in the promotion of health programmes at the workplace for the prevention of CVDs, focusing on the control of main risk factors: obesity, hypertension, hyperlipidaemia, smoking, balanced diet and physical activity.
 
 The aim of this study is to propose a method for the early detection of MetS in a working population that is free of biomarkers (non-invasive) and based on anthropometric variables, and to validate it in a different population of workers.
+
+* Programación: 
+	
+	HTML5/CSS/JS
+	AngularJS 1.4.3
+	Facebook Style Template from http://www.bootply.com/96266
+
+* Date: Feb.2016
