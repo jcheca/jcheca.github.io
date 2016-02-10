@@ -122,10 +122,10 @@ hr {
 .logo {
   display:block;
   padding:3px;
-  background-color:#fff;
+  background-color:#e9eaed;
   color:#3B5999;
   height:28px;
-  width:60px;
+  width:55px;
   margin:9px;
   margin-right:2px;
   margin-left:15px;
@@ -134,8 +134,25 @@ hr {
   text-align:center;
   text-decoration:none;
   text-shadow:0 0 1px;
-  border-radius:2px;
+  border-radius:4px;
 }
+
+.logo2 {
+  display:block;
+  padding:0px;
+  color:#e9eaed;
+  height:28px;
+  width:300px;
+  margin:9px;
+  margin-right:15px;
+  margin-left:80px;
+  font-size:12px;
+  font-weight:100;
+  text-align:left;
+  text-decoration:none;
+  font-style: italic;
+}
+
 #sidebar-footer {
   background-color:#444;
   position:absolute;
