@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<title>mHelvia</title>
+	<meta name="generator" content="Bootply" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link href="images/favicon-16x16.png" rel="shortcut icon">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+
+	<!--[if lt IE 9]>
+		<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link href="css/styles.css" rel="stylesheet">
+</head>
+<body ng-app="mHelvia">
+<div class="wrapper">
+    <div class="box">
+        <div class="row row-offcanvas row-offcanvas-left">   
+            <!-- sidebar -->
+            <div class="column col-sm-2 col-xs-1 sidebar-offcanvas" id="sidebar">
+              
+              <ul class="nav">
+          			<li><a href="#" data-toggle="offcanvas" class="visible-xs text-center"><i class="glyphicon glyphicon-chevron-right"></i></a></li>
+            	</ul>
+               
+                <ul class="nav hidden-xs" id="lg-menu">
+                    <li class="active"><a href="sm.html"><i class="glyphicon glyphicon-list-alt"></i> MS</a></li>
+                    <li><a href="wt.html"><i class="glyphicon glyphicon-list"></i> A</a></li>
+                    <li><a href="ht.html"><i class="glyphicon glyphicon-th"></i> B</a></li>
+                    <li><a href="vl.html"><i class="glyphicon glyphicon-ok"></i> C</a></li>
+                    <li><a href="au.html"><i class="glyphicon glyphicon-user"></i> D</a></li>
+                    <li><a href="ab.html"><i class="glyphicon glyphicon-edit"></i> About</a></li>
+
+                </ul>
+                <ul class="list-unstyled hidden-xs" id="sidebar-footer">
+                    <li>
+                      <h3>
+                        <a href="http://www.uco.es" target="_blank"><img src="images/logo-footer.png" width="28px"></a> 
+                        <hr><p>mHelvia</p>
+                      </h3> Repositorio
+                    </li>
+                </ul>
+              
+              	<!-- tiny only nav-->
+              <ul class="nav visible-xs" id="xs-menu">
+                  	<li><a href="sm.html" class="text-center"><i class="glyphicon glyphicon-list-alt"></i></a></li>
+                    <li><a href="wt.html" class="text-center"><i class="glyphicon glyphicon-list"></i></a></li>
+                  	<li><a href="ht.html" class="text-center"><i class="glyphicon glyphicon-th"></i></a></li>
+                    <li><a href="vl.html" class="text-center"><i class="glyphicon glyphicon-ok"></i></a></li>
+                    <li><a href="au.html" class="text-center"><i class="glyphicon glyphicon-user"></i></a></li>
+                    <li><a href="ab.html" class="text-center"><i class="glyphicon glyphicon-edit"></i></a></li>
+              </ul>
+              
+            </div>
+            <!-- /sidebar -->
+          
+            <!-- main right col -->
+            <div class="column col-sm-10 col-xs-11" id="main">
+                
+                <!-- top nav -->
+                
+              	<div class="navbar navbar-blue navbar-static-top">  
+                    <div class="navbar-header">
+                      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle</span>
+                        <span class="icon-bar"></span>
+          				      <span class="icon-bar"></span>
+          				      <span class="icon-bar"></span>
+                      </button>
+                      <a href="index.html" class="navbar-brand logo">mHelvia</a>
+                      <p class="logo2">Repositorio Institucional de la UCO. &#169; 2016.Feb</p>
+                  	</div>
+                </div>
+
+                <!-- /top nav -->
+              
+                <div class="padding">
+                    <div class="full col-sm-12">
+                      
+                        <!-- content -->                      
+                      	<div class="row">
+                          
+                        
+                        <!-- main col left --> 
+                        <div class="bs-callout bs-callout-info" id="callout-alerts-no-default"> 
+
+
+                        <h4>mHelvia</h4> 
+
+                        <h5>Repositorio Intitucional de la Universidad de Córdoba.</h5>
+
+                        <p>Bienvenido a Helvia. Su objetivo es permitir el acceso libre a la producción científica y académica de la Universidad, aumentando la visibilidad de los contenidos generados por los miembros de la UCO y garantizando la conservación de los mismos.</p>
+
+                        <p>El repositorio recoge todo tipo de materiales digitales: artículos de revistas, comunicaciones a congresos, tesis doctorales, documentos de trabajo, materiales docentes y objetos de aprendizaje, así como los productos digitales del patrimonio bibliográfico de la Universidad de Córdoba.</p>
+
+                        <!-- Top de Comunidades -->
+                        <div ng-controller="Communities">
+                        <table class="table table-striped table-hover">
+                          <thead>
+                            <tr>
+                              <th>Comunidades</th>
+                              <th>Introducción</th>
+                              <th>Items</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr ng-repeat="comunidad in communities">
+                              <td>
+                                  {{comunidad.name}}</br>
+                              </td>
+                              <td>
+                                  {{comunidad.introductoryText}}</br>
+                              </td>
+                              <td>
+                                  {{comunidad.countItems}}</br>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        </div>
+
+
+                        </div>
+                    </div>
+                </div><!-- /padding -->
+
+            </div>
+            <!-- /main -->
+          
+        </div>
+    </div>
+</div>
+
+
+
+	<!-- script references -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+    <script src="angular/1.4.3/angular.min.js"></script>
+    <script src="js/mHelvia.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/scripts.js"></script>
+    
+	</body>
+</html>

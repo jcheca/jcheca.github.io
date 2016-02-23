@@ -21,3 +21,7 @@ The aim of this study is to propose a method for the early detection of MetS in 
 	Facebook Style Template from http://www.bootply.com/96266
 
 * Date: Feb.2016
+
+[CHANGELOG]
+
+23.02.2016 - Multiidioma. Incluido textos en español. Tablas diferentes para las Valoracioines.

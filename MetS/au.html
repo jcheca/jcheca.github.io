@@ -15,7 +15,7 @@
 	<![endif]-->
 	<link href="css/styles.css" rel="stylesheet">
 </head>
-<body ng-app="">
+<body ng-app="mets" ng-controller="Idioma">
 <div class="wrapper">
     <div class="box">
         <div class="row row-offcanvas row-offcanvas-left">   
@@ -26,6 +26,9 @@
           			<li><a href="#" data-toggle="offcanvas" class="visible-xs text-center"><i class="glyphicon glyphicon-chevron-right"></i></a></li>
             	</ul>
                
+
+                <!-- Menu en Inglés -->
+                <div ng-if="Idioma == 'EN'">               
                 <ul class="nav hidden-xs" id="lg-menu">
                     <li><a href="sm.html"><i class="glyphicon glyphicon-list-alt"></i> MS</a></li>
                     <li><a href="wt.html"><i class="glyphicon glyphicon-list"></i> WtHR</a></li>
@@ -44,6 +47,29 @@
                       </h3> Metabolic Syndrome
                     </li>
                 </ul>
+                </div>
+
+                <!-- Menu en Inglés -->
+                <div ng-if="Idioma == 'ES'">               
+                <ul class="nav hidden-xs" id="lg-menu">
+                    <li><a href="sm.html"><i class="glyphicon glyphicon-list-alt"></i> SM</a></li>
+                    <li><a href="wt.html"><i class="glyphicon glyphicon-list"></i> ICT</a></li>
+                    <li><a href="ht.html"><i class="glyphicon glyphicon-th"></i> HTA</a></li>
+                    <li><a href="vl.html"><i class="glyphicon glyphicon-ok"></i> Validación</a></li>
+                    <li class="active"><a href="au.html"><i class="glyphicon glyphicon-user"></i> Autores</a></li>
+                    <li><a href="ab.html"><i class="glyphicon glyphicon-edit"></i> Acerca de</a></li>
+
+                </ul>
+                <ul class="list-unstyled hidden-xs" id="sidebar-footer">
+                    <li>
+                      <h3>
+                        <a href="http://www.uco.es" target="_blank"><img src="images/logo-footer.png" width="28px"></a> 
+                        <a href="http://imibic.org" target="_blank"><img src="images/imibic.png" width="130px"></a>
+                        <hr><p>MetS</p>
+                      </h3> Síndrome Metabólico
+                    </li>
+                </ul>
+                </div>
               
               	<!-- tiny only nav-->
               <ul class="nav visible-xs" id="xs-menu">
@@ -86,6 +112,7 @@
                           
                         
                         <!-- main col left --> 
+                        <div ng-if="Idioma == 'EN'">               
                         <div class="bs-callout bs-callout-info" id="callout-alerts-no-default"> 
         
                           <h4>Metabolic Syndrome</h4> 
@@ -99,13 +126,33 @@
                           <div class="alert alert-info"><strong>Guillermo Molina-Recio.</strong> <i>Department of Nursing, School of Medicine and Nursing, University of Códoba, Córdoba, Spain.</i><a href="http://orcid.org/0000-0002-0005-4901" target="_blank"> ORCID: 0000-0002-0005-4901</a></div>
                           <div class="alert alert-info"><strong>Jose López-Miranda.</strong> <i>Lipids and Atherosclerosis Unit, Department of Medicine, Instituto Maimónides de Investigación Biomédica de Córdoba (IMIBIC); Reina Sofia University Hospital; University of Cordoba, Córdoba, Spain</i></div>
                           
-                          0000-0002-9070-556X
-
-                        </div>
-        
-                      
+                      </div>
                       <hr>
                       <a href="index.html"><i class="glyphicon glyphicon-share"></i></a> Return Test
+                      </div>
+
+
+                        <div ng-if="Idioma == 'ES'">               
+                        <div class="bs-callout bs-callout-info" id="callout-alerts-no-default"> 
+        
+                          <h4>Síndrome Metabolico</h4> 
+
+                          <h5>Autores.</h5>
+                          
+                          <div class="alert alert-info"><strong>Manuel Romero-Saldaña.</strong> <i>Departamento de Seguridad y Salud Laboral, Ayuntamiento de Córdoba, España.</i><a href="http://orcid.org/0000-0002-6146-4402" target="_blank"> ORCID: 0000-0002-6146-4402</a></div>
+                          <div class="alert alert-info"><strong>Francisco J Fuentes-Jiménez.</strong> <i>IMIBIC, Hospital Universitario Reina Sofía, Universidad de Córdoba, Córdoba, España.</i> CIBER Physiopathology of Obesity and Nutrition CIBEROBN, ISCIII, Madrid, España</div>
+                          <div class="alert alert-info"><strong>Manuel Vaquero-Abellán.</strong> <i>Departamento de Riesgos Laborales y Protección Ambiental. Universidad de Córdoba, Córdoba, España.</i><a href="http://orcid.org/0000-0002-0602-317X" target="_blank"> ORCID: 0000-0002-0602-317X</a></div> 
+                          <div class="alert alert-info"><strong>Carlos Álvarez-Fernández.</strong> <i>Departamento de Seguridad y Salud Laboral, Ayuntamiento de Córdoba, Córdoba, España</i><a href="http://orcid.org/0000-0002-9070-556X" target="_blank"> ORCID: 0000-0002-9070-556X</a></div>
+                          <div class="alert alert-info"><strong>Guillermo Molina-Recio.</strong> <i>Departamento de Enfermería, Escuela de Medicina y Enfermería, Universidad de Códoba, Córdoba, España.</i><a href="http://orcid.org/0000-0002-0005-4901" target="_blank"> ORCID: 0000-0002-0005-4901</a></div>
+                          <div class="alert alert-info"><strong>Jose López-Miranda.</strong> <i>Unidad de Lípidos y Arterioesclerosis, Departamento de Medicina, Instituto Maimónides de Investigación Biomédica de Córdoba (IMIBIC); Hospital Universitario Reina Sofía; Universidad de Cordoba, Córdoba, España</i></div>
+                          
+                      </div>
+                      <hr>
+                      <a href="index.html"><i class="glyphicon glyphicon-share"></i></a> Volver al Test
+                      </div>
+
+
+
                         
                       
                     </div><!-- /col-9 -->
@@ -124,6 +171,7 @@
     <script type="text/javascript" src="angular/1.4.3/angular.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
 		<script src="js/scripts.js"></script>
+    <script src="js/mets.js"></script>
     
 	</body>
 </html>

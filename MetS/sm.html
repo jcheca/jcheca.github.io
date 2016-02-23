@@ -15,7 +15,7 @@
 	<![endif]-->
 	<link href="css/styles.css" rel="stylesheet">
 </head>
-<body ng-app="">
+<body ng-app="mets" ng-controller="Idioma">
 <div class="wrapper">
     <div class="box">
         <div class="row row-offcanvas row-offcanvas-left">   
@@ -26,6 +26,9 @@
           			<li><a href="#" data-toggle="offcanvas" class="visible-xs text-center"><i class="glyphicon glyphicon-chevron-right"></i></a></li>
             	</ul>
                
+
+                <!-- Menu en Inglés -->
+                <div ng-if="Idioma == 'EN'">
                 <ul class="nav hidden-xs" id="lg-menu">
                     <li class="active"><a href="sm.html"><i class="glyphicon glyphicon-list-alt"></i> MS</a></li>
                     <li><a href="wt.html"><i class="glyphicon glyphicon-list"></i> WtHR</a></li>
@@ -43,6 +46,28 @@
                       </h3> Metabolic Syndrome
                     </li>
                 </ul>
+                </div>
+
+                <!-- Menu en Español -->
+                <div ng-if="Idioma == 'ES'">
+                <ul class="nav hidden-xs" id="lg-menu">
+                    <li class="active"><a href="sm.html"><i class="glyphicon glyphicon-list-alt"></i> SM</a></li>
+                    <li><a href="wt.html"><i class="glyphicon glyphicon-list"></i> ICT</a></li>
+                    <li><a href="ht.html"><i class="glyphicon glyphicon-th"></i> HTA</a></li>
+                    <li><a href="vl.html"><i class="glyphicon glyphicon-ok"></i> Validación</a></li>
+                    <li><a href="au.html"><i class="glyphicon glyphicon-user"></i> Autores</a></li>
+                    <li><a href="ab.html"><i class="glyphicon glyphicon-edit"></i> Acerca de</a></li>
+                </ul>
+                <ul class="list-unstyled hidden-xs" id="sidebar-footer">
+                    <li>
+                      <h3>
+                        <a href="http://www.uco.es" target="_blank"><img src="images/logo-footer.png" width="28px"></a> 
+                        <a href="http://imibic.org" target="_blank"><img src="images/imibic.png" width="130px"></a>
+                        <hr><p>MetS</p>
+                      </h3> Síndrome Metabólico
+                    </li>
+                </ul>
+                </div>
               
               	<!-- tiny only nav-->
               <ul class="nav visible-xs" id="xs-menu">
@@ -82,32 +107,61 @@
                       
                         <!-- content -->                      
                       	<div class="row">
-                          
-                        
+                                                  
                         <!-- main col left --> 
                         <div class="bs-callout bs-callout-info" id="callout-alerts-no-default"> 
-        
-                          <h4>Metabolic Syndrome</h4> 
+                          
+                          <!-- Inicio en Inglés -->
+                          <div ng-if="Idioma == 'EN'">
 
-                          <h5>Introduction.</h5>
+                            <h4>Metabolic Syndrome</h4> 
 
-                          <p>Metabolic syndrome (MetS) is defined as a group of metabolic risk factors, characterised by central obesity, high arterial blood pressure (BP) and an impaired glucose (hyperglycaemia) and lipid (hypertriglyceridaemia and low high-density lipoprotein (HDL)-cholesterol) metabolism.</p>
+                            <h5>Introduction.</h5>
 
-                          <p>MetS is closely linked to type 2 diabetes mellitus (DM), cardiovascular disease (CVD) and other cardiovascular risk factors that increase morbidity and mortality. The general increase in the prevalence of MetS over the past few decades has made it an urgent priority for public health services in all countries.</p>
+                            <p>Metabolic syndrome (MetS) is defined as a group of metabolic risk factors, characterised by central obesity, high arterial blood pressure (BP) and an impaired glucose (hyperglycaemia) and lipid (hypertriglyceridaemia and low high-density lipoprotein (HDL)-cholesterol) metabolism.</p>
 
-                          <p>With the aim of the early detection of MetS, a large amount of research has been carried out recently aimed at identifying predictors based on biomarkers of metabolic risk, such as systemic inflammation markers (C-reactive protein, leukocyte rate and subtypes), adipocytokines (leptin, adiponectin, tumour necrosis factor α), uric acid and bilirubin, etc.</p>
+                            <p>MetS is closely linked to type 2 diabetes mellitus (DM), cardiovascular disease (CVD) and other cardiovascular risk factors that increase morbidity and mortality. The general increase in the prevalence of MetS over the past few decades has made it an urgent priority for public health services in all countries.</p>
 
-                          <p>In addition, the identification of abdominal obesity and, more specifically, the accumulation of visceral fat as a key factor in the pathogenesis of insulin resistance and the onset of MetS has led to a body of research aiming to link MetS to anthropometric measurements of obesity such as body mass index (BMI), waist circumference (WC), waist–hip index, waist–height index, etc. However, the heterogeneity of the populations studied has meant that consensus and agreement in the results differ widely.</p>
+                            <p>With the aim of the early detection of MetS, a large amount of research has been carried out recently aimed at identifying predictors based on biomarkers of metabolic risk, such as systemic inflammation markers (C-reactive protein, leukocyte rate and subtypes), adipocytokines (leptin, adiponectin, tumour necrosis factor α), uric acid and bilirubin, etc.</p>
 
-                          <p>Occupational health nursing is actively involved in the promotion of health programmes at the workplace for the prevention of CVDs, focusing on the control of main risk factors: obesity, hypertension, hyperlipidaemia, smoking, balanced diet and physical activity.</p>
+                            <p>In addition, the identification of abdominal obesity and, more specifically, the accumulation of visceral fat as a key factor in the pathogenesis of insulin resistance and the onset of MetS has led to a body of research aiming to link MetS to anthropometric measurements of obesity such as body mass index (BMI), waist circumference (WC), waist–hip index, waist–height index, etc. However, the heterogeneity of the populations studied has meant that consensus and agreement in the results differ widely.</p>
 
-                          <p>The aim of this study is to propose a method for the early detection of MetS in a working population that is free of biomarkers (non-invasive) and based on anthropometric variables, and to validate it in a different population of workers.</p>
+                            <p>Occupational health nursing is actively involved in the promotion of health programmes at the workplace for the prevention of CVDs, focusing on the control of main risk factors: obesity, hypertension, hyperlipidaemia, smoking, balanced diet and physical activity.</p>
+
+                            <p>The aim of this study is to propose a method for the early detection of MetS in a working population that is free of biomarkers (non-invasive) and based on anthropometric variables, and to validate it in a different population of workers.</p>
+                      
+                            <hr>
+                            <a href="index.html"><i class="glyphicon glyphicon-share"></i></a> Return Test
+
+                          </div>
+                          <!-- Fin en Inglés -->
+
+                          <!-- Inicio en Español -->
+                          <div ng-if="Idioma == 'ES'">
+
+                            <h4>Sindrome Metabólico</h4> 
+
+                            <h5>Introducción.</h5>
+
+                            <p>El síndrome metabólico (SM) se define como una agrupación de factores de riesgo metabólico, caracterizados por obesidad central, elevación de la presión arterial, alteraciones del metabolismo glucémico (hiperglucemia) y lipídico (hipertrigliceriemia y bajo nivel de colesterol HDL). </p>
+
+                            <p>El SM está fuertemente asociado a diabetes mellitus (DM) tipo 2, enfermedades cardiovasculares (ECV), y a otros factores de riesgo cardiovascular que incrementan la morbimortalidad. El aumento generalizado de la prevalencia de SM en las últimas décadas, lo convierte en un problema de salud pública prioritario para cualquier país.</p>
+
+                            <p>Con el propósito de la detección precoz de SM, recientemente, se han llevado a cabo numerosas investigaciones dirigidas a identificar variables predictoras basadas en biomarcadores de riesgo metabólico, como parámetros de inflamación sistémica (proteína C reactiva, tasa leucocitaria y subtipos), adipocitoquinas (leptina, adiponectina, el factor de necrosis tumoral α),  uricemia, bilirrubina, etc.</p>
+
+                            <p>Por otra parte, la identificación de la obesidad abdominal y, más concretamente, la acumulación de grasa visceral como factor clave en la etiopatogenia de la resistencia a la insulina y la aparición de SM, ha generado gran número de investigaciones con el fin de asociar SM a indicadores antropométricos de obesidad como el índice de masa corporal, la circunferencia de cintura, el índice cintura-cadera, el índice cintura-talla, etc. Sin embargo, la heterogeneidad de las poblaciones estudiadas ha provocado que el consenso y la concordancia en los resultados sean muy dispares.</p>
+
+                            <p>El objetivo del presente estudio es proponer un método de detección precoz de SM en población trabajadora basado en variables antropométricas y exento de marcadores biológicos (método no invasivo), así como validarlo en una población distinta de trabajadores.</p>
+                      
+                            <hr>
+                            <a href="index.html"><i class="glyphicon glyphicon-share"></i></a> Volver al Test
+
+                          </div>
+                          <!-- Fin en Español -->
+
+
 
                         </div>
-        
-                      
-                      <hr>
-                      <a href="index.html"><i class="glyphicon glyphicon-share"></i></a> Return Test
                         
                       
                     </div><!-- /col-9 -->
@@ -126,6 +180,7 @@
     <script type="text/javascript" src="angular/1.4.3/angular.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
 		<script src="js/scripts.js"></script>
+    <script src="js/mets.js"></script>
     
 	</body>
 </html>

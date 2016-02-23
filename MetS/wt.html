@@ -15,7 +15,7 @@
 	<![endif]-->
 	<link href="css/styles.css" rel="stylesheet">
 </head>
-<body ng-app="">
+<body ng-app="mets" ng-controller="Idioma">
 <div class="wrapper">
     <div class="box">
         <div class="row row-offcanvas row-offcanvas-left">   
@@ -26,6 +26,9 @@
           			<li><a href="#" data-toggle="offcanvas" class="visible-xs text-center"><i class="glyphicon glyphicon-chevron-right"></i></a></li>
             	</ul>
                
+
+                <!-- Menu Inglés -->
+                <div ng-if="Idioma == 'EN'">
                 <ul class="nav hidden-xs" id="lg-menu">
                     <li><a href="sm.html"><i class="glyphicon glyphicon-list-alt"></i> MS</a></li>
                     <li class="active"><a href="wt.html"><i class="glyphicon glyphicon-list"></i> WtHR</a></li>
@@ -43,6 +46,29 @@
                       </h3> Metabolic Syndrome
                     </li>
                 </ul>
+                </div>
+
+                <!-- Menu Español -->
+                <div ng-if="Idioma == 'ES'">
+                <ul class="nav hidden-xs" id="lg-menu">
+                    <li><a href="sm.html"><i class="glyphicon glyphicon-list-alt"></i> SM</a></li>
+                    <li class="active"><a href="wt.html"><i class="glyphicon glyphicon-list"></i> ICT</a></li>
+                    <li><a href="ht.html"><i class="glyphicon glyphicon-th"></i> HTA</a></li>
+                    <li><a href="vl.html"><i class="glyphicon glyphicon-ok"></i> Validación</a></li>
+                    <li><a href="au.html"><i class="glyphicon glyphicon-user"></i> Autores</a></li>
+                    <li><a href="ab.html"><i class="glyphicon glyphicon-edit"></i> Acerca de</a></li>
+                </ul>
+                <ul class="list-unstyled hidden-xs" id="sidebar-footer">
+                    <li>
+                      <h3>
+                        <a href="http://www.uco.es" target="_blank"><img src="images/logo-footer.png" width="28px"></a> 
+                        <a href="http://imibic.org" target="_blank"><img src="images/imibic.png" width="130px"></a>
+                        <hr><p>MetS</p>
+                      </h3> Síndrome Metabólico
+                    </li>
+                </ul>
+                </div>
+
               
               	<!-- tiny only nav-->
               <ul class="nav visible-xs" id="xs-menu">
@@ -81,23 +107,34 @@
                       
                         <!-- content -->                      
                       	<div class="row">
-                          
-                        
-                        <!-- main col left --> 
+                                                  
                         <div class="bs-callout bs-callout-info" id="callout-alerts-no-default"> 
+      
+                          <div ng-if="Idioma == 'EN'">
+                            <h4>Metabolic Syndrome</h4> 
+                            <h5>WtHR.</h5>
+
+                            <p>Height was measured to the nearest 0.1 cm using a stadiometer. Waist and hip circumferences were measured using a flexible steel tape. The plane of the tape was perpendicular to the long axis of the body and parallel to the floor. WC was measured half way between the lower costal border and the iliac crest. The measurement was made at the end of a normal expiration while the subject stood upright, with feet together and arms hanging freely at the sides. Hip circumference was measured over non- restrictive underwear, or light-weight shorts, at the level of the maximum extension of the buttocks posteriorly in a horizontal plane, without compressing the skin.</p>
         
-                          <h4>Metabolic Syndrome</h4> 
+                            <hr>
+                            <a href="index.html"><i class="glyphicon glyphicon-share"></i></a> Return Test
+                          </div>
 
-                          <h5>WtHR.</h5>
-
-                          <p>Height was measured to the nearest 0.1 cm using a stadiometer. Waist and hip circumferences were measured using a flexible steel tape. The plane of the tape was perpendicular to the long axis of the body and parallel to the floor. WC was measured half way between the lower costal border and the iliac crest. The measurement was made at the end of a normal expiration while the subject stood upright, with feet together and arms hanging freely at the sides. Hip circumference was measured over non- restrictive underwear, or light-weight shorts, at the level of the maximum extension of the buttocks posteriorly in a horizontal plane, without compressing the skin.</p>
-
-                        </div>
+                          <!-- Texto en Español -->
+                          <div ng-if="Idioma == 'ES'">
         
+                            <h4>Síndrome Metabólico</h4> 
+
+                            <h5>Índice Cintura-Talla (ICT)</h5>
+
+                            <p>Calculado por el cociente entre la circunferencia de la cintura y la talla en centímetros. La talla se midió con una precisión de 0,1 cm utilizando un estadiómetro.  La circunferencia de la cintura se midió utilizando una cinta de acero flexible. El plano de medida fue perpendicular al eje longitudinal del cuerpo y paralelo al suelo. Se midió a mitad de camino entre el reborde costal inferior y la cresta ilíaca. La medición se realizó al final de una espiración normal, mientras que el sujeto estaba en pie, con los pies juntos y los brazos colgando libremente a los lados. Circunferencia de la cadera se midió en ropa interior, en un plano horizontal, sin comprimir la piel.</p>              
+        
+                            <hr>
+                            <a href="index.html"><i class="glyphicon glyphicon-share"></i></a> Volver al Test
+                          </div>
+
                       
-                      <hr>
-                      <a href="index.html"><i class="glyphicon glyphicon-share"></i></a> Return Test
-                        
+                        </div>       
                       
                     </div><!-- /col-9 -->
                 </div><!-- /padding -->
@@ -115,6 +152,7 @@
     <script type="text/javascript" src="angular/1.4.3/angular.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
 		<script src="js/scripts.js"></script>
+    <script src="js/mets.js"></script>
     
 	</body>
 </html>

@@ -15,7 +15,7 @@
 	<![endif]-->
 	<link href="css/styles.css" rel="stylesheet">
 </head>
-<body ng-app="">
+<body ng-app="mets" ng-controller="Idioma">
 <div class="wrapper">
     <div class="box">
         <div class="row row-offcanvas row-offcanvas-left">   
@@ -26,6 +26,8 @@
           			<li><a href="#" data-toggle="offcanvas" class="visible-xs text-center"><i class="glyphicon glyphicon-chevron-right"></i></a></li>
             	</ul>
                
+                <!-- Menu en Inglés -->
+                <div ng-if="Idioma == 'EN'">
                 <ul class="nav hidden-xs" id="lg-menu">
                     <li><a href="sm.html"><i class="glyphicon glyphicon-list-alt"></i> MS</a></li>
                     <li><a href="wt.html"><i class="glyphicon glyphicon-list"></i> WtHR</a></li>
@@ -43,6 +45,29 @@
                       </h3> Metabolic Syndrome
                     </li>
                 </ul>
+                </div>
+
+                <!-- Menu en Español -->
+                <div ng-if="Idioma == 'ES'">
+                <ul class="nav hidden-xs" id="lg-menu">
+                    <li><a href="sm.html"><i class="glyphicon glyphicon-list-alt"></i> SM</a></li>
+                    <li><a href="wt.html"><i class="glyphicon glyphicon-list"></i> ICT</a></li>
+                    <li class="active"><a href="ht.html"><i class="glyphicon glyphicon-th"></i> HTA</a></li>
+                    <li><a href="vl.html"><i class="glyphicon glyphicon-ok"></i> Validación</a></li>
+                    <li><a href="au.html"><i class="glyphicon glyphicon-user"></i> Autores</a></li>
+                    <li><a href="ab.html"><i class="glyphicon glyphicon-edit"></i> Acerca de</a></li>
+                </ul>
+                <ul class="list-unstyled hidden-xs" id="sidebar-footer">
+                    <li>
+                      <h3>
+                        <a href="http://www.uco.es" target="_blank"><img src="images/logo-footer.png" width="28px"></a> 
+                        <a href="http://imibic.org" target="_blank"><img src="images/imibic.png" width="130px"></a>
+                        <hr><p>MetS</p>
+                      </h3> Sindrome Metabólico
+                    </li>
+                </ul>
+                </div>
+
               
               	<!-- tiny only nav-->
               <ul class="nav visible-xs" id="xs-menu">
@@ -86,18 +111,32 @@
                         <!-- main col left --> 
                         <div class="bs-callout bs-callout-info" id="callout-alerts-no-default"> 
         
+
+                          <!-- En Inglés -->
+                          <div ng-if="Idioma == 'EN'">
                           <h4>Metabolic Syndrome</h4> 
 
                           <h5>HT.</h5>
 
                           <p>To measure BP, the recommendations in the Manual of Hypertension of the Spanish Society of Family Medicine were followed. BP was determined after a resting period of 10 minutes in the supine position using an automatic and calibrated sphygmomanometer (OMRON M3, OMRON Healthcare Europe, Spain). As indicated for the anthropometrical measures, BP was measured three times with a 1-minute gap between each measurement and an average value was calculated.</p>
+              
+                          <hr>
+                          <a href="index.html"><i class="glyphicon glyphicon-share"></i></a> Return Test
+                          </div>
+
+                          <!-- En Inglés -->
+                          <div ng-if="Idioma == 'ES'">
+                          <h4>Síndrome Metabólico.</h4> 
+
+                          <h5>HTA.</h5>
+
+                          <p>Para medir la Presión Arterial, se siguieron las recomendaciones del Manual de Hipertensión de la Sociedad Española de Medicina de Familia. Se determinó después de un período de descanso de 10 minutos en la posición supina utilizando un esfigmomanómetro automático y calibrado (OMRON M3, Omron Healthcare Europe, España). Como se ha indicado para las medidas antropométricas, BP se midió tres veces con una separación de 1 minuto entre cada medida y se calculó un valor medio.</p>
+              
+                          <hr>
+                          <a href="index.html"><i class="glyphicon glyphicon-share"></i></a> Volver al Test
+                          </div>
 
                         </div>
-        
-                      
-                      <hr>
-                      <a href="index.html"><i class="glyphicon glyphicon-share"></i></a> Return Test
-                        
                       
                     </div><!-- /col-9 -->
                 </div><!-- /padding -->
@@ -115,6 +154,7 @@
     <script type="text/javascript" src="angular/1.4.3/angular.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
 		<script src="js/scripts.js"></script>
+    <script src="js/mets.js"></script>
     
 	</body>
 </html>

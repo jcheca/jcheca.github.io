@@ -8,14 +8,16 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <link href="images/favicon-16x16.png" rel="shortcut icon">
 	<link href="css/bootstrap.min.css" rel="stylesheet">
+  <!--
   <link href="css/bi-style.css" rel="stylesheet" />
+  ->
 
 	<!--[if lt IE 9]>
 		<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
 	<link href="css/styles.css" rel="stylesheet">
 </head>
-<body ng-app="">
+<body ng-app="mets" ng-controller="Idioma">
 <div class="wrapper">
     <div class="box">
         <div class="row row-offcanvas row-offcanvas-left">   
@@ -26,6 +28,8 @@
           			<li><a href="#" data-toggle="offcanvas" class="visible-xs text-center"><i class="glyphicon glyphicon-chevron-right"></i></a></li>
             	</ul>
                
+                <!-- Menu Inglés -->
+                <div ng-if="Idioma == 'EN'"> 
                 <ul class="nav hidden-xs" id="lg-menu">
                     <li class="active"><a href="sm.html"><i class="glyphicon glyphicon-list-alt"></i> MS</a></li>
                     <li><a href="wt.html"><i class="glyphicon glyphicon-list"></i> WtHR</a></li>
@@ -44,6 +48,30 @@
                       </h3> Metabolic Syndrome
                     </li>
                 </ul>
+                </div>
+
+                <!-- Menu Español -->
+                <div ng-if="Idioma == 'ES'"> 
+                <ul class="nav hidden-xs" id="lg-menu">
+                    <li class="active"><a href="sm.html"><i class="glyphicon glyphicon-list-alt"></i> SM</a></li>
+                    <li><a href="wt.html"><i class="glyphicon glyphicon-list"></i> ICT</a></li>
+                    <li><a href="ht.html"><i class="glyphicon glyphicon-th"></i> HTA</a></li>
+                    <li><a href="vl.html"><i class="glyphicon glyphicon-ok"></i> Validación</a></li>
+                    <li><a href="au.html"><i class="glyphicon glyphicon-user"></i> Autores</a></li>
+                    <li><a href="ab.html"><i class="glyphicon glyphicon-edit"></i> Acerca de</a></li>
+
+                </ul>
+                <ul class="list-unstyled hidden-xs" id="sidebar-footer">
+                    <li>
+                      <h3>
+                        <a href="http://www.uco.es" target="_blank"><img src="images/logo-footer.png" width="28px"></a> 
+                        <a href="http://imibic.org" target="_blank"><img src="images/imibic.png" width="130px"></a>
+                        <hr><p>MetS</p>
+                      </h3> Síndrome Metabólico
+                    </li>
+                </ul>
+                </div>
+
               
               	<!-- tiny only nav-->
               <ul class="nav visible-xs" id="xs-menu">
@@ -72,13 +100,19 @@
           				      <span class="icon-bar"></span>
                       </button>
                       <a href="index.html" class="navbar-brand logo">MetS</a>
+                      <div ng-if="Idioma == 'EN'"> 
                       <p class="logo2">A Non-invasive method for early detection. &#169; 2016.Feb</p>
+                      </div>
+                      <div ng-if="Idioma == 'ES'"> 
+                      <p class="logo2">Método para la detección precoz del síndrome metabólico. &#169; 2016.Feb</p>
+                      </div>
+
                   	</div>
                 </div>
 
                 <!-- /top nav -->
               
-                <div class="padding">
+                <div class="padding" ng-controller="Idioma">
                     <div class="full col-sm-12">
                       
                         <!-- content -->                      
@@ -88,7 +122,7 @@
                         <!-- main col left --> 
                         <div class="bs-callout bs-callout-info" id="callout-alerts-no-default"> 
 
-
+                        <div ng-if="Idioma == 'EN'"> 
                         <h4>Method for the early detection of MetS</h4> 
 
                         <h5>Implications for practice.</h5>
@@ -102,6 +136,28 @@
                         <p>Let's try !!</p>
 
                         <h5>Check questions below to set to True.</h5>
+                        </div>
+
+
+                        <div ng-if="Idioma == 'ES'"> 
+                        <h4>Método para la detección precoz del síndrome metabólico.</h4> 
+
+                        <h5>Implicaciones para la Práctica.</h5>
+
+                        <p>Hemos desarrollado un nuevo método para la detección de síndrome metabólico utilizando técnicas no invasivas y con base en sólo dos variables antropométricas: <strong>Índice Cintura Talla</strong> (⩾0.55) y <strong>Presión Arterial</strong> (⩾128 / 85 mmHg) . Este método reduce el uso de análisis de sangre para aquellos casos en los que se requiere confirmación.</p>
+
+                        <p>El nuevo método se ha propuesto como un árbol de decisión clínica compuesta de estos dos predictores (Índice Cintura Talla y Presión Arterial). Es un método versátil, económico y fácil de medir en cualquier entorno médico.</p>
+
+                        <p>Este nuevo método ha demostrado una precisión diagnóstica elevada, con una alta sensibilidad, especificidad y concordancia clínica con la prueba de referencia (NCEP ATP III).</p>
+
+                        <p>Probemos !!</p>
+
+                        <h5>Responda a estas preguntas para comprobar su estado.</h5>
+                        </div>
+
+
+
+
 
                         <div class="row">
                           <div class="col-lg-6">
@@ -109,7 +165,9 @@
                               <span class="input-group-addon">
                               <input type="checkbox" aria-label="..." ng-model="user.cb1" value="{{user.cb1}}">
                               </span>
-                              <input type="text" class="form-control" value="Is WtHR >= 0,55 ?" disabled>
+                              <input type="text" class="form-control" value="Is WtHR >= 0,55 ?" disabled ng-if="Idioma == 'EN'">
+                              <input type="text" class="form-control" value="Es el ICT >= 0,55 ?" disabled ng-if="Idioma == 'ES'">
+
                             </div><!-- /input-group -->
                           </div><!-- /.col-lg-6 -->
                         </div>
@@ -122,7 +180,8 @@
                               <span class="input-group-addon">
                               <input type="checkbox" aria-label="..." ng-model="user.cb2" value="{{user.cb1}}">
                               </span>
-                              <input type="text" class="form-control" value="Is Blood Pressure >= 128/85 mmHg ?" disabled>
+                              <input type="text" class="form-control" value="Is Blood Pressure >= 128/85 mmHg ?" disabled ng-if="Idioma == 'EN'">
+                              <input type="text" class="form-control" value="Es la Presión Arterial >= 128/85 mmHg ?" disabled ng-if="Idioma == 'ES'">
                             </div><!-- /input-group -->
                           </div><!-- /.col-lg-6 -->
                         </div>
@@ -133,8 +192,12 @@
                           <!-- Resolución casos -->  
                           <div class="col-lg-6" ng-if="user.cb1 !== true">
                              <div ng-if="user.cb2 == true">
-                              <div class="alert alert-success" role="alert">(4) NO Metabolic Syndrome</div>
-                              <p>Statistical significance (9.5%):</p>
+                              <div class="alert alert-success" role="alert" ng-if="Idioma == 'EN'">(4) NO Metabolic Syndrome</div>
+                              <div class="alert alert-success" role="alert" ng-if="Idioma == 'ES'">(4) NO Presenta Síndrome Metabólico</div>
+
+                              <p ng-if="Idioma == 'EN'">Statistical significance (9.5%):</p>
+                              <p ng-if="Idioma == 'ES'">Significado estadístico (9.5%):</p>
+
                               <div class="progress">
                                 <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="9.5" aria-valuemin="0" aria-valuemax="100" style="width: 9.5%">
                                 9.5%
@@ -142,8 +205,12 @@
                               </div>
                              </div>
                              <div ng-if="user.cb2 !== true">
-                              <div class="alert alert-success" role="alert">(3) NO Metabolic Syndrome</div>
-                              <p>Statistical significance (0.5%):</p>
+                              <div class="alert alert-success" role="alert" ng-if="Idioma == 'EN'">(3) NO Metabolic Syndrome</div>
+                              <div class="alert alert-success" role="alert" ng-if="Idioma == 'ES'">(3) NO Presenta Síndrome Metabólico</div>
+
+                              <p ng-if="Idioma == 'EN'">Statistical significance (0.5%):</p>
+                              <p ng-if="Idioma == 'ES'">Significado estadístico (0.5%):</p>
+
                               <div class="progress">
                                 <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="0.5" aria-valuemin="0" aria-valuemax="100" style="width: 1%">
                                 0.5%
@@ -154,17 +221,29 @@
 
                           <div class="col-lg-6" ng-if="user.cb1 == true">
                             <div ng-if="user.cb2 == true">
-                                <div class="alert alert-danger" role="alert">(6) Metabolic Syndrome: YES, Look for your Occupational Safety and Health Dr.</div>
-                              <p>Statistical significance (61.7%):</p>  
+                                <div class="alert alert-danger" role="alert" ng-if="Idioma == 'EN'">(6) Metabolic Syndrome: YES, Look for your Occupational Safety and Health Dr.</div>
+                                <div class="alert alert-danger" role="alert" ng-if="Idioma == 'ES'">(6) Síndrome Metabólico: SI, Acuda al Dr. de Seguridad en el Trabajo.</div>
+                              <p ng-if="Idioma == 'EN'">Statistical significance (61.7%):</p>  
+                              <p ng-if="Idioma == 'ES'">Significado estadístico (61.7%):</p>  
+
                               <div class="progress">
-                                <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="61.7" aria-valuemin="0" aria-valuemax="100" style="width: 61.7%">
+                                <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="61.7" aria-valuemin="0" aria-valuemax="100" style="width: 61.7%" ng-if="Idioma == 'EN'">
                                 61.7% - (MetS Danger) 
                                 </div>
+                                <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="61.7" aria-valuemin="0" aria-valuemax="100" style="width: 61.7%" ng-if="Idioma == 'ES'">
+                                61.7% - (MetS Peligroso) 
+                                </div>
+
+
                               </div>
                             </div>
                             <div ng-if="user.cb2 !== true">
-                              <div class="alert alert-success" role="alert">(5) NO Metabolic Syndrome</div>
-                              <p>Statistical significance (16.9%):</p>
+                              <div class="alert alert-success" role="alert" ng-if="Idioma == 'EN'">(5) NO Metabolic Syndrome</div>
+                              <div class="alert alert-success" role="alert" ng-if="Idioma == 'ES'">(5) NO Presenta Síndrome Metabólico</div>
+
+                              <p ng-if="Idioma == 'EN'">Statistical significance (16.9%):</p>
+                              <p ng-if="Idioma == 'ES'">Significado estadístico (16.9%):</p>
+
                               <div class="progress">
                                 <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="16.9" aria-valuemin="0" aria-valuemax="100" style="width: 16.9%">
                                 16.9%
@@ -194,6 +273,7 @@
     <script src="angular/1.4.3/angular.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
 		<script src="js/scripts.js"></script>
+    <script src="js/mets.js"></script>
     
 	</body>
 </html>

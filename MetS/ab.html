@@ -18,7 +18,7 @@
 	<![endif]-->
 	<link href="css/styles.css" rel="stylesheet">
 </head>
-<body ng-app="">
+<body ng-app="mets" ng-controller="Idioma">
 <div class="wrapper">
     <div class="box">
         <div class="row row-offcanvas row-offcanvas-left">   
@@ -29,6 +29,8 @@
           			<li><a href="#" data-toggle="offcanvas" class="visible-xs text-center"><i class="glyphicon glyphicon-chevron-right"></i></a></li>
             	</ul>
                
+                <!-- Menu en Inglés -->
+                <div ng-if="Idioma == 'EN'"> 
                 <ul class="nav hidden-xs" id="lg-menu">
                     <li><a href="sm.html"><i class="glyphicon glyphicon-list-alt"></i> MS</a></li>
                     <li><a href="wt.html"><i class="glyphicon glyphicon-list"></i> WtHR</a></li>
@@ -47,6 +49,30 @@
                       </h3> Metabolic Syndrome
                     </li>
                 </ul>
+                </div>
+
+                <!-- Menu en Español -->
+                <div ng-if="Idioma == 'ES'"> 
+                <ul class="nav hidden-xs" id="lg-menu">
+                    <li><a href="sm.html"><i class="glyphicon glyphicon-list-alt"></i> SM</a></li>
+                    <li><a href="wt.html"><i class="glyphicon glyphicon-list"></i> ICT</a></li>
+                    <li><a href="ht.html"><i class="glyphicon glyphicon-th"></i> HTA</a></li>
+                    <li><a href="vl.html"><i class="glyphicon glyphicon-ok"></i> Validación</a></li>
+                    <li><a href="au.html"><i class="glyphicon glyphicon-user"></i> Autores</a></li>
+                    <li class="active"><a href="ab.html"><i class="glyphicon glyphicon-edit"></i> Acerca de</a></li>
+
+                </ul>
+                <ul class="list-unstyled hidden-xs" id="sidebar-footer">
+                    <li>
+                      <h3>
+                        <a href="http://www.uco.es" target="_blank"><img src="images/logo-footer.png" width="28px"></a> 
+                        <a href="http://imibic.org" target="_blank"><img src="images/imibic.png" width="130px"></a>
+                        <hr><p>MetS</p>
+                      </h3> Síndrome Metabólico
+                    </li>
+                </ul>
+                </div>
+
               
               	<!-- tiny only nav-->
               <ul class="nav visible-xs" id="xs-menu">
@@ -89,6 +115,8 @@
                           
                         
                         <!-- main col left --> 
+
+                        <div ng-if="Idioma == 'EN'">               
                         <div class="bs-callout bs-callout-info" id="callout-alerts-no-default"> 
         
                           <h4>Metabolic Syndrome</h4> 
@@ -101,17 +129,36 @@
                           <a href="https://www.facebook.com/abbascomputing/" target="_blank"><img src="images/facebook.png"></a>
                           <a href="http://es.linkedin.com/in/jcheca" target="_blank"><img src="images/linkedin.png"></a></div>
 
-
-
                           <p><a class="btn btn-default view-pdf" href="images/article_mets.pdf" role="button" target="_blank">PDF Article &raquo;</a></p>
-
-
 
                         </div>
 
-                              
-                      <hr>
-                      <a href="index.html"><i class="glyphicon glyphicon-share"></i></a> Return Test 
+                        <hr>
+                        <a href="index.html"><i class="glyphicon glyphicon-share"></i></a> Return Test 
+                        </div>
+
+
+
+                        <div ng-if="Idioma == 'ES'">               
+                        <div class="bs-callout bs-callout-info" id="callout-alerts-no-default"> 
+        
+                          <h4>Sínrome Metabólico</h4> 
+
+                          <h5>Acerca de MetS v.0 - <i>Feb.2016</i></h5>
+                          
+                          <p><img src="images/mets.png" width="100px" class = "img-thumbnail"></p>
+
+                          <div class="alert alert-info"><strong>José Checa-Claudel.</strong> <i>Analista Programador en el Área de Nuevas Tecnologías. Soporte a la Docencia y a la Investigación - Sistemas, Universidad de Cordoba, Córdoba, España. <a href="http://orcid.org/0000-0001-6501-0283" target="_blank">ORCID: 0000-0001-6501-0283</a> en <a href="https://github.com/jcheca"><img src="images/git.png"></a> </i><a href="http://twitter.com/abbasben" target="_black"><img src="images/twitter.png"></a>
+                          <a href="https://www.facebook.com/abbascomputing/" target="_blank"><img src="images/facebook.png"></a>
+                          <a href="http://es.linkedin.com/in/jcheca" target="_blank"><img src="images/linkedin.png"></a></div>
+
+                          <p><a class="btn btn-default view-pdf" href="images/article_mets.pdf" role="button" target="_blank">Artículo PDF &raquo;</a></p>
+
+                        </div>
+
+                        <hr>
+                        <a href="index.html"><i class="glyphicon glyphicon-share"></i></a> Volver al Test 
+                        </div>
 
 
                         
@@ -132,6 +179,7 @@
     <script type="text/javascript" src="angular/1.4.3/angular.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
 		<script src="js/scripts.js"></script>
+    <script src="js/mets.js"></script>
     <script src="js/pdfplugin.js"></script>
 
     
