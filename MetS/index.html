@@ -37,7 +37,6 @@
                     <li><a href="vl.html"><i class="glyphicon glyphicon-ok"></i> Validation</a></li>
                     <li><a href="au.html"><i class="glyphicon glyphicon-user"></i> Authors</a></li>
                     <li><a href="ab.html"><i class="glyphicon glyphicon-edit"></i> About</a></li>
-
                 </ul>
                 <ul class="list-unstyled hidden-xs" id="sidebar-footer">
                     <li>
@@ -67,11 +66,11 @@
                         <a href="http://www.uco.es" target="_blank"><img src="images/logo-footer.png" width="28px"></a> 
                         <a href="http://imibic.org" target="_blank"><img src="images/imibic.png" width="130px"></a>
                         <hr><p>MetS</p>
-                      </h3> Síndrome Metabólico
+                      </h3> Síndrome Metabólico               
+
                     </li>
                 </ul>
                 </div>
-
               
               	<!-- tiny only nav-->
               <ul class="nav visible-xs" id="xs-menu">
@@ -99,6 +98,7 @@
           				      <span class="icon-bar"></span>
           				      <span class="icon-bar"></span>
                       </button>
+                      <img class="navbar-brand logo-lang" src="images/{{Idioma}}.png" width="25px;" ng-click="cambiame()">
                       <a href="index.html" class="navbar-brand logo">MetS</a>
                       <div ng-if="Idioma == 'EN'"> 
                       <p class="logo2">A Non-invasive method for early detection. &#169; 2016.Feb</p>
@@ -112,7 +112,7 @@
 
                 <!-- /top nav -->
               
-                <div class="padding" ng-controller="Idioma">
+                <div class="padding">
                     <div class="full col-sm-12">
                       
                         <!-- content -->                      
