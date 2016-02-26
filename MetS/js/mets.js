@@ -27,12 +27,13 @@ angular.module("mets", ['tc.chartjs'])
         value: 0.5,
         color:'#F7464A',
         highlight: '#FF5A5E',
-        label: 'Risk/Riesgo'
+        label: 'Risk/Riesgo 0.5%'
       },
       {
         value: 99.5, 
         color: '#FDB45C',
         highlight: '#FFC870',
+        label: 'NO Risk/Riesgo 99.5%'
       }
     ];
 
@@ -42,12 +43,14 @@ angular.module("mets", ['tc.chartjs'])
         value: 9.5,
         color:'#F7464A',
         highlight: '#FF5A5E',
-        label: 'Risk/Riesgo'
+        label: 'Risk/Riesgo 9.5%' 
       },
       {
         value: 90.5,
         color: '#FDB45C',
         highlight: '#FFC870',
+        label: 'NO Risk/Riesgo 90.5%'
+
       }
     ];
 
@@ -57,12 +60,14 @@ angular.module("mets", ['tc.chartjs'])
         value: 16.9,
         color:'#F7464A',
         highlight: '#FF5A5E',
-        label: 'Risk/Riesgo'
+        label: 'Risk/Riesgo 16.9%'
       },
       {
         value: 83.1,
         color: '#FDB45C',
         highlight: '#FFC870',
+        label: 'NO Risk/Riesgo 83.1%'
+
       }
     ];
 
@@ -73,18 +78,20 @@ angular.module("mets", ['tc.chartjs'])
         value: 61.7,
         color:'#F7464A',
         highlight: '#FF5A5E',
-        label: 'Risk/Riesgo'
+        label: 'Risk/Riesgo 61.7%'
       },
       {
         value: 38.3,
         color: '#FDB45C',
         highlight: '#FFC870',
+        label: 'NO Risk/Riesgo 38.3%'
+
       }
     ];
 
     $scope.options = {
-        responsive: true
-
+        responsive: true,
+        legendTemplate : '<ul class="tc-chart-js-legend"><% for (var i=0; i<segments.length; i++){%><li><span style="background-color:<%=segments[i].fillColor%>"></span><%if(segments[i].label){%><%=segments[i].label%><%}%></li><%}%></ul>'
 
     }
 

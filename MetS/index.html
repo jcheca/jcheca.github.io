@@ -196,14 +196,15 @@
                               <p ng-if="Idioma == 'EN'">Probability of developing Metabolic Syndrome (9.5%):</p>
                               <p ng-if="Idioma == 'ES'">Probabilidad de presentar Síndrome Metabólico (9.5%):</p>
 
-                              	
+                              <!--                              	
                               <div class="progress">
                                 <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="9.5" aria-valuemin="0" aria-valuemax="100" style="width: 9.5%">
                                 9.5%
                                 </div>
                               </div> 
+                            -->
                               <div class="canvas-holder">
-                              <canvas tc-chartjs-doughnut chart-data="datalow" chart-options="options"></canvas>
+                              <canvas tc-chartjs-doughnut chart-data="datalow" chart-options="options" auto-legend></canvas>
                               </div>
                               
 
@@ -215,16 +216,18 @@
                               <p ng-if="Idioma == 'EN'">Probability of developing Metabolic Syndrome (0.5%):</p>
                               <p ng-if="Idioma == 'ES'">Probabilidad de presentar Síndrome Metabólico (0.5%):</p>
 
-                                                            <div class="progress">
+                              <!--
+                              <div class="progress">
                                 <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="0.5" aria-valuemin="0" aria-valuemax="100" style="width: 1%">
                                 0.5%
                                 </div>
                               </div>
+                            -->
                               
                               <div class="canvas-holder">
-                              <canvas tc-chartjs-doughnut chart-data="datavlow" chart-options="options"></canvas>
+                              <canvas tc-chartjs-doughnut chart-data="datavlow" chart-options="options" auto-legend></canvas>
                               </div>
-                              
+
                              </div>
                           </div> 
 
@@ -244,7 +247,7 @@
                                 </div>
                               </div>
                               <div class="canvas-holder">
-                              <canvas tc-chartjs-doughnut chart-data="datahi" chart-options="options"></canvas>
+                              <canvas tc-chartjs-doughnut chart-data="datahi" chart-options="options" auto-legend></canvas>
                               </div>
 
 
@@ -257,14 +260,15 @@
                               <p ng-if="Idioma == 'EN'">Probability of developing Metabolic Syndrome (16.9%):</p>
                               <p ng-if="Idioma == 'ES'">Probabilidad de presentar Síndrome Metabólico (16.9%):</p>
 
-                              
+                              <!--
                               <div class="progress">
                                 <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="16.9" aria-valuemin="0" aria-valuemax="100" style="width: 16.9%">
                                 16.9%
                                 </div>
                               </div>
+                            -->
                               <div class="canvas-holder">
-                              <canvas tc-chartjs-doughnut chart-data="datamoderated" chart-options="options"></canvas>
+                              <canvas tc-chartjs-doughnut chart-data="datamoderated" chart-options="options" auto-legend></canvas>
                               </div>
                               
                             </div>

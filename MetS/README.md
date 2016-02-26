@@ -1,4 +1,4 @@
-**[Metabolic Sindrome - MetS]**
+**[Metabolic Sindrome (Non-Invasive Method) - NIM MetS]**
 
 **Introduction**
 
@@ -27,6 +27,6 @@ The aim of this study is to propose a method for the early detection of MetS in 
 **[CHANGELOG]**
 
 ```
-23.02.2016 - Multiidioma. Incluido textos en español.
+23.02.2016 - Multidioma. Incluido textos en español.
 26.02.2016 - Añadido Doughnut Grafico.
 ```
