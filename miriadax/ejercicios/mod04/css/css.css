@@ -1,0 +1,171 @@
+/* Fuentes FireFox OS */
+
+@font-face {
+    font-family: "FiraMonoOT-Regular";
+  	src: url("../fonts/FiraMonoOT/FiraMonoOT-Regular.otf");
+}
+    
+@font-face {
+  	font-family: "FiraMonoOT-Bold"; 
+  	src: url("../fonts/FiraMonoOT/FiraMonoOT-Bold.otf");
+}
+
+@font-face {
+  	font-family: "FiraSansOT-BoldItalic"; 
+  	src: url("../fonts/FiraSansOT/FiraSansOT-BoldItalic.otf");
+}    
+
+@font-face {
+  	font-family: "FiraSansOT-Bold"; 
+  	src: url("../fonts/FiraSansOT/FiraSansOT-Bold.otf");
+}    
+
+@font-face {
+  	font-family: "FiraSansOT-LightItalic"; 
+  	src: url("../fonts/FiraSansOT/FiraSansOT-LightItalic.otf");
+}   
+
+@font-face {
+  	font-family: "FiraSansOT-Light"; 
+  	src: url("../fonts/FiraSansOT/FiraSansOT-Light.otf");
+}      
+
+@font-face {
+  	font-family: "FiraSansOT-MediumItalic"; 
+  	src: url("../fonts/FiraSansOT/FiraSansOT-MediumItalic.otf");
+}   
+
+@font-face {
+  	font-family: "FiraSansOT-Medium"; 
+  	src: url("../fonts/FiraSansOT/FiraSansOT-Medium.otf");
+}      
+
+@font-face {
+	font-family: "FiraSansOT-RegularItalic"; 
+	src: url("../fonts/FiraSansOT/FiraSansOT-RegularItalic.otf");
+}  
+
+@font-face {
+  	font-family: "FiraSansOT-Regular"; 
+  	src: url("../fonts/FiraSansOT/FiraSansOT-Regular.otf");
+}      
+
+body {
+	width: 480px;
+	/* height: 800px; */
+	margin: 0px;
+	padding: 0px;
+	background: url('../img/fondo.png') left top no-repeat;
+
+}
+
+.cabecera{
+	padding-left: 0px;
+	
+	width: 480px;
+	height: 5em;
+	/* Firefox 3.6+  */
+	background: -moz-linear-gradient(top, #cd6723, #bb482d);
+	/* Safari 4+ y Chrome 1+ 
+	background: -webkit-linear-gradient(top, #cd6723, #bb482d);
+	/* Opera 11.10+  
+	background: -o-linear-gradient(top, #cd6723, #bb482d);
+	/* Internet Explorer 5.5+  
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorStr='#cd6723', EndColorStr='#bb482d');
+    */
+}
+
+.cuerpo {
+	margin: 10px;
+	width: 460px;
+	margin-top: 5em;
+}
+
+.pie {
+    bottom: 0px;
+    display: block;
+    float: none;
+	width: 480px;
+	background: black;
+    position: absolute;
+}
+
+.titulo {
+	width: 480px;
+	left: 80px;
+	top: 15px;
+	font-family: FiraSansOT-Regular; 
+	font-size: 2.5rem; 
+    color: white;	
+    border: 10px;
+    height: 80px;
+    position: absolute;
+}
+
+nav {
+	text-align: center;
+    /* color: black; */
+    display: flex;
+    height: 4em;
+}
+
+ul {
+	list-style-type: none;
+	margin: auto;
+	padding: 0px;
+	width: auto;
+}
+
+li {
+	display: inline-flex;
+    width: 110px;
+    height: 4em;
+}
+
+a.icon {
+	font-family: FiraSansOT-Regular;
+	text-decoration: none;
+	font-size: 0.9em;	
+	padding: 0px; 
+	float: left;
+}
+
+
+
+a.icon:hover {
+	background-color: #FF4E00;
+	width: 0px;
+	border-bottom-width: 0px; 
+}
+
+a {
+	font-family: FiraSansOT-Regular;
+	text-decoration: none;
+	font-size: 0.9em;
+	display: inline-block; 
+	float: left;
+    width: 100px; 
+    padding-top: 15px;
+
+}
+
+a:hover {	
+	/* background-color: #53ACCF; */
+	border-bottom-width: 0px; 
+}
+
+a:active {	
+	background-color: #53ACCF; 
+	border-bottom-width: 0px; 
+}
+
+
+img {
+	padding: 0px;
+	border: 0px;
+}
+
+footer{
+	color: green;
+	font-size: 10px;
+}

@@ -1,0 +1,10 @@
+{
+  "version": "5.0",
+  "name": "Reloj",
+  "description": "Reloj Analogico y Digital",
+  "launch_path": "/index.html",
+  "developer": {
+    "name": "InternetNG Team",
+    "url": "http://internetng.dit.upm.es"
+  }
+}

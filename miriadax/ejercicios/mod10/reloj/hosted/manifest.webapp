@@ -1,0 +1,17 @@
+{
+  "version": "1.1",
+  "name": "Reloj (by) Abbas Ben",
+  "description": "Reloj Analogico y Digital en formato SVG",
+  "launch_path": "/host/0B6sz_KUWBGKkVVhGWHRkYVY0V0U/clock.html",
+  "icons": {
+  	"16": "/host/0B6sz_KUWBGKkVVhGWHRkYVY0V0U/icons/ico_16.png",
+  	"48": "/host/0B6sz_KUWBGKkVVhGWHRkYVY0V0U/icons/ico_48.png",
+    "60": "/host/0B6sz_KUWBGKkVVhGWHRkYVY0V0U/icons/app-clock.png",    
+  	"128": "/host/0B6sz_KUWBGKkVVhGWHRkYVY0V0U/icons/ico_128.png"
+
+  },
+  "developer": {
+    "name": "Abbas Ben Firnes",
+    "url": "http://www.uco.es/users/jcheca"
+  }
+}

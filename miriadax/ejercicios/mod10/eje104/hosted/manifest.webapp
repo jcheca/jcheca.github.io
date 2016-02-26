@@ -1,0 +1,16 @@
+{
+  "version": "1.1",
+  "name": "Cronómetro (by) Abbas Ben",
+  "description": "Cronómetro",
+  "launch_path": "/host/0B6sz_KUWBGKkdnk0NUtWSFdvYVE/index.html",
+  "icons": {
+  	"16": "/host/0B6sz_KUWBGKkdnk0NUtWSFdvYVE/icons/ico_16.png",
+  	"48": "/host/0B6sz_KUWBGKkdnk0NUtWSFdvYVE/icons/ico_48.png",
+    "60": "/host/0B6sz_KUWBGKkdnk0NUtWSFdvYVE/icons/app-clock.png",    
+  	"128": "/host/0B6sz_KUWBGKkdnk0NUtWSFdvYVE/icons/ico_128.png"
+  },
+  "developer": {
+    "name": "Abbas Ben Firnes",
+    "url": "http://www.uco.es/users/jcheca"
+  }
+}
