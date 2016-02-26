@@ -1,6 +1,6 @@
-[Metabolic Sindrome - MetS]
+**[Metabolic Sindrome - MetS]**
 
-* Introduction
+**Introduction**
 
 Metabolic syndrome (MetS) is defined as a group of metabolic risk factors, characterised by central obesity, high arterial blood pressure (BP) and an impaired glucose (hyperglycaemia) and lipid (hypertriglyceridaemia and low high-density lipoprotein (HDL)-cholesterol) metabolism.
 
@@ -14,16 +14,16 @@ Occupational health nursing is actively involved in the promotion of health prog
 
 The aim of this study is to propose a method for the early detection of MetS in a working population that is free of biomarkers (non-invasive) and based on anthropometric variables, and to validate it in a different population of workers.
 
-* Programación: 
+**Programación:** 
 	
-	HTML5/CSS/JS
-	AngularJS 1.4.3
-	Facebook Style Template from http://www.bootply.com/96266
-        tc-angular-chartjs: http://carlcraig.github.io/tc-angular-chartjs/
+	*HTML5/CSS/JS
+	*AngularJS 1.4.3
+	*Facebook Style Template from http://www.bootply.com/96266
+    *tc-angular-chartjs: http://carlcraig.github.io/tc-angular-chartjs/
 
-* Date: Feb.2016
+*Date: Feb.2016*
 
-[CHANGELOG]
+**[CHANGELOG]**
 
 23.02.2016 - Multiidioma. Incluido textos en español. Tablas diferentes para las Valoracioines.
 26.02.2016 - Añadido Doughnut Grafico
