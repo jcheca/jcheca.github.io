@@ -18,8 +18,8 @@ The aim of this study is to propose a method for the early detection of MetS in 
 	
 	* HTML5/CSS/JS
 	* AngularJS 1.4.3
-	* Facebook Style Template from http://www.bootply.com/96266
-    * tc-angular-chartjs: http://carlcraig.github.io/tc-angular-chartjs/
+	* Facebook Style Template from <http://www.bootply.com/96266>
+    * tc-angular-chartjs: <http://carlcraig.github.io/tc-angular-chartjs>
 
 *Date: Feb.2016*
 
