@@ -82,6 +82,11 @@ angular.module("mets", ['tc.chartjs'])
       }
     ];
 
+    $scope.options = {
+        responsive: true
+
+
+    }
 
 
 
