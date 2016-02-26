@@ -6,8 +6,8 @@ html, body {
 }
 
 .canvas-holder{
-        width:50%;
-        height: 100%;
+
+        margin-right: 0px;
 }
 
 .ng-isolate-scope {
