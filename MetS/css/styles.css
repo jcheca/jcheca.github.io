@@ -72,7 +72,7 @@ hr {
 .column {
     height: 100%;
     overflow: auto;
-    *zoom:1;
+    zoom:1;
 }
 
 .column .padding {
