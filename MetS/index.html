@@ -94,12 +94,14 @@
                 
               	<div class="navbar navbar-blue navbar-static-top">  
                     <div class="navbar-header">
+                      
                       <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
                         <span class="sr-only">Toggle</span>
                         <span class="icon-bar"></span>
           				      <span class="icon-bar"></span>
           				      <span class="icon-bar"></span>
                       </button>
+                    
                       <img class="navbar-brand logo-lang" ng-src="images/{{Idioma}}.png" width="25px;" ng-click="cambiame()">
                       <a href="index.html" class="navbar-brand logo">NIM MetS</a>
                       <div ng-if="Idioma == 'EN'"> 
@@ -203,9 +205,11 @@
                                 </div>
                               </div> 
                             -->
+                              
                               <div class="canvas-holder">
                               <canvas tc-chartjs-doughnut chart-data="datalow" chart-options="options" auto-legend></canvas>
                               </div>
+                            
                               
 
                              </div>
@@ -227,6 +231,7 @@
                               <div class="canvas-holder">
                               <canvas tc-chartjs-doughnut chart-data="datavlow" chart-options="options" auto-legend></canvas>
                               </div>
+                            
 
                              </div>
                           </div> 
@@ -246,9 +251,12 @@
                                 61.7% - (MetS Peligroso) 
                                 </div>
                               </div>
+
+                              
                               <div class="canvas-holder">
                               <canvas tc-chartjs-doughnut chart-data="datahi" chart-options="options" auto-legend></canvas>
                               </div>
+                            
 
 
 
@@ -267,9 +275,11 @@
                                 </div>
                               </div>
                             -->
+                              
                               <div class="canvas-holder">
                               <canvas tc-chartjs-doughnut chart-data="datamoderated" chart-options="options" auto-legend></canvas>
                               </div>
+                            
                               
                             </div>
                           </div> 

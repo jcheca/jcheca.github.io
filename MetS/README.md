@@ -20,7 +20,7 @@ The aim of this study is to propose a method for the early detection of MetS in 
 	* AngularJS 1.4.3
 	* Facebook Style Template from <http://www.bootply.com/96266>
 	* Charts.js from <http://www.chartjs.org>
-    * tc-angular-chartjs from <http://carlcraig.github.io/tc-angular-chartjs>
+    	* tc-angular-chartjs from <http://carlcraig.github.io/tc-angular-chartjs>
 
 *Date: Feb.2016*
 
@@ -29,4 +29,5 @@ The aim of this study is to propose a method for the early detection of MetS in 
 ```
 23.02.2016 - Multidioma. Incluido textos en español.
 26.02.2016 - Añadido Doughnut Grafico.
+08.03.2016 - Imágenes Cintura-Presion Arterial. SPA
 ```
