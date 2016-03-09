@@ -1,4 +1,4 @@
-angular.module("mets", ['tc.chartjs'])
+angular.module("mets", ['tc.chartjs','switcher'])
    .controller("Idioma", function($scope) {
 
     /* Idioma por defecto: EN */
